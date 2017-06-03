@@ -1,11 +1,11 @@
-### Orange Theory Fitness App
+## Orange Theory Fitness App
 **For Garmin Connect IQ**
 
 **This App is Unofficial and was not created by [Orange Theory Fitness](http://www.orangetheoryfitness.com)**
 
 ![Capture](dist/graphics/ciq-badge.png)
 
-##### Description
+### Description
 
 This Garmin Connect IQ App provides a display on your Garmin Device which closely matches the display seen on the screens in Orange Theory Fitness studios.  It is intended to be used in-studio along with any of the official OTF heart rate monitors.  Devices equipped with internal HRM's can use this sensor as well but it is not as accurate.  The app will record an activity of type "SPORT_TRAINING" and sub-type "CARDIO".  This activity and it's FIT data can be saved and sync'd with Garmin Connect just as any other fitness tracking app does.
 
@@ -16,11 +16,11 @@ This Garmin Connect IQ App provides a display on your Garmin Device which closel
 ![Capture](dist/graphics/capture1.png)
 ![Capture](dist/graphics/capture2.png)
 
-##### Supported Devices
+### Supported Devices
 
 * Vivoactive HR
 
-##### How-To
+### How-To
 
 **Menu Options and Settings**
 * Heart Rate Zones - Choose between the official Orange Theory Zone model or your User Profile Defined Model
@@ -38,16 +38,16 @@ This Garmin Connect IQ App provides a display on your Garmin Device which closel
 * Upon stopping / pausing the workout a menu will be presented: Resume / Save / Discard.  These are fairly self-explanatory.
 * Upon saving the activity a workout summary screen will be displayed.  The back or enter button on this screen will exit the app.
 
-##### ToDo and Planned Features
+### ToDo and Planned Features
 
 * Support Additional Devices
 * Potentially allow for manual activity selection / switching during a workout
 
-##### Bugs and Feature Requests
+### Bugs and Feature Requests
 
 To report a bug or request a feature please use the Github issue tracker associated with this repository. 
 
-##### Calculations and Accuracy
+### Calculations and Accuracy
 
 The output of this app should very closely match that of the OTF Workout Summary.  It may not be exact in all cases and is meant to be as close as possible.
 
@@ -56,13 +56,13 @@ The output of this app should very closely match that of the OTF Workout Summary
 * Calories Burned are calculated using Garmin's algorithms, not OTF's.  This is because I do not know how to override that field in the FIT recording file.
 * Splat Points are the total time in seconds in the Orange + Red Zones, rounded to the nearest minute.
 
-##### Development
+### Development
 
 Source code is made available under the [MIT license](https://opensource.org/licenses/MIT).
 
 Pull requests and translations are welcomed!
 
-##### Version History and Changelog
+### Version History and Changelog
 
 *This app is tested on a Garmin Vivoactive® HR*
 
