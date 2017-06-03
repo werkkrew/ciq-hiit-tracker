@@ -1,3 +1,8 @@
+# Connect IQ / Eclipse
+/.settings
+/.project
+/bin
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
