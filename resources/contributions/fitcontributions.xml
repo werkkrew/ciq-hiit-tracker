@@ -1,0 +1,4 @@
+<fitContributions>        
+        <fitField id="1" displayInActivitySummary="true" sortOrder = "1" precision="-1"
+        dataLabel="@Strings.splat_label" unitLabel="@Strings.splat_units"  />        
+</fitContributions>

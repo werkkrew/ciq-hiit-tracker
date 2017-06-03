@@ -1,0 +1,8 @@
+Many thanks to the following open-source Connect IQ projects for great code examples which helped me in the development of this app:
+
+https://github.com/garmin/connectiq-apps
+https://github.com/matmuc/SportMonitor
+https://github.com/lucamrod/TriathlonDuathlonAquathlon
+https://bitbucket.org/obagot/connectiq-hict
+
+Orange Theory, Splat Points, the Orange Theory logo, and Splat logo are all Trademarks of Orange Theory Fitness

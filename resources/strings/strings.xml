@@ -1,0 +1,63 @@
+<strings>
+	<string id="AppName">OTF</string>
+	<string id="AppDescription">Orange Theory Workout Tracking</string>
+	<string id="AppVersionLabel">Version</string>
+	
+	<string id="ActivityTypeLabel">Activity Type</string>
+	<string id="ActivityTypePrompt">Select the Activity Type</string>
+	<string id="HRProfileLabel">Heart Rate Profile</string>
+	<string id="HRProfilePrompt">Select Heart Rate Profile</string>
+	<string id="AllowVibrationLabel">Allow Vibration</string>
+
+	<string id="orangetheory">Orange Theory</string>
+	<string id="manual">Manual Selection</string>
+	<string id="user_profile">User Profile</string>
+	<string id="yes">Yes</string>
+	<string id="no">No</string>
+	<string id="none">None</string>
+	<string id="minor">Minor</string>
+	<string id="maintain">Maintain</string>
+	<string id="improving">Improving</string>
+	<string id="h_improving">Highly Imp.</string>
+	<string id="overreaching">Overreaching</string>
+	<string id="percent">%</string>
+	<string id="resume_workout">Resume</string>
+	<string id="save_workout">Save</string>
+	<string id="discard_workout">Discard</string>
+	
+	<string id="splat_label">Splat Points</string>
+    <string id="splat_units">Splats</string>
+
+	<string id="start_session_no_hr">No HR Detected, Start Anyway?</string>
+    <string id="start_workout">START BURNING!</string>
+    
+    <string id="StatusBar_time">00:00</string>
+    <string id="StatusBar_hr">-</string>
+    
+    <string id="Workout_timer">00:00</string>
+    <string id="Workout_hr_bpm">200</string>
+    <string id="Workout_hr_pct">100</string>
+    <string id="Workout_calories">1500</string>
+    <string id="Workout_splat">99</string>
+    
+    <string id="Summary_tz1">0</string>
+    <string id="Summary_tz2">0</string>
+    <string id="Summary_tz3">0</string>
+    <string id="Summary_tz4">0</string>
+    <string id="Summary_tz5">0</string>
+    
+    <string id="Summary_time">Time:</string>
+    <string id="Summary_time_val">00:00</string>    
+    <string id="Summary_calories">Calories:</string>
+    <string id="Summary_calories_val">0</string>    
+    <string id="Summary_splat">Splat Points:</string>
+    <string id="Summary_splat_val">0</string>
+    <string id="Summary_avgHR">Avg. HR:</string>
+    <string id="Summary_maxHR">Max. HR:</string>
+    <string id="Summary_avgHR_val">0</string>
+    <string id="Summary_maxHR_val">0</string>
+    <string id="Summary_TE">TE:</string>
+    <string id="Summary_TE_val">None</string>
+    
+    
+</strings>

@@ -1,0 +1,19 @@
+<menus>
+	<menu id="MainMenu">
+		<menu-item id="AllowVibration">@Strings.AllowVibrationLabel</menu-item>
+		<menu-item id="HRProfile">@Strings.HRProfileLabel</menu-item>
+	</menu>
+	<menu id="AllowVibrationMenu">
+		<menu-item id="VibrationOn">@Strings.yes</menu-item>
+		<menu-item id="VibrationOff">@Strings.no</menu-item>
+	</menu>
+	<menu id="HRProfileMenu">
+		<menu-item id="OTFHR">@Strings.orangetheory</menu-item>
+		<menu-item id="User">@Strings.user_profile</menu-item>
+	</menu>
+	<menu id="EndWorkoutMenu">
+	    <menu-item id="resume">@Strings.resume_workout</menu-item>
+	    <menu-item id="save">@Strings.save_workout</menu-item>
+	    <menu-item id="discard">@Strings.discard_workout</menu-item>
+	</menu>
+</menus>

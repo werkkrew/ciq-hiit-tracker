@@ -1,0 +1,7 @@
+<fonts>
+	<font id="klavika_numbers_bold_90" filename="klavika_bold_numbers_90.fnt" filter=" 0123456789-:%" antialias="true" />
+	<font id="klavika_numbers_regular_30" filename="klavika_regular_numbers_30.fnt" filter=" 0123456789-:%" antialias="true" />
+	<font id="klavika_regular_18" filename="klavika_regular_18.fnt" filter=" 0123456789-:%" antialias="true" />
+	<font id="klavika_italic_18" filename="klavika_italic_18.fnt" filter=" 1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!?%:" antialias="true" />
+	<font id="klavika_italic_26" filename="klavika_italic_26.fnt" filter=" 1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!?%:" antialias="true" />
+</fonts>

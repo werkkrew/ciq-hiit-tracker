@@ -1,0 +1,5 @@
+<properties>
+	<property id="appVersion" type="string">@Strings.AppVersion</property>
+	<property id="allowVibration" type="boolean">true</property>
+	<property id="hrProfile" type="number">0</property>
+</properties>
