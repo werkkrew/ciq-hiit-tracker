@@ -38,7 +38,7 @@ This Garmin Connect IQ App provides a display on your Garmin Device which closel
 * Upon stopping / pausing the workout a menu will be presented: Resume / Save / Discard.  These are fairly self-explanatory.
 * Upon saving the activity a workout summary screen will be displayed.  The back or enter button on this screen will exit the app.
 
-### ToDo and Planned Features
+### To Do and Planned Features
 
 * Support Additional Devices
 * Potentially allow for manual activity selection / switching during a workout
