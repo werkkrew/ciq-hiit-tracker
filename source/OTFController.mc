@@ -28,7 +28,7 @@ class OTFController
         var AppName = Ui.loadResource(Rez.Strings.AppName);
         var AppVersion = Ui.loadResource(Rez.Strings.AppVersion);
         if (Log.isDebugEnabled()) {
-            Log.debug("Controller Initialized: App:" + AppName + " Version: " + AppVersion);
+            Log.debug("Controller Initialized: App: " + AppName + " Version: " + AppVersion);
         }
 
         // Connect to Heart Rate Sensor

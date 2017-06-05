@@ -66,7 +66,13 @@ Pull requests and translations are welcomed!
 
 *This app is tested on a Garmin Vivoactive® HR*
 
-**v1.0.0 - 6-3-2017**
+**v1.0.1 - 6/5/2017**
+
+* Fixed a type casting issue on HR percentage
+* Changed the splat point calculation to be more accurate
+* Updated screenshots
+
+**v1.0.0 - 6/3/2017**
 
 * Initial Release
 

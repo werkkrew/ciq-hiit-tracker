@@ -82,10 +82,22 @@ class OTFModel
             } else {
                 var userAge = ( todayYear - birthYear );
                 // This is the formula OTF uses to get max HR
+                // The * 1.0 is a hack to force the maxHR type into a float or double because im bad
                 if ( gender == 0 ) {
-                    mMaxHR = ( 230 - userAge );
+                    mMaxHR = ( 230 - userAge ) * 1.0;
+                    if (Log.isDebugEnabled()) {
+                        Log.debug("Gender: Female");
+                        Log.debug("Age: " + userAge);
+                        Log.debug("Max HR Set To: " +mMaxHR);
+                    }
+
                 } else {
-                    mMaxHR = ( 225 - userAge );
+                    if (Log.isDebugEnabled()) {
+                        Log.debug("Gender: Male");
+                        Log.debug("Age: " + userAge);
+                        Log.debug("Max HR Set To: " +mMaxHR);
+                    }
+                    mMaxHR = ( 225 - userAge ) * 1.0;
                 }
 
                 mZones = [ (mMaxHR * z1pct), (mMaxHR * z2pct), (mMaxHR * z3pct), (mMaxHR * z4pct), (mMaxHR * z5pct), mMaxHR ];
@@ -93,9 +105,6 @@ class OTFModel
                     Log.debug("OTF Calculated Zones Set!");
                 }
             }
-        }
-        if (Log.isDebugEnabled()) {
-            Log.debug("Max HR Set To: " +mMaxHR);
         }
     }
 
@@ -298,12 +307,11 @@ class OTFModel
 
         // Seconds in splat point zone (HR Zone 4 and 5)
         mSecondsSplat = (tz4 + tz5);
+        mSplats = Math.round( ( mSecondsSplat ) / 60 );
         if (Log.isDebugEnabled()) {
             Log.debug("Splat Seconds: " + mSecondsSplat);
         }
 
-        // Subtract 1 second from splat time, divide by 60 and round up
-        mSplats = Math.round( ( mSecondsSplat - 1 ) / 60 );
         // Update the current splats field
         mSplatsField.setData( mSplats );
 

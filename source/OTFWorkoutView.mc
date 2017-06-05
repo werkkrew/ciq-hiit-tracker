@@ -108,13 +108,13 @@ class OTFWorkoutView extends Ui.View {
     function zoneCheck(zone) {
         // Transitioned into orange
         if ( prevZone <= 3 && zone == 4 ) {
-            mController.vibrate(50,500);
+            mController.vibrate(100,1000);
         // Transitioned into red
         } else if ( prevZone <= 4 && zone == 5 ) {
-            mController.vibrate(33,500);
+            mController.vibrate(100,2000);
         // Transitioned below green
         } else if ( prevZone >= 3 && zone <= 2 ) {
-            mController.vibrate(100,500);
+            mController.vibrate(100,400);
         }
         prevZone = zone;
     }
