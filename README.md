@@ -66,6 +66,12 @@ Pull requests and translations are welcomed!
 
 *This app is tested on a Garmin Vivoactive® HR*
 
+**v1.0.2 - 6/9/2017**
+
+* Removed an un-needed permission
+* Fixed a bug when closing/clearing sensors
+* Added some additional logging points for debugging
+
 **v1.0.1 - 6/5/2017**
 
 * Fixed a type casting issue on HR percentage
