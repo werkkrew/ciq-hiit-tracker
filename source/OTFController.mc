@@ -149,15 +149,16 @@ class OTFController
 
     //! Handle timing out after exit
     function onExit() {
-        Sensor.enableSensorEvents();
-        Sensor.setEnabledSensors([]);
         System.exit();
     }
 
      //! Review the stats of the activity when finished
     function onFinish() {
-        Sensor.enableSensorEvents();
-        Sensor.setEnabledSensors([]);
+        if (Log.isDebugEnabled()) {
+            Log.debug("Activity Finished - Disable Sensors and Review");
+        }
+        //Sensor.enableSensorEvents();
+        //Sensor.setEnabledSensors([]);
 
         var delegate = new OTFReviewDelegate();
         var view = new OTFReviewView();
