@@ -9,8 +9,7 @@
 
 This Garmin Connect IQ App provides a display on your Garmin Device which closely matches the display seen on the screens in Orange Theory Fitness studios.  It is intended to be used in-studio along with any of the official OTF heart rate monitors.  Devices equipped with internal HRM's can use this sensor as well but it is not as accurate.  The app will record an activity of type "SPORT_TRAINING" and sub-type "CARDIO".  This activity and it's FIT data can be saved and sync'd with Garmin Connect just as any other fitness tracking app does.
 
-* Orange Theory App on the Connect IQ Store (Link TBD)
-* Orange Theory App on Garmin Forums (Link TBD)
+* [Orange Theory App on the Connect IQ Store](https://apps.garmin.com/en-US/apps/b886d2ac-2f94-4f9d-a7bd-85a59b99e639)
 
 ![Capture](dist/graphics/capture0.png)
 ![Capture](dist/graphics/capture1.png)
