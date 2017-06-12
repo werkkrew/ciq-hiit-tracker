@@ -1,0 +1,86 @@
+<layouts>
+	<layout id="SplashScreen">
+		<drawable id="SplashScreenShapes" />
+		<bitmap id="SplashScreenBg" x="center" y="center" filename="../drawables/otf_background.png" dithering="none" >
+			<palette>
+				<color>F58220</color>
+			</palette>
+		</bitmap>	
+		<bitmap id="StatusHRIconWhite" x="5" y="3" filename="../drawables/hr_white_16.png">
+			<palette>
+				<color>FFFFFF</color>
+			</palette>
+		</bitmap>
+		
+		<bitmap id="StatusHRIconRed" x="-50" y="3" filename="../drawables/hr_red_16.png">
+			<palette>
+				<color>FF1D1D</color>
+			</palette>
+		</bitmap>
+		<label id="StatusTime" x="197" y="0" text="@Strings.StatusBar_time" font="Gfx.FONT_TINY" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
+		<label id="StatusHRText" x="30" y="0" text="@Strings.StatusBar_hr" font="Gfx.FONT_TINY" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+   		<label id="StartWorkoutLabel" x="center" y="127" text="@Strings.start_workout" font="@Fonts.klavika_italic_18" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER"/>
+	</layout>
+	
+	<layout id="PrimaryWorkoutScreen">
+		<drawable id="PrimaryWorkoutShapes" />
+		<drawable id="WorkoutZoneBg" class="WorkoutZoneBg" />
+		<drawable id="WorkoutZoneBars" class="WorkoutZoneBars" />
+		
+		<bitmap id="WorkoutHRIcon" x="3" y="5" filename="../drawables/hr_red_24.png">
+			<palette>
+				<color>FF1D1D</color>
+			</palette>		
+		</bitmap>
+		<label id="WorkoutHRbpmText" x="65" y="-2" text="@Strings.Workout_hr_bpm" font="Gfx.FONT_NUMBER_MILD" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
+		
+		<bitmap id="WorkoutTimerIcon" x="72" y="3" filename="../drawables/stopwatch_24.png">
+			<palette>
+				<color>3914C7</color>
+			</palette>
+		</bitmap>
+		<label id="WorkoutTimer" x="145" y="-2" text="@Strings.Workout_timer" font="Gfx.FONT_NUMBER_MILD" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
+	
+		<bitmap id="WorkoutCaloriesIcon" x="74" y="38" filename="../drawables/calories_24.png">
+			<palette>
+				<color>FE5504</color>
+			</palette>
+		</bitmap>
+		<label id="WorkoutCaloriesText" x="145" y="35" text="@Strings.Workout_calories" font="Gfx.FONT_NUMBER_MILD" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
+		
+		<bitmap id="WorkoutSplatIcon" x="3" y="40" filename="../drawables/splat_24.png">
+			<palette>
+				<color>F58220</color>
+			</palette>		
+		</bitmap>
+		<label id="WorkoutSplatText" x="65" y="35" text="@Strings.Workout_splat" font="Gfx.FONT_NUMBER_MILD" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
+		
+		<label id="WorkoutHRpctText" x="120" y="80" text="@Strings.Workout_hr_pct" font="@Fonts.klavika_numbers_bold_90" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
+		<label id="WorkoutHRpctSymbol" x="145" y="95" text="@Strings.percent" font="@Fonts.klavika_italic_26" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
+	</layout>
+	
+	<layout id="ReviewSummaryScreen">
+		<drawable id="ReviewSummaryShapes" />
+		<drawable id="SummaryZoneBars" class="SummaryZoneBars" />
+		
+		<label id="Summary_time" x="74" y="-1" text="@Strings.Summary_time" font="Gfx.FONT_TINY" color="Gfx.COLOR_DK_GRAY" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
+		<label id="Summary_time_val" x="82" y="-1" text="@Strings.Summary_time_val" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+		<label id="Summary_calories" x="74" y="15" text="@Strings.Summary_calories" font="Gfx.FONT_TINY" color="Gfx.COLOR_DK_GRAY" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
+		<label id="Summary_calories_val" x="82" y="15" text="@Strings.Summary_calories_val" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+		<label id="Summary_splat" x="74" y="31" text="@Strings.Summary_splat" font="Gfx.FONT_TINY" color="Gfx.COLOR_DK_GRAY" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
+		<label id="Summary_splat_val" x="82" y="31" text="@Strings.Summary_splat_val" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_LEFT" />	
+		<label id="Summary_avgHR" x="74" y="47" text="@Strings.Summary_avgHR" font="Gfx.FONT_TINY" color="Gfx.COLOR_DK_GRAY" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
+		<label id="Summary_avgHR_val" x="82" y="47" text="@Strings.Summary_avgHR_val" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_LEFT" />	
+		<label id="Summary_maxHR" x="74" y="63" text="@Strings.Summary_maxHR" font="Gfx.FONT_TINY" color="Gfx.COLOR_DK_GRAY" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
+		<label id="Summary_maxHR_val" x="82" y="63" text="@Strings.Summary_maxHR_val" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+		<label id="Summary_TE" x="74" y="79" text="@Strings.Summary_TE" font="Gfx.FONT_TINY" color="Gfx.COLOR_DK_GRAY" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
+		<label id="Summary_TE_val" x="82" y="79" text="@Strings.Summary_TE_val" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_LEFT" />		
+
+		<label id="Summary_tz1_text" x="15" y="188" text="@Strings.Summary_tz1" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+		<label id="Summary_tz2_text" x="45" y="188" text="@Strings.Summary_tz2" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+		<label id="Summary_tz3_text" x="74" y="188" text="@Strings.Summary_tz3" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+		<label id="Summary_tz4_text" x="102" y="188" text="@Strings.Summary_tz4" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+		<label id="Summary_tz5_text" x="131" y="188" text="@Strings.Summary_tz5" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+	</layout>
+
+</layouts>
