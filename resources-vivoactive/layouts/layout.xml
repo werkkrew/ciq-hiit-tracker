@@ -24,8 +24,22 @@
 	
 	<layout id="PrimaryWorkoutScreen">
 		<drawable id="PrimaryWorkoutShapes" />
-		<drawable id="WorkoutZoneBg" class="WorkoutZoneBg" />
-		<drawable id="WorkoutZoneBars" class="WorkoutZoneBars" />
+		
+		<drawable id="WorkoutZoneBg" class="WorkoutZoneBg">
+			<param name="color">Gfx.COLOR_LT_GRAY</param>
+			<param name="x">0</param>
+			<param name="y">72</param>
+			<param name="width">148</param>
+			<param name="height">103</param>
+		</drawable>
+		
+		<drawable id="WorkoutZoneBars" class="WorkoutZoneBars">
+			<param name="points_1">[[16,174],[36,174],[34,180],[14,180]]</param>
+			<param name="points_2">[[43,174],[63,174],[61,180],[41,180]]</param>
+			<param name="points_3">[[70,174],[90,174],[88,180],[68,180]]</param>
+			<param name="points_4">[[97,174],[117,174],[115,180],[95,180]]</param>
+			<param name="points_5">[[124,174],[144,174],[142,180],[122,180]]</param>
+		</drawable>
 		
 		<bitmap id="WorkoutHRIcon" x="3" y="5" filename="../drawables/hr_red_24.png">
 			<palette>
@@ -61,7 +75,17 @@
 	
 	<layout id="ReviewSummaryScreen">
 		<drawable id="ReviewSummaryShapes" />
-		<drawable id="SummaryZoneBars" class="SummaryZoneBars" />
+		
+		<drawable id="SummaryZoneBars" class="SummaryZoneBars">
+			<param name="regionHeight">80</param>
+			<param name="y">190</param>
+			<param name="width">24</param>
+			<param name="x1">4</param>
+			<param name="x2">33</param>
+			<param name="x3">62</param>
+			<param name="x4">91</param>
+			<param name="x5">120</param>
+		</drawable>
 		
 		<label id="Summary_time" x="74" y="-1" text="@Strings.Summary_time" font="Gfx.FONT_TINY" color="Gfx.COLOR_DK_GRAY" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
 		<label id="Summary_time_val" x="82" y="-1" text="@Strings.Summary_time_val" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_LEFT" />

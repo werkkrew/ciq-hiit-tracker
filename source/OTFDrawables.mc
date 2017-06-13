@@ -7,23 +7,33 @@ class WorkoutZoneBg extends Ui.Drawable {
 
     static var color;
 
+    hidden var x, y, width, height;
+
     function initialize(params) {
         Drawable.initialize(params);
 
         if ( color == null ) {
-            color = Gfx.COLOR_LT_GRAY;
+            color = params.get(:color);
         }
+
+        x = params.get(:x);
+        y = params.get(:y);
+        width = params.get(:width);
+        height = params.get(:height);
     }
 
     function draw(dc) {
         dc.setColor(color, color);
-        dc.fillRectangle(0, 72, dc.getWidth(), 103);
+        dc.fillRectangle(x, y, width, height);
     }
 
 }
 
 class WorkoutZoneBars extends Ui.Drawable {
+
     static var zone;
+
+    hidden var points_1, points_2, points_3, points_4, points_5;
 
     function initialize(params) {
         Drawable.initialize(params);
@@ -31,6 +41,12 @@ class WorkoutZoneBars extends Ui.Drawable {
         if ( zone == null ) {
             zone = 0;
         }
+
+        points_1 = params.get(:points_1);
+        points_2 = params.get(:points_2);
+        points_3 = params.get(:points_3);
+        points_4 = params.get(:points_4);
+        points_5 = params.get(:points_5);
     }
 
     function draw(dc) {
@@ -39,19 +55,19 @@ class WorkoutZoneBars extends Ui.Drawable {
 
         if ( zone == 1 ) {
             color = Gfx.COLOR_LT_GRAY;
-            points = [[16,174],[36,174],[34,180],[14,180]];
+            points = points_1;
         } else if ( zone == 2 ) {
             color = Gfx.COLOR_BLUE;
-            points = [[43,174],[63,174],[61,180],[41,180]];
+            points = points_2;
         } else if ( zone == 3 ) {
             color = Gfx.COLOR_GREEN;
-            points = [[70,174],[90,174],[88,180],[68,180]];
+            points = points_3;
         } else if ( zone == 4 ) {
             color = Gfx.COLOR_ORANGE;
-            points = [[97,174],[117,174],[115,180],[95,180]];
+            points = points_4;
         } else if ( zone == 5 ) {
             color = Gfx.COLOR_DK_RED;
-            points = [[124,174],[144,174],[142,180],[122,180]];
+            points = points_5;
         } else {
             color = Gfx.COLOR_TRANSPARENT;
             points = [[0,0],[0,0],[0,0],[0,0]];
@@ -67,24 +83,32 @@ class SummaryZoneBars extends Ui.Drawable {
     static var heights = new [5];
     static var colors = new [5];
 
+    var regionHeight;
+
+    hidden var x, y, width;
+
     function initialize(params) {
         Drawable.initialize(params);
+
+        regionHeight = params.get(:regionHeight);
+        y = params.get(:y);
+        width = params.get(:width);
     }
 
     function draw(dc) {
         dc.setColor(colors[0], colors[0]);
-        dc.fillRectangle(4, (190 - heights[0]), 24, heights[0]);
+        dc.fillRectangle(4, (y - heights[0]), width, heights[0]);
 
         dc.setColor(colors[1], colors[1]);
-        dc.fillRectangle(33, (190 - heights[1]), 24, heights[1]);
+        dc.fillRectangle(33, (y - heights[1]), width, heights[1]);
 
         dc.setColor(colors[2], colors[2]);
-        dc.fillRectangle(62, (190 - heights[2]), 24, heights[2]);
+        dc.fillRectangle(62, (y - heights[2]), width, heights[2]);
 
         dc.setColor(colors[3], colors[3]);
-        dc.fillRectangle(91, (190 - heights[3]), 24, heights[3]);
+        dc.fillRectangle(91, (y - heights[3]), width, heights[3]);
 
         dc.setColor(colors[4], colors[4]);
-        dc.fillRectangle(120, (190 - heights[4]), 24, heights[4]);
+        dc.fillRectangle(120, (y - heights[4]), width, heights[4]);
     }
 }

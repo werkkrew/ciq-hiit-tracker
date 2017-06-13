@@ -157,8 +157,6 @@ class OTFController
         if (Log.isDebugEnabled()) {
             Log.debug("Activity Finished - Disable Sensors and Review");
         }
-        //Sensor.enableSensorEvents();
-        //Sensor.setEnabledSensors([]);
 
         var delegate = new OTFReviewDelegate();
         var view = new OTFReviewView();

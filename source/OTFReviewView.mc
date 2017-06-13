@@ -121,7 +121,7 @@ class OTFReviewView extends Ui.View {
         if (Log.isDebugEnabled()) {
             Log.debug("Drawing Summary Bar Chart");
         }
-        var regionHeight = 80;
+        var regionHeight = uiZoneBars.regionHeight;
         var barHeight = 0;
 
         uiZoneBars.colors = zoneColors;
