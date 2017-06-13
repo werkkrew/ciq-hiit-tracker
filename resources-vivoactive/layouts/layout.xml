@@ -82,11 +82,11 @@
 			<param name="regionHeight">60</param>
 			<param name="y">129</param>
 			<param name="width">34</param>
-			<param name="x1">4</param>
-			<param name="x2">43</param>
-			<param name="x3">72</param>
-			<param name="x4">101</param>
-			<param name="x5">130</param>
+			<param name="x1">6</param>
+			<param name="x2">46</param>
+			<param name="x3">86</param>
+			<param name="x4">125</param>
+			<param name="x5">164</param>
 		</drawable>
 		
 		<label id="Summary_time" x="64" y="-1" text="@Strings.Summary_time" font="Gfx.FONT_TINY" color="Gfx.COLOR_DK_GRAY" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
@@ -105,11 +105,11 @@
 		<label id="Summary_maxHR_val" x="72" y="47" text="@Strings.Summary_maxHR_val" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_LEFT" />
 		
 
-		<label id="Summary_tz1_text" x="15" y="131" text="@Strings.Summary_tz1" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_CENTER" />
-		<label id="Summary_tz2_text" x="45" y="131" text="@Strings.Summary_tz2" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_CENTER" />
-		<label id="Summary_tz3_text" x="74" y="131" text="@Strings.Summary_tz3" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_CENTER" />
-		<label id="Summary_tz4_text" x="102" y="131" text="@Strings.Summary_tz4" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_CENTER" />
-		<label id="Summary_tz5_text" x="131" y="131" text="@Strings.Summary_tz5" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+		<label id="Summary_tz1_text" x="23" y="130" text="@Strings.Summary_tz1" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+		<label id="Summary_tz2_text" x="63" y="130" text="@Strings.Summary_tz2" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+		<label id="Summary_tz3_text" x="103" y="130" text="@Strings.Summary_tz3" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+		<label id="Summary_tz4_text" x="141" y="130" text="@Strings.Summary_tz4" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+		<label id="Summary_tz5_text" x="181" y="130" text="@Strings.Summary_tz5" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_CENTER" />
 	</layout>
 
 </layouts>
