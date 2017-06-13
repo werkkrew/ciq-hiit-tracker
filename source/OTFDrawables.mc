@@ -85,30 +85,35 @@ class SummaryZoneBars extends Ui.Drawable {
 
     var regionHeight;
 
-    hidden var x, y, width;
+    hidden var x1, x2, x3, x4, x5, y, width;
 
     function initialize(params) {
         Drawable.initialize(params);
 
         regionHeight = params.get(:regionHeight);
+        x1 = params.get(:x1);
+        x2 = params.get(:x2);
+        x3 = params.get(:x3);
+        x4 = params.get(:x4);
+        x5 = params.get(:x5);
         y = params.get(:y);
         width = params.get(:width);
     }
 
     function draw(dc) {
         dc.setColor(colors[0], colors[0]);
-        dc.fillRectangle(4, (y - heights[0]), width, heights[0]);
+        dc.fillRectangle(x1, (y - heights[0]), width, heights[0]);
 
         dc.setColor(colors[1], colors[1]);
-        dc.fillRectangle(33, (y - heights[1]), width, heights[1]);
+        dc.fillRectangle(x2, (y - heights[1]), width, heights[1]);
 
         dc.setColor(colors[2], colors[2]);
-        dc.fillRectangle(62, (y - heights[2]), width, heights[2]);
+        dc.fillRectangle(x3, (y - heights[2]), width, heights[2]);
 
         dc.setColor(colors[3], colors[3]);
-        dc.fillRectangle(91, (y - heights[3]), width, heights[3]);
+        dc.fillRectangle(x4, (y - heights[3]), width, heights[3]);
 
         dc.setColor(colors[4], colors[4]);
-        dc.fillRectangle(120, (y - heights[4]), width, heights[4]);
+        dc.fillRectangle(x5, (y - heights[4]), width, heights[4]);
     }
 }
