@@ -66,7 +66,7 @@ class OTFController
             var view = new OTFWorkoutView();
             delegate.setController(self);
 
-            Ui.pushView(view, delegate, Ui.SLIDE_LEFT);
+            Ui.switchToView(view, delegate, Ui.SLIDE_LEFT);
             mModel.start();
             notifyShort();
         }
