@@ -21,6 +21,7 @@ class EndWorkoutDelegate extends Ui.MenuInputDelegate {
     // Handle the menu input
     function onMenuItem(item) {
         if (item == :resume) {
+            Ui.popView(Ui.SLIDE_DOWN);
             controller.startWorkout();
             return true;
         } else if (item == :save) {

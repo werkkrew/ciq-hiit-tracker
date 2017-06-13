@@ -10,15 +10,10 @@ class StartConfirmationDelegate extends Ui.ConfirmationDelegate {
 
     function onResponse(value) {
         if (value == Ui.CONFIRM_YES) {
-            if (Log.isDebugEnabled()) {
-                Log.debug("Start activity confirmed");
-            }
             controller.mStarted = true;
             controller.startWorkout();
         } else {
-            if (Log.isDebugEnabled()) {
-                Log.debug("Start activity declined");
-            }
+            Ui.popView(Ui.SLIDE_DOWN);
         }
     }
 

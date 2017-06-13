@@ -16,7 +16,6 @@ class OTFDelegate extends Ui.BehaviorDelegate {
 
     //! Back button pressed
     function onBack() {
-        Log.debug("Back button pressed.");
         // Do not quit if activity is running, pause the workout instead
         if ( controller.isRunning() ) {
             controller.stopWorkout();
