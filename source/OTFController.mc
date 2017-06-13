@@ -27,9 +27,6 @@ class OTFController
     function initialize() {
         var AppName = Ui.loadResource(Rez.Strings.AppName);
         var AppVersion = Ui.loadResource(Rez.Strings.AppVersion);
-        if (Log.isDebugEnabled()) {
-            Log.debug("Controller Initialized: App: " + AppName + " Version: " + AppVersion);
-        }
 
         // Connect to Heart Rate Sensor
         Sensor.enableSensorEvents(method(:onSensor));
@@ -66,7 +63,7 @@ class OTFController
             var view = new OTFWorkoutView();
             delegate.setController(self);
 
-            Ui.switchToView(view, delegate, Ui.SLIDE_LEFT);
+            Ui.pushView(view, delegate, Ui.SLIDE_LEFT);
             mModel.start();
             notifyShort();
         }
@@ -94,9 +91,7 @@ class OTFController
 
         // Save the recording
         mModel.save();
-        if (Log.isDebugEnabled()) {
-            Log.debug("Saving Activity");
-        }
+
         // Give the system some time to finish the recording. Push up a progress bar
         // and start a timer to allow all processing to finish
         Ui.pushView(new Ui.ProgressBar("Saving...", null), new OTFProgressDelegate(), Ui.SLIDE_DOWN);
@@ -109,9 +104,7 @@ class OTFController
     //! Discard the recording
     function discard() {
         mModel.discard();
-        if (Log.isDebugEnabled()) {
-            Log.debug("Activity: Discarding");
-        }
+
         // Give the system some time to discard the recording. Push up a progress bar
         // and start a timer to allow all processing to finish
         Ui.pushView(new Ui.ProgressBar("Discarding...", null), new OTFProgressDelegate(), Ui.SLIDE_DOWN);
@@ -154,10 +147,6 @@ class OTFController
 
      //! Review the stats of the activity when finished
     function onFinish() {
-        if (Log.isDebugEnabled()) {
-            Log.debug("Activity Finished - Disable Sensors and Review");
-        }
-
         var delegate = new OTFReviewDelegate();
         var view = new OTFReviewView();
         delegate.setController(self);
@@ -190,7 +179,7 @@ class OTFController
     }
 
     //! Turn on/off backlight based on given flag.
-    hidden function backlight(on) {
+    function backlight(on) {
         if (Attention has :backlight) {
             Attention.backlight(on);
         }

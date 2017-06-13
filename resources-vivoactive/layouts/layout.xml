@@ -43,28 +43,32 @@
 		</drawable>
 		
 		<bitmap id="WorkoutHRIcon" x="3" y="5" filename="../drawables/hr_red_24.png" dithering="none">
-			<palette>
+			<palette disableTransparency="true">
+				<color>FFFFFF</color>
 				<color>FF1D1D</color>
 			</palette>		
 		</bitmap>
 		<label id="WorkoutHRbpmText" x="65" y="-2" text="@Strings.Workout_hr_bpm" font="Gfx.FONT_NUMBER_MILD" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
 		
 		<bitmap id="WorkoutTimerIcon" x="72" y="3" filename="../drawables/stopwatch_24.png" dithering="none">
-			<palette>
+			<palette disableTransparency="true">
+				<color>FFFFFF</color>
 				<color>3914C7</color>
 			</palette>
 		</bitmap>
 		<label id="WorkoutTimer" x="145" y="-2" text="@Strings.Workout_timer" font="Gfx.FONT_NUMBER_MILD" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
 	
 		<bitmap id="WorkoutCaloriesIcon" x="74" y="38" filename="../drawables/calories_24.png" dithering="none">
-			<palette>
+			<palette disableTransparency="true">
+				<color>FFFFFF</color>
 				<color>FE5504</color>
 			</palette>
 		</bitmap>
 		<label id="WorkoutCaloriesText" x="145" y="35" text="@Strings.Workout_calories" font="Gfx.FONT_NUMBER_MILD" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
 		
 		<bitmap id="WorkoutSplatIcon" x="3" y="40" filename="../drawables/splat_24.png" dithering="none">
-			<palette>
+			<palette disableTransparency="true">
+				<color>FFFFFF</color>
 				<color>F58220</color>
 			</palette>		
 		</bitmap>

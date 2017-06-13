@@ -55,18 +55,12 @@ class OTFModel
 
     // Define the HR Zones the same as OTF does (do not use the user zones)
     // min zone 1, max zone 1, max zone 2, max zone 3, max zone 4, max zone 5
-    function setZones() {
+    hidden function setZones() {
         if (hrProfile == 1)
         {
-            if (Log.isDebugEnabled()) {
-                Log.debug("Setting user HR Zones");
-            }
             mZones = Profile.getHeartRateZones(Profile.HR_ZONE_SPORT_GENERIC);
             mMaxHR = mZones[5];
         } else {
-            if (Log.isDebugEnabled()) {
-                Log.debug("Setting Orange Theory HR Zones");
-            }
             var birthYear = Profile.getProfile().birthYear;
             var todayYear = Time.Gregorian.info(Time.today(), Time.FORMAT_SHORT).year;
             var gender = Profile.getProfile().gender;
@@ -75,9 +69,6 @@ class OTFModel
             // If user has not provided a birth year or the device cannot get the current date
             // default back to the pre-defined zones
             if ( birthYear == null || todayYear == null ) {
-                if (Log.isDebugEnabled()) {
-                    Log.debug("User Birth Year or Current Date are null, falling back to default zones...");
-                }
                 mZones = Profile.getHeartRateZones(Profile.HR_ZONE_SPORT_GENERIC);
             } else {
                 var userAge = ( todayYear - birthYear );
@@ -85,34 +76,17 @@ class OTFModel
                 // The * 1.0 is a hack to force the maxHR type into a float or double because im bad
                 if ( gender == 0 ) {
                     mMaxHR = ( 230 - userAge ) * 1.0;
-                    if (Log.isDebugEnabled()) {
-                        Log.debug("Gender: Female");
-                        Log.debug("Age: " + userAge);
-                        Log.debug("Max HR Set To: " +mMaxHR);
-                    }
-
                 } else {
-                    if (Log.isDebugEnabled()) {
-                        Log.debug("Gender: Male");
-                        Log.debug("Age: " + userAge);
-                        Log.debug("Max HR Set To: " +mMaxHR);
-                    }
                     mMaxHR = ( 225 - userAge ) * 1.0;
                 }
 
                 mZones = [ (mMaxHR * z1pct), (mMaxHR * z2pct), (mMaxHR * z3pct), (mMaxHR * z4pct), (mMaxHR * z5pct), mMaxHR ];
-                if (Log.isDebugEnabled()) {
-                    Log.debug("OTF Calculated Zones Set!");
-                }
             }
         }
     }
 
     // Initialize Activity
     function initialize() {
-        if (Log.isDebugEnabled()) {
-            Log.debug("Model Initialized");
-        }
         // Sensor Heart Rate
         mHeartRate = 0;
         // Heart Rate as a Percentage
@@ -273,9 +247,6 @@ class OTFModel
     // Process splat points
     function splatCallback() {
         if( mHeartRate == null ) {
-            if (Log.isDebugEnabled()) {
-                Log.debug("Heart Rate is null");
-            }
             return;
         }
 
@@ -299,18 +270,9 @@ class OTFModel
         mHeartRatePct = ( mHeartRate / mMaxHR ) * 100;
         mZoneTimes = [ tz1, tz2, tz3, tz4, tz5 ];
 
-        if (Log.isDebugEnabled()) {
-            Log.debug("HR: " + mHeartRate);
-            Log.debug("Zone: " + mHeartRateZone);
-            Log.debug("HR Pct: " + mHeartRatePct);
-        }
-
         // Seconds in splat point zone (HR Zone 4 and 5)
         mSecondsSplat = (tz4 + tz5);
         mSplats = Math.round( ( mSecondsSplat ) / 60 );
-        if (Log.isDebugEnabled()) {
-            Log.debug("Splat Seconds: " + mSecondsSplat);
-        }
 
         // Update the current splats field
         mSplatsField.setData( mSplats );
