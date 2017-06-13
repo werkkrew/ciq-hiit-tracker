@@ -17,6 +17,7 @@ class OTFSplashView extends Ui.View {
     hidden var uiStatusHRText;
     hidden var uiStatusHRIconWhite;
     hidden var uiStatusHRIconRed;
+    hidden var xOffset;
 
     function initialize() {
         View.initialize();
@@ -31,6 +32,7 @@ class OTFSplashView extends Ui.View {
         uiStatusHRIconWhite = null;
         uiStatusHRIconRed = null;
         uiStatusHRText = null;
+        xOffset = null;
     }
 
     //! Load your resources here
@@ -42,6 +44,8 @@ class OTFSplashView extends Ui.View {
         uiStatusHRText = View.findDrawableById("StatusHRText");
         uiStatusHRIconWhite = View.findDrawableById("StatusHRIconWhite");
         uiStatusHRIconRed = View.findDrawableById("StatusHRIconRed");
+
+        xOffset = uiStatusHRIconWhite.locX;
     }
 
     //! Called when this View is brought to the foreground. Restore
@@ -85,14 +89,14 @@ class OTFSplashView extends Ui.View {
         if (heartrate == 0 || heartrate == null) {
             uiStatusHRIconRed.locX = -50;
             if (uiStatusHRIconWhite.locX == -50) {
-                uiStatusHRIconWhite.locX = 5;
+                uiStatusHRIconWhite.locX = xOffset;
             } else {
                 uiStatusHRIconWhite.locX = -50;
             }
             uiStatusHRText.setText("");
         } else {
             heartrate = Lang.format("$1$", [heartrate]);
-            uiStatusHRIconRed.locX = 5;
+            uiStatusHRIconRed.locX = xOffset;
             uiStatusHRIconWhite.locX = -50;
             uiStatusHRText.setText( heartrate );
         }
