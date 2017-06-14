@@ -90,6 +90,10 @@ Pull requests and translations are welcomed!
 
 *This app is tested on a Garmin Vivoactive® HR*
 
+**v1.1.2 - 6/14/2017**
+
+* Forerunner 630 Support
+
 **v1.1.1 - 6/14/2017**
 
 * Fixed a bug in the review screen where test bars were left in place
