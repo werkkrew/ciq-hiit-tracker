@@ -14,15 +14,18 @@ This Garmin Connect IQ App provides a display on your Garmin Device which closel
 ### Screenshots
 
 **Tall**
+
 ![Capture](dist/graphics/capt_tall_01.png)
 ![Capture](dist/graphics/capt_tall_02.png)
 ![Capture](dist/graphics/capt_tall_03.png)
 
 **Rectangle**
+
 ![Capture](dist/graphics/capt_rect_01.png)
 ![Capture](dist/graphics/capt_rect_02.png)
 
 **Semi-Round**
+
 ![Capture](dist/graphics/capt_semi_01.png)
 ![Capture](dist/graphics/capt_semi_02.png)
 
