@@ -68,6 +68,10 @@ class OTFWorkoutView extends Ui.View {
     //! loading resources into memory.
     function onShow() {
         mTimer.start(method(:onTimer), 1000, true);
+        // If we come back to this view via back button, resume
+        if (!mController.isRunning()) {
+            mController.onStartStop();
+        }
     }
 
     //! Called when this View is removed from the screen. Save the

@@ -20,42 +20,27 @@ module Prefs {
     //! Store activity type
     function setActivityType(type) {
         App.getApp().setProperty(ACTIVITY_TYPE, type);
-        if (Log.isDebugEnabled()) {
-            Log.debug("Prefs: activity type set to " + type);
-        }
     }
 
     //! Store Heart Rate Profile
     function setHRProfile(profile) {
         App.getApp().setProperty(HR_PROFILE, profile);
-        if (Log.isDebugEnabled()) {
-            Log.debug("Prefs: Heart Rate profile set to " + profile);
-        }
     }
 
     //! Get Heart Rate Profile
     function getHRProfile() {
         var profile = getNumber(HR_PROFILE, 0, 0, 999);
-        if (Log.isDebugEnabled()) {
-            Log.debug("Prefs: Heart Rate profile value is " + profile);
-        }
         return profile;
     }
 
     //! Set vibration policy
     function setAllowVibration(value) {
         App.getApp().setProperty(ALLOW_VIBRATION, value);
-        if (Log.isDebugEnabled()) {
-            Log.debug("Prefs: allow vibration set to " + value);
-        }
     }
 
     //! Return boolean of vibration setting
     function getAllowVibration() {
         var value = getBoolean(ALLOW_VIBRATION, true);
-        if (Log.isDebugEnabled()) {
-            Log.debug("Prefs: allow vibration value is " + value);
-        }
         return value;
     }
 
@@ -66,7 +51,7 @@ module Prefs {
     //! @param def the default value if preference value cannot be found
     //! @param min the minimum authorized value for the preference
     //! @param max the maximum authorized value for the preference
-    hidden function getNumber(name, def, min, max) {
+    function getNumber(name, def, min, max) {
         var app = App.getApp();
         var pref = def;
 
@@ -97,7 +82,7 @@ module Prefs {
     //! Return the boolean value for the preference
     //! @param name the name of the preference
     //! @param def the default value if preference value cannot be found
-    hidden function getBoolean(name, def) {
+    function getBoolean(name, def) {
         var app = App.getApp();
         var pref = def;
 
@@ -120,8 +105,8 @@ module Prefs {
     }
 
     // Settings name, see resources/settings.xml
-    hidden const ACTIVITY_TYPE = "activityType";
-    hidden const HR_PROFILE = "hrProfile";
-    hidden const ALLOW_VIBRATION = "allowVibration";
+    const ACTIVITY_TYPE = "activityType";
+    const HR_PROFILE = "hrProfile";
+    const ALLOW_VIBRATION = "allowVibration";
 
 }

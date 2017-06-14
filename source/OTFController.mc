@@ -10,17 +10,19 @@ using Toybox.Attention as Attention;
 using Toybox.Time as Time;
 using Toybox.Lang as Lang;
 
+// Preferences
 var activityType;
 var hrProfile;
 var allowVibration;
+var confirmation;
 
 class OTFController
 {
-    var mTimer;
-    var mModel;
-    var mRunning;
-    var mStarted;
+    hidden var mModel;
 
+    hidden var mRunning;
+
+    hidden var mTimer;
     hidden var backlightTimer;
 
     //! Initialize the controller
@@ -39,49 +41,66 @@ class OTFController
 
         // We are not running (yet)
         mRunning = false;
-        mStarted = false;
         backlightTimer = null;
-
+        confirmation = false;
     }
 
     //! Start the recording process
     //! If it was not previously started confirm the presense of a HR
     function startWorkout() {
-        // grab current heart rate
-        var heartrate = mModel.getHRbpm();
+        mRunning = true;
 
-        if ((heartrate == 0 || heartrate == null) && !mStarted ) {
-            var dialog = new Ui.Confirmation(Ui.loadResource(Rez.Strings.start_session_no_hr));
-            var delegate = new StartConfirmationDelegate();
-            delegate.setController(self);
-            Ui.pushView(dialog, delegate, Ui.SLIDE_UP );
-        } else {
-            mStarted = true;
-            mRunning = true;
+        var delegate = new OTFWorkoutDelegate();
+        var view = new OTFWorkoutView();
+        delegate.setController(self);
 
-            var delegate = new OTFDelegate();
-            var view = new OTFWorkoutView();
-            delegate.setController(self);
+        Ui.switchToView(view, delegate, Ui.SLIDE_LEFT);
 
-            Ui.switchToView(view, delegate, Ui.SLIDE_LEFT);
-            mModel.start();
-            notifyShort();
-        }
+        mModel.start();
+        notifyShort();
     }
 
     //! Start the Model
-    function resumeWorkout() {
+    hidden function resumeWorkout() {
         mRunning = true;
         mModel.start();
         notifyShort();
     }
 
     //! Stop/Pause the Model
-    function stopWorkout() {
+    hidden function stopWorkout() {
         mRunning = false;
         mModel.stop();
         notifyShort();
         WatchUi.pushView(new Rez.Menus.EndWorkoutMenu(), new EndWorkoutDelegate(), WatchUi.SLIDE_UP);
+    }
+
+    //! Handle the start/stop button
+    function onStartStop() {
+        if (mRunning) {
+            stopWorkout();
+        } else {
+            resumeWorkout();
+        }
+    }
+
+    //! Confirmation of no HR
+    function confirmStart() {
+        // grab current heart rate
+        var heartrate = mModel.getHRbpm();
+
+        // If there is no heart rate detected and the prompt has not previously been confirmed
+        // confirm if the user still wishes to start the workout
+        if (heartrate == 0 || heartrate == null) {
+            var dialog = new Ui.Confirmation(Ui.loadResource(Rez.Strings.start_session_no_hr));
+            var delegate = new StartConfirmationDelegate();
+
+            // Open the HR confirmation dialog
+            delegate.setController(self);
+            Ui.pushView(dialog, delegate, Ui.SLIDE_UP );
+        } else {
+            startWorkout();
+        }
     }
 
     //! Save the recording
@@ -114,6 +133,15 @@ class OTFController
         mTimer.start(method(:onExit), 3000, false);
     }
 
+     //! Review the stats of the activity when finished
+    function onFinish() {
+        var delegate = new OTFReviewDelegate();
+        var view = new OTFReviewView();
+        delegate.setController(self);
+
+        Ui.switchToView(view, delegate, Ui.SLIDE_UP);
+    }
+
     //! Are we running currently?
     function isRunning() {
         return mRunning;
@@ -122,17 +150,6 @@ class OTFController
     //! Get the recording time elapsed
     function getTime() {
         return mModel.getTimeElapsed();
-    }
-
-    //! Handle the start/stop button
-    function onStartStop() {
-        if(mRunning) {
-            stopWorkout();
-        } else if (!mStarted) {
-            startWorkout();
-        } else {
-            resumeWorkout();
-        }
     }
 
     //! Handle Sensor Events
@@ -144,16 +161,6 @@ class OTFController
     function onExit() {
         System.exit();
     }
-
-     //! Review the stats of the activity when finished
-    function onFinish() {
-        var delegate = new OTFReviewDelegate();
-        var view = new OTFReviewView();
-        delegate.setController(self);
-
-        Ui.switchToView(view, delegate, Ui.SLIDE_UP);
-    }
-
 
     //! Load preferences for the view from the object store.
     //! This can be called from the app when the settings have changed.

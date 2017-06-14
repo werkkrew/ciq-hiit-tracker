@@ -3,7 +3,6 @@
 using Toybox.WatchUi as Ui;
 using Toybox.System as Sys;
 using Toybox.Application;
-using Toybox.Timer;
 
 
 //! This delegate handles input for the Menu pushed when the user
@@ -21,16 +20,11 @@ class EndWorkoutDelegate extends Ui.MenuInputDelegate {
     // Handle the menu input
     function onMenuItem(item) {
         if (item == :resume) {
-            Ui.popView(Ui.SLIDE_DOWN);
-            controller.startWorkout();
-            return true;
+            controller.onStartStop();
         } else if (item == :save) {
             controller.save();
-            return true;
-        } else {
+        } else if (item == :discard) {
             controller.discard();
-            return true;
         }
-        return false;
     }
 }

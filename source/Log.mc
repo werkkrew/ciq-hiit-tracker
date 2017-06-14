@@ -26,5 +26,5 @@ module Log {
     }
 
 
-    hidden const DEBUG = false;
+    const DEBUG = true;
 }

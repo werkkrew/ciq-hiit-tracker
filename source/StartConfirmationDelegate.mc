@@ -10,10 +10,9 @@ class StartConfirmationDelegate extends Ui.ConfirmationDelegate {
 
     function onResponse(value) {
         if (value == Ui.CONFIRM_YES) {
-            controller.mStarted = true;
-            controller.startWorkout();
+            confirmation = true;
         } else {
-            Ui.popView(Ui.SLIDE_DOWN);
+            confirmation = false;
         }
     }
 

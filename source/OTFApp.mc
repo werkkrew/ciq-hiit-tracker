@@ -17,9 +17,6 @@ class OTFApp extends App.AppBase {
     var model;
     var controller;
 
-    hidden var view;
-    hidden var delegate;
-
     //! Initialize App
     function initialize() {
         AppBase.initialize();
@@ -34,8 +31,8 @@ class OTFApp extends App.AppBase {
 
     //! Return the initial view of your application here
     function getInitialView() {
-        view = new OTFSplashView();
-        delegate = new OTFDelegate();
+        var view = new OTFSplashView();
+        var delegate = new OTFSplashDelegate();
 
         controller.loadPreferences();
         delegate.setController(controller);

@@ -39,9 +39,6 @@ class OTFReviewView extends Ui.View {
     hidden var uiTE = null;
 
     function initialize() {
-        if (Log.isDebugEnabled()) {
-            Log.debug("Initialize Review View");
-        }
         View.initialize();
         // Get the model and controller from the Application
         mModel = Application.getApp().model;
@@ -50,9 +47,6 @@ class OTFReviewView extends Ui.View {
 
     //! Load your resources here
     function onLayout(dc) {
-        if (Log.isDebugEnabled()) {
-            Log.debug("Load Layout Resources");
-        }
         // Load the layout from the resource file
         setLayout(Rez.Layouts.ReviewSummaryScreen(dc));
 
@@ -92,9 +86,6 @@ class OTFReviewView extends Ui.View {
 
     //! Update the view
     function onUpdate(dc) {
-        if (Log.isDebugEnabled()) {
-            Log.debug("View Updated");
-        }
         var timeString = Lang.format("$1$:$2$", [elapsedTime / 60, (elapsedTime % 60).format("%02d")]);
 
         uiTime.setText( timeString );
@@ -118,9 +109,6 @@ class OTFReviewView extends Ui.View {
 
     //! Calculate the height of the bars
     function drawSummaryBars(times, colors) {
-        if (Log.isDebugEnabled()) {
-            Log.debug("Drawing Summary Bar Chart");
-        }
         var regionHeight = uiZoneBars.regionHeight;
         var barHeight = 0;
 
@@ -138,9 +126,6 @@ class OTFReviewView extends Ui.View {
     }
 
     function teString(te) {
-        if (Log.isDebugEnabled()) {
-            Log.debug("Get training level string");
-        }
         if ( te == null || te == 0 ) {
             return Ui.loadResource(Rez.Strings.none);
         } else if ( te < 1.9 ) {

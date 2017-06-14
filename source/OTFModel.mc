@@ -65,6 +65,11 @@ class OTFModel
             var todayYear = Time.Gregorian.info(Time.today(), Time.FORMAT_SHORT).year;
             var gender = Profile.getProfile().gender;
 
+            // SDK 2.3.x Simulator Bug?
+            if ( birthYear < 1900 ) {
+                birthYear += 1900;
+            }
+
             // Get the users age (will not be exact due to Garmin only providing users birth year)
             // If user has not provided a birth year or the device cannot get the current date
             // default back to the pre-defined zones
@@ -121,10 +126,6 @@ class OTFModel
         mTimer.start(method(:splatCallback), 1000, true);
         // Start recording
         mSession.start();
-
-        if (Log.isDebugEnabled()) {
-            Log.debug("Workout Started!");
-        }
     }
 
     // Stop sensor processing
@@ -133,10 +134,6 @@ class OTFModel
         mTimer.stop();
         // Stop the FIT recording
         mSession.stop();
-
-        if (Log.isDebugEnabled()) {
-            Log.debug("Workout Stopped!");
-        }
     }
 
     // Save the current session

@@ -101,7 +101,7 @@ class SummaryZoneBars extends Ui.Drawable {
     }
 
     function draw(dc) {
-        //heights = [30,30,30,30,30];
+        heights = [30,30,30,30,30];
 
         dc.setColor(colors[0], colors[0]);
         dc.fillRectangle(x1, (y - heights[0]), width, heights[0]);

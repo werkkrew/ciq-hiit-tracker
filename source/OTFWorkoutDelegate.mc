@@ -2,7 +2,7 @@
 
 using Toybox.WatchUi as Ui;
 
-class OTFDelegate extends Ui.BehaviorDelegate {
+class OTFWorkoutDelegate extends Ui.BehaviorDelegate {
 
     hidden var controller;
 
@@ -16,26 +16,23 @@ class OTFDelegate extends Ui.BehaviorDelegate {
 
     //! Back button pressed
     function onBack() {
-        // Do not quit if activity is running, pause the workout instead
-        if ( controller.isRunning() ) {
-            controller.stopWorkout();
-        } else {
-            Ui.popView(Ui.SLIDE_RIGHT);
-        }
+        // Treat the back button like the start/stop button during workout
+        controller.onStartStop();
         return true;
     }
 
     //! Menu button pressed
     function onMenu() {
-        if ((controller != null) && !controller.isRunning()) {
+        // Do not allow access to the menu while workout is running
+        if ( !controller.isRunning() ) {
             Ui.pushView(new Rez.Menus.MainMenu(), new OTFMenuDelegate(), Ui.SLIDE_UP);
-            return true;
         }
-        return false;
+        return true;
     }
 
     //!
     function onKey(key) {
+        Log.debug("Key Pressed: " + key.getKey());
         if (key.getKey() == Ui.KEY_ENTER) {
             // Pass the input to the controller
             controller.onStartStop();
@@ -45,12 +42,8 @@ class OTFDelegate extends Ui.BehaviorDelegate {
 
     //! Start the controller on initial tap, ignore a subsequent tap
     function onSelect() {
-        // Pass the input to the controller
-        if ( controller.isRunning()) {
-            controller.turnOnBacklight();
-        } else {
-            controller.startWorkout();
-        }
+        // Taps on the screen toggle the backlight during a workout
+        controller.turnOnBacklight();
         return true;
     }
 
