@@ -36,12 +36,12 @@ class OTFSplashDelegate extends Ui.BehaviorDelegate {
         return true;
     }
 
-    //! Start the controller on initial tap
-    function onSelect() {
-        controller.confirmStart();
-        return true;
+    //! Screen Tap
+    function onTap(type) {
+        if (type.getType() == Ui.CLICK_TYPE_TAP) {
+            controller.turnOnBacklight();
+        }
     }
-
 
     function setController(c) {
         controller = c;

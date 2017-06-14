@@ -30,9 +30,9 @@ class OTFWorkoutDelegate extends Ui.BehaviorDelegate {
         return true;
     }
 
-    //!
+    //! Button Pressed
     function onKey(key) {
-        Log.debug("Key Pressed: " + key.getKey());
+        Log.debug("Button Pressed: " + key.getKey());
         if (key.getKey() == Ui.KEY_ENTER) {
             // Pass the input to the controller
             controller.onStartStop();
@@ -40,11 +40,12 @@ class OTFWorkoutDelegate extends Ui.BehaviorDelegate {
         return true;
     }
 
-    //! Start the controller on initial tap, ignore a subsequent tap
-    function onSelect() {
-        // Taps on the screen toggle the backlight during a workout
-        controller.turnOnBacklight();
-        return true;
+    //! Screen Tap
+    function onTap(type) {
+        Log.debug("Screen Tapped: " + type.getType());
+        if (type.getType() == Ui.CLICK_TYPE_TAP) {
+            controller.turnOnBacklight();
+        }
     }
 
 

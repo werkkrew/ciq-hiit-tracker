@@ -45,15 +45,18 @@ This Garmin Connect IQ App provides a display on your Garmin Device which closel
 * Allow Vibration - Enable or Disable Vibration.  Enabling presents cues at start/stop of workout and when falling into the blue zone or going up into the orange/red zone.
 
 **Buttons and Interactions**
-* Screen tap on the splash screen will start the workout
-* Screen tap during a workout will activate the device back light
+* On touchscreen devices tapping the screen will toggle the device back light (if equipped).
+* Any button other than Back and Enter pressed outside of menus / prompts will toggle the backlight (if equipped).
 * Back button on splash screen will exit the app
 * Back button when the workout is active will pause the workout
-* Enter button works as a start/stop button
+* Back button on review page will exit the app
+* Enter / Primary button on splash screen will start the workout
+* Enter / Primary button during workout will pause the workout
+* Enter / Primary button on review page will exit the app
 
 **Prompts**
 * If a Heart Rate is not detected upon starting the workout, user will be confirmed if they want to proceed.  App does not function without a heart rate but this assumes the user will attach their heart rate monitor after starting the workout.  This prompt will not be displayed on subsequent start/stop actions during a workout session.
-* Upon stopping / pausing the workout a menu will be presented: Resume / Save / Discard.  These are fairly self-explanatory.
+* Upon stopping / pausing the workout a menu will be presented: Resume / Save / Discard.  These are fairly self-explanatory.  A back button pressed defaults to resume.
 * Upon saving the activity a workout summary screen will be displayed.  The back or enter button on this screen will exit the app.
 
 ### To Do and Planned Features

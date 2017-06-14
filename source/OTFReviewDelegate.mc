@@ -21,6 +21,7 @@ class OTFReviewDelegate extends Ui.BehaviorDelegate {
         return true;
     }
 
+    //! Button Pressed
     function onKey(key) {
         if (key.getKey() == Ui.KEY_ENTER) {
             //Exit the app
@@ -29,10 +30,11 @@ class OTFReviewDelegate extends Ui.BehaviorDelegate {
         return true;
     }
 
-    function onSelect() {
-        //Turn on backlight
-        controller.turnOnBacklight();
-        return true;
+    //! Screen Tap
+    function onTap(type) {
+        if (type.getType() == Ui.CLICK_TYPE_TAP) {
+            controller.turnOnBacklight();
+        }
     }
 
     function setController(c) {
