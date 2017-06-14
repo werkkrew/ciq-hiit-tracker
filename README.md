@@ -11,15 +11,27 @@ This Garmin Connect IQ App provides a display on your Garmin Device which closel
 
 * [Orange Theory App on the Connect IQ Store](https://apps.garmin.com/en-US/apps/b886d2ac-2f94-4f9d-a7bd-85a59b99e639)
 
+### Screenshots
+
+**Tall**
 ![Capture](dist/graphics/capt_tall_01.png)
 ![Capture](dist/graphics/capt_tall_02.png)
 ![Capture](dist/graphics/capt_tall_03.png)
+
+**Rectangle**
 ![Capture](dist/graphics/capt_rect_01.png)
 ![Capture](dist/graphics/capt_rect_02.png)
+
+**Semi-Round**
+![Capture](dist/graphics/capt_semi_01.png)
+![Capture](dist/graphics/capt_semi_02.png)
 
 ### Supported Devices
 
 * Vivoactive HR
+* Vivoactive
+* Forerunner 920XT
+* Forerunner 235
 
 ### How-To
 
@@ -69,8 +81,10 @@ Pull requests and translations are welcomed!
 
 **v1.1.0 - 6/13/2017**
 
+* Updated code to be compatible with CIQ SDK 2.3.1
 * Memory footprint optimizations
-* Added support for rectangle shaped watches (vivoactive)
+* Added support for Vivoactive
+* Added support for Forerunner 920XT, 235
 
 **v1.0.3 - 6/11/2017**
 
