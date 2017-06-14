@@ -31,7 +31,9 @@ This Garmin Connect IQ App provides a display on your Garmin Device which closel
 * Vivoactive HR
 * Vivoactive
 * Forerunner 920XT
+* Forerunner 230
 * Forerunner 235
+* Forerunner 735XT
 
 ### How-To
 
@@ -68,6 +70,7 @@ The output of this app should very closely match that of the OTF Workout Summary
 * HR Zone Thresholds are: Blue - 61%, Green 71%, Orange 84%, Red 92%
 * Calories Burned are calculated using Garmin's algorithms, not OTF's.  This is because I do not know how to override that field in the FIT recording file.
 * Splat Points are the total time in seconds in the Orange + Red Zones, rounded to the nearest minute.
+* Splat Points are usually 1-2 low for the duration of the workout.  I believe this is because I use BPM to calculate time in zone and OTF might use percentage which is rounded.
 
 ### Development
 
@@ -84,7 +87,7 @@ Pull requests and translations are welcomed!
 * Updated code to be compatible with CIQ SDK 2.3.1
 * Memory footprint optimizations
 * Added support for Vivoactive
-* Added support for Forerunner 920XT, 235
+* Added support for Forerunner 920XT, 230, 235, 735XT
 
 **v1.0.3 - 6/11/2017**
 
