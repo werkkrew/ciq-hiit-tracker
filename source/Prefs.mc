@@ -44,7 +44,6 @@ module Prefs {
         return value;
     }
 
-
     //! Return the number value for a preference, or the given default value if pref
     //! does not exist, is invalid, is less than the min or is greater than the max.
     //! @param name the name of the preference
