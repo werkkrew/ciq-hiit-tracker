@@ -27,6 +27,10 @@ class OTFReviewDelegate extends Ui.BehaviorDelegate {
             //Exit the app
             controller.onExit();
         }
+        // All other buttons toggle backlight
+        if (key.getKey() == Ui.KEY_LIGHT || key.getKey() == Ui.KEY_UP || key.getKey() == Ui.KEY_DOWN) {
+            controller.turnOnBacklight();
+        }
         return true;
     }
 

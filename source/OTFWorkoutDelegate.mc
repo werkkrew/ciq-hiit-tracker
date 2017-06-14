@@ -24,25 +24,24 @@ class OTFWorkoutDelegate extends Ui.BehaviorDelegate {
     //! Menu button pressed
     function onMenu() {
         // Do not allow access to the menu while workout is running
-        if ( !controller.isRunning() ) {
-            Ui.pushView(new Rez.Menus.MainMenu(), new OTFMenuDelegate(), Ui.SLIDE_UP);
-        }
+        controller.turnOnBacklight();
         return true;
     }
 
     //! Button Pressed
     function onKey(key) {
-        Log.debug("Button Pressed: " + key.getKey());
         if (key.getKey() == Ui.KEY_ENTER) {
-            // Pass the input to the controller
             controller.onStartStop();
+        }
+        // All other buttons toggle backlight
+        if (key.getKey() == Ui.KEY_LIGHT || key.getKey() == Ui.KEY_UP || key.getKey() == Ui.KEY_DOWN) {
+            controller.turnOnBacklight();
         }
         return true;
     }
 
     //! Screen Tap
     function onTap(type) {
-        Log.debug("Screen Tapped: " + type.getType());
         if (type.getType() == Ui.CLICK_TYPE_TAP) {
             controller.turnOnBacklight();
         }

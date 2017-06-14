@@ -41,6 +41,8 @@ This Garmin Connect IQ App provides a display on your Garmin Device which closel
 ### How-To
 
 **Menu Options and Settings**
+*The menu can only be accessed while on the splash screen*
+
 * Heart Rate Zones - Choose between the official Orange Theory Zone model or your User Profile Defined Model
 * Allow Vibration - Enable or Disable Vibration.  Enabling presents cues at start/stop of workout and when falling into the blue zone or going up into the orange/red zone.
 
@@ -87,6 +89,11 @@ Pull requests and translations are welcomed!
 ### Version History and Changelog
 
 *This app is tested on a Garmin Vivoactive® HR*
+
+**v1.1.1 - 6/14/2017**
+
+* Fixed a bug in the review screen where test bars were left in place
+* Improved button handling
 
 **v1.1.0 - 6/13/2017**
 

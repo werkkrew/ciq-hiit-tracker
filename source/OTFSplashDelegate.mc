@@ -29,9 +29,15 @@ class OTFSplashDelegate extends Ui.BehaviorDelegate {
 
     //!
     function onKey(key) {
+        //Log.debug("Button Pressed: " + key.getKey());
+        // Enter key toggles start/stop
         if (key.getKey() == Ui.KEY_ENTER) {
-            // Pass the input to the controller
             controller.confirmStart();
+        }
+
+        // All other buttons toggle backlight
+        if (key.getKey() == Ui.KEY_LIGHT || key.getKey() == Ui.KEY_UP || key.getKey() == Ui.KEY_DOWN) {
+            controller.turnOnBacklight();
         }
         return true;
     }
