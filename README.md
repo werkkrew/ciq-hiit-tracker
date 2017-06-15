@@ -44,7 +44,7 @@ This Garmin Connect IQ App provides a display on your Garmin Device which closel
 **Menu Options and Settings**
 *The menu can only be accessed while on the splash screen*
 
-* Activity Type - Select the type of activity the workout will be recorded as
+* Activity Type - Select the type of activity the workout will be recorded as.  The Activity Sub-Type setting only applies to the "Training" Activity.
 * Heart Rate Zones - Choose between the official Orange Theory Zone model or your User Profile Defined Models
 * Allow Vibration - Enable or Disable Vibration.  Enabling presents cues at start/stop of workout and when falling into the blue zone or going up into the orange/red zone
 

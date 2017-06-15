@@ -13,7 +13,7 @@
 		</settingConfig>
 	</setting>
 	<setting propertyKey="@Properties.activitySubType" title="@Strings.ActivitySubTypeLabel" prompt="@Strings.ActivitySubTypePrompt">
-		<settingConfig type="list" required="true">
+		<settingConfig type="list" required="false">
 			<listEntry value="0">@Strings.activity_sub_cardio</listEntry>
 			<listEntry value="1">@Strings.activity_sub_strength</listEntry>
 			<listEntry value="2">@Strings.activity_sub_flexibility</listEntry>
