@@ -80,8 +80,6 @@ class OTFModel
             // Create the new FIT fields to record to.
             mSplatsField = mSession.createField("splat_points", 0, Fit.DATA_TYPE_UINT16, {:mesgType => Fit.MESG_TYPE_SESSION, :units => "Splat Points"});
         }
-        // Set up the OTF HR Zones
-        setZones();
     }
 
     // Start session
@@ -248,17 +246,17 @@ class OTFModel
     // Define the HR Zones as per user preference
     // If user selects OTF as the mode, we create a custom set of zones
     // min zone 1, max zone 1, max zone 2, max zone 3, max zone 4, max zone 5
-    hidden function setZones() {
-        if (hrProfile == 1) {
+    function setZones(profile) {
+        if (profile == 1) {
             mZones = Profile.getHeartRateZones(Profile.HR_ZONE_SPORT_GENERIC);
             mMaxHR = mZones[5];
-        } else if (hrProfile == 2) {
+        } else if (profile == 2) {
             mZones = Profile.getHeartRateZones(Profile.HR_ZONE_SPORT_RUNNING);
             mMaxHR = mZones[5];
-        } else if (hrProfile == 3) {
+        } else if (profile == 3) {
             mZones = Profile.getHeartRateZones(Profile.HR_ZONE_SPORT_BIKING);
             mMaxHR = mZones[5];
-        } else if (hrProfile == 4) {
+        } else if (profile == 4) {
             mZones = Profile.getHeartRateZones(Profile.HR_ZONE_SPORT_SWIMMING);
             mMaxHR = mZones[5];
         } else {
@@ -289,7 +287,7 @@ class OTFModel
                 mZones = [ (mMaxHR * z1pct), (mMaxHR * z2pct), (mMaxHR * z3pct), (mMaxHR * z4pct), (mMaxHR * z5pct), mMaxHR ];
             }
         }
-        Log.debug("Heart Rate Zones Set: " + hrProfile);
+        Log.debug("Heart Rate Zones Set: " + profile);
     }
 
 }

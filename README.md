@@ -37,6 +37,7 @@ This Garmin Connect IQ App provides a display on your Garmin Device which closel
 * Forerunner 230
 * Forerunner 235
 * Forerunner 735XT
+* Forerunner 630
 
 ### How-To
 
@@ -88,12 +89,15 @@ Pull requests and translations are welcomed!
 
 ### Version History and Changelog
 
-*This app is tested on a Garmin VivoactiveÂ® HR*
+*This app is tested on a Garmin Vivoactive® HR*
 
-**v1.1.2 - 6/14/2017**
+**v1.1.2 - 6/15/2017**
 
 * Forerunner 630 Support
 * Corrections to custom FIT field for Splat Points
+* Additional HR profile settings
+* Memory optimizations
+* Fix reloading of changes to settings
 
 **v1.1.1 - 6/14/2017**
 

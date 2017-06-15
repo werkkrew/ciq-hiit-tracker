@@ -12,7 +12,7 @@ using Toybox.Lang as Lang;
 
 // Preferences
 var activityType;
-var hrProfile;
+//var hrProfile;
 var allowVibration;
 
 // Globals
@@ -172,11 +172,13 @@ class OTFController
     //! Load preferences for the view from the object store.
     //! This can be called from the app when the settings have changed.
     function loadPreferences() {
-        Log.debug("Preferences Loaded");
-        hrProfile = Prefs.getHRProfile();
+        Log.debug("Preferences Loading");
+        mModel.setZones(Prefs.getHRProfile());
+        //hrProfile = Prefs.getHRProfile();
+        
+        
         allowVibration = (Attention has :vibrate) && (System.getDeviceSettings().vibrateOn) && (Prefs.getAllowVibration());
 
-        Log.debug("HR Profile: " + hrProfile);
         Log.debug("Allow Vibration: " + allowVibration);
     }
 

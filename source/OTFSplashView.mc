@@ -52,8 +52,11 @@ class OTFSplashView extends Ui.View {
     //! the state of this View and prepare it to be shown. This includes
     //! loading resources into memory.
     function onShow() {
+        // Load preferencese
+        mController.loadPreferences();
+        
         mTimer.start(method(:onTimer), 1000, true);
-        if ( confirmation == true) {
+        if ( confirmation == true ) {
             mController.startWorkout();
         }
     }

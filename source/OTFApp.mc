@@ -34,7 +34,7 @@ class OTFApp extends App.AppBase {
         var view = new OTFSplashView();
         var delegate = new OTFSplashDelegate();
 
-        controller.loadPreferences();
+        //controller.loadPreferences();
         delegate.setController(controller);
 
         return [ view, delegate ];
@@ -42,7 +42,6 @@ class OTFApp extends App.AppBase {
 
     //! New app settings have been received
     function onSettingsChanged() {
-        Log.debug("Settings Changed");
         controller.loadPreferences();
         Ui.requestUpdate();
     }
