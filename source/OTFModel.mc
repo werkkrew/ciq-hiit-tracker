@@ -9,13 +9,15 @@ using Toybox.UserProfile as Profile;
 using Toybox.Time;
 using Toybox.Timer;
 using Toybox.Math;
+using Toybox.WatchUi as Ui;
 
 class OTFModel
 {
     // Internal Timer and monitoring variables
     hidden var mTimer;
     hidden var mSeconds;
-    hidden var mSession;
+    hidden var mSession = null;
+    hidden var mSplatsField = null;
 
     // Primary stats used during intervals
     hidden var mHeartRate;
@@ -25,7 +27,6 @@ class OTFModel
     hidden var mZones;
     hidden var mZoneTimes;
     hidden var mSplats;
-    hidden var mSplatsField;
     hidden var mSecondsSplat;
 
     // Summarized and exposed statistics
@@ -73,13 +74,6 @@ class OTFModel
         mZones = new [6];
         // HR Time in Each Zone
         mZoneTimes = new [5];
-
-        if(Toybox has :ActivityRecording) {
-            // Create a new FIT recording session
-            mSession = Recording.createSession({:sport=>Recording.SPORT_TRAINING, :subSport=>Recording.SUB_SPORT_CARDIO_TRAINING, :name=>"Orange Theory"});
-            // Create the new FIT fields to record to.
-            mSplatsField = mSession.createField("splat_points", 0, Fit.DATA_TYPE_UINT16, {:mesgType => Fit.MESG_TYPE_SESSION, :units => "Splat Points"});
-        }
     }
 
     // Start session
@@ -88,8 +82,10 @@ class OTFModel
         mTimer = new Timer.Timer();
         // Process the sensors at 10 Hz
         mTimer.start(method(:splatCallback), 1000, true);
-        // Start recording
-        mSession.start();
+        // Start the FIT recording
+        if ( mSession != null ) {
+            mSession.start();
+        }
     }
 
     // Stop sensor processing
@@ -97,18 +93,24 @@ class OTFModel
         // Stop the timer
         mTimer.stop();
         // Stop the FIT recording
-        mSession.stop();
+        if ( mSession != null ) {
+            mSession.stop();
+        }
     }
 
     // Save the current session
     function save() {
-        mSession.save();
-        mSession = null;
+        if ( mSession != null ) {
+            mSession.save();
+            mSession = null;
+        }
     }
 
     // Discard the current session
     function discard() {
-        mSession.discard();
+        if ( mSession != null ) {
+            mSession.discard();
+        }
     }
 
     // Return the splat points
@@ -191,7 +193,9 @@ class OTFModel
 
             if ( mSplats != null ) {
                 splatPoints = mSplats;
-                mSplatsField.setData( mSplats );
+                if ( mSession != null ) {
+                    mSplatsField.setData( mSplats );
+                }
             } else {
                 splatPoints = 0;
             }
@@ -237,7 +241,9 @@ class OTFModel
         mSplats = Math.round( ( mSecondsSplat ) / 60 );
 
         // Update the current splats field
-        mSplatsField.setData( mSplats );
+        if ( mSession != null ) {
+            mSplatsField.setData( mSplats );
+        }
 
         // Increment timer
         mSeconds++;
@@ -288,6 +294,43 @@ class OTFModel
             }
         }
         Log.debug("Heart Rate Zones Set: " + profile);
+    }
+    
+    // Set the recording activity type as per user preferences
+    function setActivity(type, subType) {
+        if(Toybox has :ActivityRecording) {
+            
+            // Default and Treadmill Running
+            if ( type == 0 || type == 2) {
+                type = Recording.SPORT_RUNNING;
+                subType = Recording.SUB_SPORT_TREADMILL;
+            } else if ( type == 1 ) {
+                type = Recording.SPORT_TRAINING;
+                if ( subType == 0 ) {
+                    subType = Recording.SUB_SPORT_CARDIO_TRAINING;
+                } else if ( subType == 1 ) {
+                    subType = Recording.SUB_SPORT_STRENGTH_TRAINING;
+                } else if ( subType == 2 ) {
+                    subType = Recording.SUB_SPORT_FLEXIBILITY_TRAINING;         
+                }
+            } else if ( type == 3 ) {
+                type = Recording.SPORT_WALKING;
+                subType = Recording.SUB_SPORT_TREADMILL;
+            } else if ( type == 4 ) {
+                type = Recording.SPORT_ROWING;
+                subType = Recording.SUB_SPORT_INDOOR_ROWING;
+            } else if ( type == 5 ) {
+                type = Recording.SPORT_CYCLING;
+                subType = Recording.SUB_SPORT_INDOOR_CYCLING;
+            }
+ 
+            // Create a new FIT recording session
+            mSession = Recording.createSession({:sport=>type, :subSport=>subType, :name => Ui.loadResource(Rez.Strings.orangetheory)});
+            // Create the new FIT fields to record to.
+            mSplatsField = mSession.createField("splat_points", 0, Fit.DATA_TYPE_UINT16, {:mesgType => Fit.MESG_TYPE_SESSION, :units => Ui.loadResource(Rez.Strings.splat_units)});
+            
+            Log.debug("Activity Recording Type: " + type + " Sub: " + subType);
+        }
     }
 
 }

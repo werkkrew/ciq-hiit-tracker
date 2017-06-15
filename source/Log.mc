@@ -25,6 +25,5 @@ module Log {
         }
     }
 
-
     const DEBUG = false;
 }

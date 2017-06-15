@@ -25,6 +25,7 @@ class OTFWorkoutView extends Ui.View {
     hidden var uiHRZoneColor;
 
     hidden var prevZone;
+    hidden var vibeTime;
 
 
     function initialize() {
@@ -44,7 +45,9 @@ class OTFWorkoutView extends Ui.View {
         uiHRZoneBackground = null;
         uiHRZoneBars = null;
         uiHRZoneColor = [ Gfx.COLOR_LT_GRAY, Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLUE, Gfx.COLOR_GREEN, Gfx.COLOR_ORANGE, Gfx. COLOR_DK_RED ];
+        
         prevZone = 0;
+        vibeTime = 0;
     }
 
     //! Load your resources here
@@ -84,15 +87,18 @@ class OTFWorkoutView extends Ui.View {
     //! Update the view
     function onUpdate(dc) {
         var curZone = mModel.getHRzone();
+        var time = mModel.getTimeElapsed();
+        var timeString = Lang.format("$1$:$2$", [time / 60, (time % 60).format("%02d")]);
 
         if( curZone != null ) {
             uiHRZoneBackground.color = uiHRZoneColor[ curZone ];
             uiHRZoneBars.zone = curZone;
-            zoneCheck(curZone);
+            
+            // Prevent back to back vibration events
+            if(( time - vibeTime) > 10) {
+                zoneCheck(curZone);
+            }
         }
-
-        var time = mModel.getTimeElapsed();
-        var timeString = Lang.format("$1$:$2$", [time / 60, (time % 60).format("%02d")]);
 
         uiTimer.setText( timeString );
         uiHRpctText.setText(Lang.format("$1$", [mModel.getHRpct().format("%.0d")]));
@@ -112,13 +118,16 @@ class OTFWorkoutView extends Ui.View {
     function zoneCheck(zone) {
         // Transitioned into orange
         if ( prevZone <= 3 && zone == 4 ) {
-            mController.vibrate(100,1000);
+            mController.vibrate(2);
+            vibeTime = mModel.getTimeElapsed();
         // Transitioned into red
         } else if ( prevZone <= 4 && zone == 5 ) {
-            mController.vibrate(100,2000);
+            mController.vibrate(3);
+            vibeTime = mModel.getTimeElapsed();
         // Transitioned below green
         } else if ( prevZone >= 3 && zone <= 2 ) {
-            mController.vibrate(100,400);
+            mController.vibrate(1);
+            vibeTime = mModel.getTimeElapsed();
         }
         prevZone = zone;
     }

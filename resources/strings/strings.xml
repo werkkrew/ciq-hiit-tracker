@@ -3,17 +3,6 @@
 	<string id="AppDescription">Orange Theory Workout Tracking</string>
 	<string id="AppVersionLabel">Version</string>
 	
-	<string id="ActivityTypeLabel">Activity Type</string>
-	<string id="ActivityTypePrompt">Select the Activity Type</string>
-	<string id="HRProfileLabel">Heart Rate Profile</string>
-	<string id="HRProfilePrompt">Select Heart Rate Profile</string>
-	<string id="AllowVibrationLabel">Allow Vibration</string>
-
-	<string id="orangetheory">Orange Theory</string>
-	<string id="user_profile_generic">User Generic</string>
-	<string id="user_profile_running">User Running</string>
-	<string id="user_profile_biking">User Biking</string>
-	<string id="user_profile_swimming">User Swimming</string>
 	<string id="yes">Yes</string>
 	<string id="no">No</string>
 	<string id="none">None</string>
@@ -26,10 +15,34 @@
 	<string id="resume_workout">Resume</string>
 	<string id="save_workout">Save</string>
 	<string id="discard_workout">Discard</string>
-	<string id="manual">Manual Selection</string>
+	
+	<string id="ActivityTypeLabel">Activity Type</string>
+	<string id="ActivityTypePrompt">Select the Activity Type</string>
+	<string id="ActivitySubTypeLabel">Activity Sub-type</string>
+	<string id="ActivitySubTypePrompt">Select the Activity Sub-type</string>
+	<string id="HRProfileLabel">Heart Rate Profile</string>
+	<string id="HRProfilePrompt">Select Heart Rate Profile</string>
+	<string id="AllowVibrationLabel">Allow Vibration</string>
+
+	<string id="orangetheory">Orange Theory</string>
+	<string id="user_profile_generic">User Generic</string>
+	<string id="user_profile_running">User Running</string>
+	<string id="user_profile_biking">User Biking</string>
+	<string id="user_profile_swimming">User Swimming</string>
+	
+	<string id="activity_default">Default</string>
+	<string id="activity_manual">Manual</string>
+	<string id="activity_running">Running</string>
+	<string id="activity_walking">Walking</string>
+	<string id="activity_rowing">Rowing</string>
+	<string id="activity_cycling">Cycling</string>
+	<string id="activity_training">Training</string>
+	<string id="activity_sub_cardio">Cardio</string>
+	<string id="activity_sub_strength">Strength</string>
+	<string id="activity_sub_flexibility">Flexibility</string>
 	
 	<string id="splat_label">Splat Points</string>
-    <string id="splat_units">Splats</string>
+    <string id="splat_units">Splat Points</string>
 
 	<string id="start_session_no_hr">No HR Detected, Start Anyway?</string>
     <string id="start_workout">START BURNING!</string>
@@ -60,7 +73,5 @@
     <string id="Summary_avgHR_val">0</string>
     <string id="Summary_maxHR_val">0</string>
     <string id="Summary_TE">TE:</string>
-    <string id="Summary_TE_val">None</string>
-    
-    
+    <string id="Summary_TE_val">None</string>   
 </strings>

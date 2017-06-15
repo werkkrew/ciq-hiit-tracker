@@ -20,6 +20,24 @@ module Prefs {
         HR_USER_BIKING = 3,
         HR_USER_SWIMMING = 4
     }
+    
+    //! Activity Types
+    enum {
+        ACT_DEFAULT = 0,
+        ACT_TRAINING = 1,
+        ACT_RUNNING = 2,
+        ACT_WALKING = 3,
+        ACT_ROWING = 4, 
+        ACT_CYCLING = 5,
+        ACT_MANUAL = 6
+    }
+    
+    //! Sub-Activity Types
+    enum {
+        SUB_CARDIO = 0,
+        SUB_STRENGTH = 1,
+        SUB_FLEXIBILITY = 2
+    }        
 
     //! Store activity type
     function setActivityType(type) {
@@ -28,7 +46,19 @@ module Prefs {
 
     //! Get activity type
     function getActivityType() {
-        App.getApp().getNumber(ACTIVITY_TYPE, 0, 0, 100);
+        var type = getNumber(ACTIVITY_TYPE, 0, 0, 100);
+        return type;
+    }
+    
+    //! Store activity sub-type
+    function setActivitySubType(type) {
+        App.getApp().setProperty(ACTIVITY_SUB_TYPE, type);
+    }
+
+    //! Get activity sub-type
+    function getActivitySubType() {
+        var subType = getNumber(ACTIVITY_SUB_TYPE, 0, 0, 100);
+        return subType;
     }
 
     //! Store Heart Rate Profile
@@ -114,6 +144,7 @@ module Prefs {
 
     // Settings name, see resources/settings.xml
     const ACTIVITY_TYPE = "activityType";
+    const ACTIVITY_SUB_TYPE = "activitySubType";
     const HR_PROFILE = "hrProfile";
     const ALLOW_VIBRATION = "allowVibration";
 

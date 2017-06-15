@@ -7,7 +7,7 @@
 
 ### Description
 
-This Garmin Connect IQ App provides a display on your Garmin Device which closely matches the display seen on the screens in Orange Theory Fitness studios.  It is intended to be used in-studio along with any of the official OTF heart rate monitors.  Devices equipped with internal HRM's can use this sensor as well but it is not as accurate.  The app will record an activity of type "SPORT_TRAINING" and sub-type "CARDIO".  This activity and it's FIT data can be saved and sync'd with Garmin Connect just as any other fitness tracking app does.
+This Garmin Connect IQ App provides a display on your Garmin Device which closely matches the display seen on the screens in Orange Theory Fitness studios.  It is intended to be used in-studio along with any of the official OTF heart rate monitors.  Devices equipped with internal HRM's can use this sensor as well but it is not as accurate.  By default the app will record an activity of type Treadmill Running but can be changed by the user.  This activity and it's FIT data can be saved and sync'd with Garmin Connect just as any other fitness tracking app does.
 
 * [Orange Theory App on the Connect IQ Store](https://apps.garmin.com/en-US/apps/b886d2ac-2f94-4f9d-a7bd-85a59b99e639)
 
@@ -44,8 +44,9 @@ This Garmin Connect IQ App provides a display on your Garmin Device which closel
 **Menu Options and Settings**
 *The menu can only be accessed while on the splash screen*
 
-* Heart Rate Zones - Choose between the official Orange Theory Zone model or your User Profile Defined Model
-* Allow Vibration - Enable or Disable Vibration.  Enabling presents cues at start/stop of workout and when falling into the blue zone or going up into the orange/red zone.
+* Activity Type - Select the type of activity the workout will be recorded as
+* Heart Rate Zones - Choose between the official Orange Theory Zone model or your User Profile Defined Models
+* Allow Vibration - Enable or Disable Vibration.  Enabling presents cues at start/stop of workout and when falling into the blue zone or going up into the orange/red zone
 
 **Buttons and Interactions**
 * On touchscreen devices tapping the screen will toggle the device back light (if equipped).
@@ -90,6 +91,12 @@ Pull requests and translations are welcomed!
 ### Version History and Changelog
 
 *This app is tested on a Garmin Vivoactive® HR*
+
+**v1.2.0 - 6/15/2017**
+
+* Added setting to allow user selection of the activity recording type.  Now defaults to Treadmill Running
+* Vibration Updates, changed vibration profiles to be more easily recognizable as to what they mean
+* Prevent back-to-back vibration events when heart rate is going between two zones relatively quickly
 
 **v1.1.2 - 6/15/2017**
 

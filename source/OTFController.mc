@@ -10,11 +10,6 @@ using Toybox.Attention as Attention;
 using Toybox.Time as Time;
 using Toybox.Lang as Lang;
 
-// Preferences
-var activityType;
-//var hrProfile;
-var allowVibration;
-
 // Globals
 var confirmation;
 
@@ -26,6 +21,7 @@ class OTFController
 
     hidden var mTimer;
     hidden var backlightTimer;
+    hidden var allowVibration;
 
     //! Initialize the controller
     function initialize() {
@@ -173,12 +169,12 @@ class OTFController
     //! This can be called from the app when the settings have changed.
     function loadPreferences() {
         Log.debug("Preferences Loading");
+        // Set HR zones as per preferences
         mModel.setZones(Prefs.getHRProfile());
-        //hrProfile = Prefs.getHRProfile();
-        
+        // Set Activity Recording Type 
+        mModel.setActivity(Prefs.getActivityType(), Prefs.getActivitySubType());      
         
         allowVibration = (Attention has :vibrate) && (System.getDeviceSettings().vibrateOn) && (Prefs.getAllowVibration());
-
         Log.debug("Allow Vibration: " + allowVibration);
     }
 
@@ -207,18 +203,44 @@ class OTFController
 
     hidden function notifyShort() {
         turnOnBacklight();
-        if (allowVibration) {
-            Attention.vibrate([
-                new Attention.VibeProfile(100, 400)
-            ]);
-        }
+        vibrate(0);
     }
 
-    function vibrate(duty, length) {
+    function vibrate(style) {
         if (allowVibration) {
-            Attention.vibrate([
-                new Attention.VibeProfile(duty, length)
-            ]);
+            var VibeData = null;
+            if ( style == 0 ) {
+                // Single Short
+                VibeData = 
+                [
+                    new Attention.VibeProfile(100, 250)
+                ];
+            } else if ( style == 1 ) {
+                // Single Long
+                VibeData = 
+                [
+                    new Attention.VibeProfile(100, 2000)
+                ];
+            } else if ( style == 2 ) {
+                // Two Short
+                VibeData = 
+                [
+                    new Attention.VibeProfile(100, 250),
+                    new Attention.VibeProfile(0, 250),
+                    new Attention.VibeProfile(100, 250)
+                ];          
+            } else if ( style == 3 ) {
+                // Three Short
+                VibeData = 
+                [
+                    new Attention.VibeProfile(100, 250),
+                    new Attention.VibeProfile(0, 250),
+                    new Attention.VibeProfile(100, 250),
+                    new Attention.VibeProfile(0, 250),
+                    new Attention.VibeProfile(100, 250)                    
+                ];          
+            }
+            Attention.vibrate(VibeData);
         }
     }
 }

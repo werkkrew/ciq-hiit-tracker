@@ -2,6 +2,23 @@
 	<setting propertyKey="@Properties.appVersion" title="@Strings.AppVersionLabel">
 		<settingConfig type="alphaNumeric" readonly="true" />
 	</setting>
+	<setting propertyKey="@Properties.activityType" title="@Strings.ActivityTypeLabel" prompt="@Strings.ActivityTypePrompt">
+		<settingConfig type="list" required="true">
+			<listEntry value="0">@Strings.activity_default</listEntry>
+			<listEntry value="1">@Strings.activity_training</listEntry>
+			<listEntry value="2">@Strings.activity_running</listEntry>
+			<listEntry value="3">@Strings.activity_walking</listEntry>
+			<listEntry value="4">@Strings.activity_rowing</listEntry>
+			<listEntry value="5">@Strings.activity_cycling</listEntry>
+		</settingConfig>
+	</setting>
+	<setting propertyKey="@Properties.activitySubType" title="@Strings.ActivitySubTypeLabel" prompt="@Strings.ActivitySubTypePrompt">
+		<settingConfig type="list" required="true">
+			<listEntry value="0">@Strings.activity_sub_cardio</listEntry>
+			<listEntry value="1">@Strings.activity_sub_strength</listEntry>
+			<listEntry value="2">@Strings.activity_sub_flexibility</listEntry>
+		</settingConfig>
+	</setting>
 	<setting propertyKey="@Properties.hrProfile" title="@Strings.HRProfileLabel" prompt="@Strings.HRProfilePrompt">
 		<settingConfig type="list" required="true">
 			<listEntry value="0">@Strings.orangetheory</listEntry>
