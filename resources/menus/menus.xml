@@ -8,8 +8,11 @@
 		<menu-item id="VibrationOff">@Strings.no</menu-item>
 	</menu>
 	<menu id="HRProfileMenu">
-		<menu-item id="OTFHR">@Strings.orangetheory</menu-item>
-		<menu-item id="User">@Strings.user_profile</menu-item>
+		<menu-item id="OTF">@Strings.orangetheory</menu-item>
+		<menu-item id="user_generic">@Strings.user_profile_generic</menu-item>
+		<menu-item id="user_running">@Strings.user_profile_running</menu-item>
+		<menu-item id="user_biking">@Strings.user_profile_biking</menu-item>
+		<menu-item id="user_swimming">@Strings.user_profile_swimming</menu-item>
 	</menu>
 	<menu id="EndWorkoutMenu">
 	    <menu-item id="resume">@Strings.resume_workout</menu-item>

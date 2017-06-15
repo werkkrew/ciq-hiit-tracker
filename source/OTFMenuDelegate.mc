@@ -30,12 +30,24 @@ class OTFMenuDelegate extends Ui.MenuInputDelegate {
         }
 
         // Heart Rate Zones
-        if (item == :OTFHR) {
+        if (item == :OTF) {
             Prefs.setHRProfile(Prefs.HR_OTFAPP);
             return true;
         }
-        if (item == :User) {
-            Prefs.setHRProfile(Prefs.HR_USER_PROFILE);
+        if (item == :user_generic) {
+            Prefs.setHRProfile(Prefs.HR_USER_GENERIC);
+            return true;
+        }
+        if (item == :user_running) {
+            Prefs.setHRProfile(Prefs.HR_USER_RUNNING);
+            return true;
+        }
+        if (item == :user_biking) {
+            Prefs.setHRProfile(Prefs.HR_USER_BIKING);
+            return true;
+        }
+        if (item == :user_swimming) {
+            Prefs.setHRProfile(Prefs.HR_USER_SWIMMING);
             return true;
         }
         return false;

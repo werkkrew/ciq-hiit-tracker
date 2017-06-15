@@ -53,43 +53,6 @@ class OTFModel
     hidden var z4pct = 0.84;
     hidden var z5pct = 0.92;
 
-    // Define the HR Zones the same as OTF does (do not use the user zones)
-    // min zone 1, max zone 1, max zone 2, max zone 3, max zone 4, max zone 5
-    hidden function setZones() {
-        if (hrProfile == 1)
-        {
-            mZones = Profile.getHeartRateZones(Profile.HR_ZONE_SPORT_GENERIC);
-            mMaxHR = mZones[5];
-        } else {
-            var birthYear = Profile.getProfile().birthYear;
-            var todayYear = Time.Gregorian.info(Time.today(), Time.FORMAT_SHORT).year;
-            var gender = Profile.getProfile().gender;
-
-            // SDK 2.3.x Simulator Bug?
-            if ( birthYear < 1900 ) {
-                birthYear += 1900;
-            }
-
-            // Get the users age (will not be exact due to Garmin only providing users birth year)
-            // If user has not provided a birth year or the device cannot get the current date
-            // default back to the pre-defined zones
-            if ( birthYear == null || todayYear == null ) {
-                mZones = Profile.getHeartRateZones(Profile.HR_ZONE_SPORT_GENERIC);
-            } else {
-                var userAge = ( todayYear - birthYear );
-                // This is the formula OTF uses to get max HR
-                // The * 1.0 is a hack to force the maxHR type into a float or double because im bad
-                if ( gender == 0 ) {
-                    mMaxHR = ( 230 - userAge ) * 1.0;
-                } else {
-                    mMaxHR = ( 225 - userAge ) * 1.0;
-                }
-
-                mZones = [ (mMaxHR * z1pct), (mMaxHR * z2pct), (mMaxHR * z3pct), (mMaxHR * z4pct), (mMaxHR * z5pct), mMaxHR ];
-            }
-        }
-    }
-
     // Initialize Activity
     function initialize() {
         // Sensor Heart Rate
@@ -110,10 +73,13 @@ class OTFModel
         mZones = new [6];
         // HR Time in Each Zone
         mZoneTimes = new [5];
-        // Create a new FIT recording session
-        mSession = Recording.createSession({:sport=>Recording.SPORT_TRAINING, :subSport=>Recording.SUB_SPORT_CARDIO_TRAINING, :name=>"Orange Theory"});
-        // Create the new FIT fields to record to.
-        mSplatsField = mSession.createField("splat_points", 1, Fit.DATA_TYPE_UINT16, {:mesgType => Fit.MESG_TYPE_RECORD});
+
+        if(Toybox has :ActivityRecording) {
+            // Create a new FIT recording session
+            mSession = Recording.createSession({:sport=>Recording.SPORT_TRAINING, :subSport=>Recording.SUB_SPORT_CARDIO_TRAINING, :name=>"Orange Theory"});
+            // Create the new FIT fields to record to.
+            mSplatsField = mSession.createField("splat_points", 0, Fit.DATA_TYPE_UINT16, {:mesgType => Fit.MESG_TYPE_SESSION, :units => "Splat Points"});
+        }
         // Set up the OTF HR Zones
         setZones();
     }
@@ -139,6 +105,7 @@ class OTFModel
     // Save the current session
     function save() {
         mSession.save();
+        mSession = null;
     }
 
     // Discard the current session
@@ -277,4 +244,52 @@ class OTFModel
         // Increment timer
         mSeconds++;
     }
+
+    // Define the HR Zones as per user preference
+    // If user selects OTF as the mode, we create a custom set of zones
+    // min zone 1, max zone 1, max zone 2, max zone 3, max zone 4, max zone 5
+    hidden function setZones() {
+        if (hrProfile == 1) {
+            mZones = Profile.getHeartRateZones(Profile.HR_ZONE_SPORT_GENERIC);
+            mMaxHR = mZones[5];
+        } else if (hrProfile == 2) {
+            mZones = Profile.getHeartRateZones(Profile.HR_ZONE_SPORT_RUNNING);
+            mMaxHR = mZones[5];
+        } else if (hrProfile == 3) {
+            mZones = Profile.getHeartRateZones(Profile.HR_ZONE_SPORT_BIKING);
+            mMaxHR = mZones[5];
+        } else if (hrProfile == 4) {
+            mZones = Profile.getHeartRateZones(Profile.HR_ZONE_SPORT_SWIMMING);
+            mMaxHR = mZones[5];
+        } else {
+            var birthYear = Profile.getProfile().birthYear;
+            var todayYear = Time.Gregorian.info(Time.today(), Time.FORMAT_SHORT).year;
+            var gender = Profile.getProfile().gender;
+
+            // SDK 2.3.x Simulator Bug?
+            if ( birthYear < 1900 ) {
+                birthYear += 1900;
+            }
+
+            // Get the users age (will not be exact due to Garmin only providing users birth year)
+            // If user has not provided a birth year or the device cannot get the current date
+            // default back to the pre-defined zones
+            if ( birthYear == null || todayYear == null ) {
+                mZones = Profile.getHeartRateZones(Profile.HR_ZONE_SPORT_GENERIC);
+            } else {
+                var userAge = ( todayYear - birthYear );
+                // This is the formula OTF uses to get max HR
+                // The * 1.0 is a hack to force the maxHR type into a float or double because im bad
+                if ( gender == 0 ) {
+                    mMaxHR = ( 230 - userAge ) * 1.0;
+                } else {
+                    mMaxHR = ( 225 - userAge ) * 1.0;
+                }
+
+                mZones = [ (mMaxHR * z1pct), (mMaxHR * z2pct), (mMaxHR * z3pct), (mMaxHR * z4pct), (mMaxHR * z5pct), mMaxHR ];
+            }
+        }
+        Log.debug("Heart Rate Zones Set: " + hrProfile);
+    }
+
 }

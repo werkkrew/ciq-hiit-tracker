@@ -42,6 +42,7 @@ class OTFApp extends App.AppBase {
 
     //! New app settings have been received
     function onSettingsChanged() {
+        Log.debug("Settings Changed");
         controller.loadPreferences();
         Ui.requestUpdate();
     }

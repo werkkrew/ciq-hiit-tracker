@@ -1,6 +1,7 @@
 //! Preferences Module from 7-Minute App: https://bitbucket.org/obagot/connectiq-hict/
 
 using Toybox.Application as App;
+using Toybox.FitContributor as Fit;
 
 //! Preferences utility.
 module Prefs {
@@ -14,12 +15,20 @@ module Prefs {
     //! List of HR Profiles
     enum {
         HR_OTFAPP = 0,
-        HR_USER_PROFILE = 1
+        HR_USER_GENERIC = 1,
+        HR_USER_RUNNING = 2,
+        HR_USER_BIKING = 3,
+        HR_USER_SWIMMING = 4
     }
 
     //! Store activity type
     function setActivityType(type) {
         App.getApp().setProperty(ACTIVITY_TYPE, type);
+    }
+
+    //! Get activity type
+    function getActivityType() {
+        App.getApp().getNumber(ACTIVITY_TYPE, 0, 0, 100);
     }
 
     //! Store Heart Rate Profile
@@ -29,7 +38,7 @@ module Prefs {
 
     //! Get Heart Rate Profile
     function getHRProfile() {
-        var profile = getNumber(HR_PROFILE, 0, 0, 999);
+        var profile = getNumber(HR_PROFILE, 0, 0, 5);
         return profile;
     }
 

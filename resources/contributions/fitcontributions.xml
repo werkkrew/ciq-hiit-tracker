@@ -1,4 +1,3 @@
 <fitContributions>        
-        <fitField id="1" displayInActivitySummary="true" sortOrder = "1" precision="-1"
-        dataLabel="@Strings.splat_label" unitLabel="@Strings.splat_units"  />        
+        <fitField id="0" displayInActivitySummary="true" sortOrder = "0" precision="0" dataLabel="@Strings.splat_label" unitLabel="@Strings.splat_units"  />        
 </fitContributions>

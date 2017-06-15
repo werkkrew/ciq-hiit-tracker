@@ -14,6 +14,8 @@ using Toybox.Lang as Lang;
 var activityType;
 var hrProfile;
 var allowVibration;
+
+// Globals
 var confirmation;
 
 class OTFController
@@ -30,9 +32,14 @@ class OTFController
         var AppName = Ui.loadResource(Rez.Strings.AppName);
         var AppVersion = Ui.loadResource(Rez.Strings.AppVersion);
 
+        Log.debug("App: " + AppName);
+        Log.debug("Version: " + AppVersion);
+
         // Connect to Heart Rate Sensor
         Sensor.enableSensorEvents(method(:onSensor));
         Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE]);
+
+        Log.debug("Heart Rate Sensor Enabled");
 
         // Allocate a timer
         mTimer = null;
@@ -165,8 +172,12 @@ class OTFController
     //! Load preferences for the view from the object store.
     //! This can be called from the app when the settings have changed.
     function loadPreferences() {
+        Log.debug("Preferences Loaded");
         hrProfile = Prefs.getHRProfile();
         allowVibration = (Attention has :vibrate) && (System.getDeviceSettings().vibrateOn) && (Prefs.getAllowVibration());
+
+        Log.debug("HR Profile: " + hrProfile);
+        Log.debug("Allow Vibration: " + allowVibration);
     }
 
     //! Turn on backlight.

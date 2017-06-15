@@ -10,8 +10,10 @@
 	<string id="AllowVibrationLabel">Allow Vibration</string>
 
 	<string id="orangetheory">Orange Theory</string>
-	<string id="manual">Manual Selection</string>
-	<string id="user_profile">User Profile</string>
+	<string id="user_profile_generic">User Generic</string>
+	<string id="user_profile_running">User Running</string>
+	<string id="user_profile_biking">User Biking</string>
+	<string id="user_profile_swimming">User Swimming</string>
 	<string id="yes">Yes</string>
 	<string id="no">No</string>
 	<string id="none">None</string>
@@ -24,6 +26,7 @@
 	<string id="resume_workout">Resume</string>
 	<string id="save_workout">Save</string>
 	<string id="discard_workout">Discard</string>
+	<string id="manual">Manual Selection</string>
 	
 	<string id="splat_label">Splat Points</string>
     <string id="splat_units">Splats</string>

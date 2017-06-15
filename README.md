@@ -93,6 +93,7 @@ Pull requests and translations are welcomed!
 **v1.1.2 - 6/14/2017**
 
 * Forerunner 630 Support
+* Corrections to custom FIT field for Splat Points
 
 **v1.1.1 - 6/14/2017**
 
