@@ -29,15 +29,28 @@ This Garmin Connect IQ App provides a display on your Garmin Device which closel
 ![Capture](dist/graphics/capt_semi_01.png)
 ![Capture](dist/graphics/capt_semi_02.png)
 
+**Round**
+
+![Capture](dist/graphics/capt_circ_01.png)
+![Capture](dist/graphics/capt_circ_02.png)
+![Capture](dist/graphics/capt_circ_03.png)
+
 ### Supported Devices
 
-* Vivoactive HR
-* Vivoactive
-* Forerunner 920XT
-* Forerunner 230
-* Forerunner 235
-* Forerunner 735XT
-* Forerunner 630
+* Vivoactive® HR
+* Vivoactive®
+* Forerunner® 920XT
+* Forerunner® 230
+* Forerunner® 235
+* Forerunner® 735XT
+* Forerunner® 630
+* fenix® 3
+* fenix® 3 HR
+* fenix® 5S
+* D2® Bravo
+* D2® Bravo Titanium
+* tactix® Bravo
+* quatix® 3
 
 ### How-To
 
