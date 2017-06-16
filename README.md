@@ -37,20 +37,19 @@ This Garmin Connect IQ App provides a display on your Garmin Device which closel
 
 ### Supported Devices
 
-* Vivoactive® HR
-* Vivoactive®
-* Forerunner® 920XT
-* Forerunner® 230
-* Forerunner® 235
-* Forerunner® 735XT
-* Forerunner® 630
-* fenix® 3
-* fenix® 3 HR
-* fenix® 5S
-* D2® Bravo
-* D2® Bravo Titanium
-* tactix® Bravo
-* quatix® 3
+* Vivoactiveï¿½ HR
+* Vivoactiveï¿½
+* Forerunnerï¿½ 920XT
+* Forerunnerï¿½ 230
+* Forerunnerï¿½ 235
+* Forerunnerï¿½ 735XT
+* Forerunnerï¿½ 630
+* fenixï¿½ 3
+* fenixï¿½ 3 HR
+* D2ï¿½ Bravo
+* D2ï¿½ Bravo Titanium
+* tactixï¿½ Bravo
+* quatixï¿½ 3
 
 ### How-To
 
@@ -103,7 +102,12 @@ Pull requests and translations are welcomed!
 
 ### Version History and Changelog
 
-*This app is tested on a Garmin Vivoactive® HR*
+*This app is tested on a Garmin Vivoactiveï¿½ HR*
+
+**v1.2.1 - 6/16/2017**
+
+* Added Fenix 3 and other round watch support
+* Fixed an issue with incorrect version build uploaded for 1.2.0
 
 **v1.2.0 - 6/15/2017**
 
