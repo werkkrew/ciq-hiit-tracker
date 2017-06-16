@@ -1,6 +1,7 @@
 <fonts>
 	<font id="klavika_numbers_bold_110" filename="klavika_bold_numbers_110.fnt" filter="0123456789" antialias="true" />
 	<font id="klavika_numbers_bold_90" filename="klavika_bold_numbers_90.fnt" filter="0123456789" antialias="true" />
+	<font id="klavika_numbers_regular_24" filename="klavika_regular_numbers_24.fnt" filter="0123456789%:" antialias="true" />
 	<font id="klavika_italic_18" filename="klavika_italic_18.fnt" filter=" STARBUNIG!" antialias="true" />
 	<font id="klavika_italic_26" filename="klavika_italic_26.fnt" filter=" %" antialias="true" />
 </fonts>
