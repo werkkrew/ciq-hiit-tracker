@@ -46,6 +46,8 @@ This Garmin Connect IQ App provides a display on your Garmin Device which closel
 * Forerunner� 630
 * fenix� 3
 * fenix� 3 HR
+* fenix� 5S
+* fenix� 5 Chronos
 * D2� Bravo
 * D2� Bravo Titanium
 * tactix� Bravo
@@ -103,6 +105,11 @@ Pull requests and translations are welcomed!
 ### Version History and Changelog
 
 *This app is tested on a Garmin Vivoactive� HR*
+
+**v1.2.2 - 6/16/2017**
+
+* Added Fenix 5S and Fenix Chronos Support
+* Added Round 240x240 Watch support
 
 **v1.2.1 - 6/16/2017**
 
