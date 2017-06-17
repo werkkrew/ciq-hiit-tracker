@@ -73,7 +73,7 @@
 		<drawable id="ReviewSummaryShapes" />
 		
 		<drawable id="SummaryZoneBars" class="SummaryZoneBars">
-			<param name="regionHeight">80</param>
+			<param name="regionHeight">70</param>
 			<param name="y">175</param>
 			<param name="width">26</param>
 			<param name="x1">32</param>
@@ -88,10 +88,8 @@
 		<label id="Summary_calories" x="106" y="21" text="@Strings.Summary_calories" font="Gfx.FONT_TINY" color="Gfx.COLOR_DK_GRAY" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
 		<label id="Summary_calories_val" x="112" y="21" text="@Strings.Summary_calories_val" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_LEFT" />
 		
-		<label id="Summary_splat" x="95" y="69" text="@Strings.Summary_splat" font="Gfx.FONT_TINY" color="Gfx.COLOR_DK_GRAY" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
-		<label id="Summary_splat_val" x="101" y="69" text="@Strings.Summary_splat_val" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_LEFT" />
-		<label id="Summary_TE" x="143" y="69" text="@Strings.Summary_TE" font="Gfx.FONT_TINY" color="Gfx.COLOR_DK_GRAY" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
-		<label id="Summary_TE_val" x="149" y="69" text="@Strings.Summary_TE_val" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_LEFT" />	
+		<label id="Summary_splat" x="106" y="69" text="@Strings.Summary_splat" font="Gfx.FONT_TINY" color="Gfx.COLOR_DK_GRAY" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
+		<label id="Summary_splat_val" x="112" y="69" text="@Strings.Summary_splat_val" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_LEFT" />
 				
 		<label id="Summary_avgHR" x="106" y="37" text="@Strings.Summary_avgHR" font="Gfx.FONT_TINY" color="Gfx.COLOR_DK_GRAY" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
 		<label id="Summary_avgHR_val" x="112" y="37" text="@Strings.Summary_avgHR_val" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_LEFT" />	

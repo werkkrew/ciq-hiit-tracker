@@ -5,12 +5,6 @@
 	
 	<string id="yes">Yes</string>
 	<string id="no">No</string>
-	<string id="none">None</string>
-	<string id="minor">Minor</string>
-	<string id="maintain">Maintain</string>
-	<string id="improving">Improving</string>
-	<string id="h_improving">Highly Imp.</string>
-	<string id="overreaching">Overreaching</string>
 	<string id="percent">%</string>
 	<string id="resume_workout">Resume</string>
 	<string id="save_workout">Save</string>
@@ -72,6 +66,4 @@
     <string id="Summary_maxHR">Max. HR:</string>
     <string id="Summary_avgHR_val">0</string>
     <string id="Summary_maxHR_val">0</string>
-    <string id="Summary_TE">TE:</string>
-    <string id="Summary_TE_val">None</string>   
 </strings>

@@ -48,7 +48,7 @@
 		<drawable id="ReviewSummaryShapes" />
 		
 		<drawable id="SummaryZoneBars" class="SummaryZoneBars">
-			<param name="regionHeight">80</param>
+			<param name="regionHeight">90</param>
 			<param name="y">190</param>
 			<param name="width">24</param>
 			<param name="x1">4</param>
@@ -67,9 +67,7 @@
 		<label id="Summary_avgHR" x="74" y="47" text="@Strings.Summary_avgHR" font="Gfx.FONT_TINY" color="Gfx.COLOR_DK_GRAY" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
 		<label id="Summary_avgHR_val" x="82" y="47" text="@Strings.Summary_avgHR_val" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_LEFT" />	
 		<label id="Summary_maxHR" x="74" y="63" text="@Strings.Summary_maxHR" font="Gfx.FONT_TINY" color="Gfx.COLOR_DK_GRAY" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
-		<label id="Summary_maxHR_val" x="82" y="63" text="@Strings.Summary_maxHR_val" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_LEFT" />
-		<label id="Summary_TE" x="74" y="79" text="@Strings.Summary_TE" font="Gfx.FONT_TINY" color="Gfx.COLOR_DK_GRAY" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
-		<label id="Summary_TE_val" x="82" y="79" text="@Strings.Summary_TE_val" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_LEFT" />		
+		<label id="Summary_maxHR_val" x="82" y="63" text="@Strings.Summary_maxHR_val" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_LEFT" />		
 
 		<label id="Summary_tz1_text" x="15" y="188" text="@Strings.Summary_tz1" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_CENTER" />
 		<label id="Summary_tz2_text" x="45" y="188" text="@Strings.Summary_tz2" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_CENTER" />

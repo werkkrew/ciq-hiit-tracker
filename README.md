@@ -79,7 +79,7 @@ This Garmin Connect IQ App provides a display on your Garmin Device which closel
 
 ### To Do and Planned Features
 
-* Support Additional Devices
+* Allow the 4 statistics shown during a workout to be user selectable from a list of desirable stats
 * Potentially allow for manual activity selection / switching during a workout
 
 ### Bugs and Feature Requests
@@ -106,10 +106,14 @@ Pull requests and translations are welcomed!
 
 *This app is tested on a Garmin Vivoactive� HR*
 
+**v1.2.3 - 6/16/2017**
+
+* Removed "Training Effect" statistic from summary.  It did not seem to return a useful value most of the time.
+
 **v1.2.2 - 6/16/2017**
 
 * Added Fenix 5S and Fenix Chronos Support
-* Added Round 240x240 Watch support
+* Added Round 240x240 Watch support including Approach S60
 
 **v1.2.1 - 6/16/2017**
 

@@ -20,7 +20,6 @@ class OTFReviewView extends Ui.View {
     hidden var peakHR = null;
     hidden var peakHRPct = null;
     hidden var splatPoints = null;
-    hidden var trainingEffect = null;
     hidden var zoneTimes = null;
     hidden var zoneColors = null;
 
@@ -36,7 +35,6 @@ class OTFReviewView extends Ui.View {
     hidden var uiSplat = null;
     hidden var uiAvgHR = null;
     hidden var uiMaxHR = null;
-    hidden var uiTE = null;
 
     function initialize() {
         View.initialize();
@@ -62,8 +60,6 @@ class OTFReviewView extends Ui.View {
         uiSplat = View.findDrawableById("Summary_splat_val");
         uiAvgHR = View.findDrawableById("Summary_avgHR_val");
         uiMaxHR = View.findDrawableById("Summary_maxHR_val");
-        uiTE = View.findDrawableById("Summary_TE_val");
-
 
         elapsedTime = mModel.getTimeElapsed();
         calories = mModel.calories;
@@ -72,7 +68,6 @@ class OTFReviewView extends Ui.View {
         peakHR = mModel.peakHR;
         peakHRPct = mModel.peakHRPct;
         splatPoints = mModel.splatPoints;
-        trainingEffect = mModel.trainingEffect;
         zoneTimes = mModel.zoneTimes;
         zoneColors = [ Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLUE, Gfx.COLOR_GREEN, Gfx.COLOR_ORANGE, Gfx. COLOR_DK_RED ];
     }
@@ -93,7 +88,6 @@ class OTFReviewView extends Ui.View {
         uiSplat.setText(Lang.format("$1$", [splatPoints]));
         uiAvgHR.setText(Lang.format("$1$% ($2$)", [averageHRPct.format("%.2d"), averageHR]));
         uiMaxHR.setText(Lang.format("$1$% ($2$)", [peakHRPct.format("%.2d"), peakHR]));
-        uiTE.setText(Lang.format("$1$", [teString(trainingEffect)]));
 
         drawSummaryBars(zoneTimes, zoneColors);
 
@@ -109,37 +103,21 @@ class OTFReviewView extends Ui.View {
 
     //! Calculate the height of the bars
     function drawSummaryBars(times, colors) {
-        var regionHeight = uiZoneBars.regionHeight;
+        var regionHeight = uiZoneBars.regionHeight * 1.0;
         var barHeight = 0;
 
         uiZoneBars.colors = zoneColors;
 
+        //times = [60, 300, 600, 1800, 3600];
         for( var i = 0; i < times.size(); i++ ) {
-            barHeight = Math.round((regionHeight / 60) * ((times[i] / 60) * 1.5));
+            barHeight = Math.round((regionHeight / 60) * (times[i] / 60));
 
             // Make very small bars more visible
             if ( barHeight > 0 ) {
                 barHeight = barHeight + 5;
             }
+
             uiZoneBars.heights[i] = barHeight;
         }
     }
-
-    function teString(te) {
-        if ( te == null || te == 0 ) {
-            return Ui.loadResource(Rez.Strings.none);
-        } else if ( te < 1.9 ) {
-            return Ui.loadResource(Rez.Strings.minor);
-        } else if ( te > 1.9 && te < 2.9 ) {
-            return Ui.loadResource(Rez.Strings.maintain);
-        } else if ( te > 2.9 && te < 3.9 ) {
-            return Ui.loadResource(Rez.Strings.improving);
-        } else if ( te > 3.9 < te < 4.9 ) {
-            return Ui.loadResource(Rez.Strings.h_improving);
-        } else {
-            return Ui.loadResource(Rez.Strings.overreaching);
-        }
-        return Ui.loadResource(Rez.Strings.none);
-    }
-
 }

@@ -37,7 +37,6 @@ class OTFModel
     var peakHR;
     var peakHRPct;
     var splatPoints;
-    var trainingEffect;
     var zoneTimes;
 
     //Time in Zones
@@ -200,12 +199,6 @@ class OTFModel
                 splatPoints = 0;
             }
 
-            if ( activity.trainingEffect != null ) {
-                trainingEffect = activity.trainingEffect;
-            } else {
-                trainingEffect = 0;
-            }
-
             zoneTimes = mZoneTimes;
         }
     }
@@ -295,11 +288,11 @@ class OTFModel
         }
         Log.debug("Heart Rate Zones Set: " + profile);
     }
-    
+
     // Set the recording activity type as per user preferences
     function setActivity(type, subType) {
         if(Toybox has :ActivityRecording) {
-            
+
             // Default and Treadmill Running
             if ( type == 0 || type == 2) {
                 type = Recording.SPORT_RUNNING;
@@ -311,7 +304,7 @@ class OTFModel
                 } else if ( subType == 1 ) {
                     subType = Recording.SUB_SPORT_STRENGTH_TRAINING;
                 } else if ( subType == 2 ) {
-                    subType = Recording.SUB_SPORT_FLEXIBILITY_TRAINING;         
+                    subType = Recording.SUB_SPORT_FLEXIBILITY_TRAINING;
                 }
             } else if ( type == 3 ) {
                 type = Recording.SPORT_WALKING;
@@ -323,12 +316,12 @@ class OTFModel
                 type = Recording.SPORT_CYCLING;
                 subType = Recording.SUB_SPORT_INDOOR_CYCLING;
             }
- 
+
             // Create a new FIT recording session
             mSession = Recording.createSession({:sport=>type, :subSport=>subType, :name => Ui.loadResource(Rez.Strings.orangetheory)});
             // Create the new FIT fields to record to.
             mSplatsField = mSession.createField("splat_points", 0, Fit.DATA_TYPE_UINT16, {:mesgType => Fit.MESG_TYPE_SESSION, :units => Ui.loadResource(Rez.Strings.splat_units)});
-            
+
             Log.debug("Activity Recording Type: " + type + " Sub: " + subType);
         }
     }
