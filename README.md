@@ -11,6 +11,20 @@ This Garmin Connect IQ App provides a display on your Garmin Device which closel
 
 * [Orange Theory App on the Connect IQ Store](https://apps.garmin.com/en-US/apps/b886d2ac-2f94-4f9d-a7bd-85a59b99e639)
 
+### Calculations and Accuracy
+
+The output of this app should very closely match that of the OTF Workout Summary.  It may not be exact in all cases and is meant to be as close as possible.
+
+* Max HR is calculated as per Orange Theory's method which is: (230 - Age) for Females and (225 - Age) for Males
+* HR Zone Thresholds are: Blue - 61%, Green 71%, Orange 84%, Red 92%
+* Calories Burned are calculated using Garmin's algorithms, not OTF's.  This is because I do not know how to override that field in the FIT recording file.
+* Splat Points are the total time in seconds in the Orange + Red Zones, rounded to the nearest minute.
+* Splat Points are usually 1-2 low for the duration of the workout.  I believe this is because I use BPM to calculate time in zone and OTF might use percentage which is rounded.
+
+Heart Rate Stability
+
+During particularly crowded sessions my Vivoactive HR has trouble staying connected to my Scosche Rhythm+.  I believe it is due to interference with so many ANT devices in one room, but this is not something I can solve in my app, as the sensor connectivity is a base feature of the device.  To compensate I have added a "Heart Rate Stabilizier" feature which is on by default but can be disabled.  Essentially this will continue to use the last known heart rate for up to 10 seconds if the sensor disconnects.  Generally speaking when the sensor disconnects it seems to reconnect quite quickly so hopefully this feature will help the app produce more stable results during crowded sessions.
+
 ### Screenshots
 
 **Tall**
@@ -61,6 +75,7 @@ This Garmin Connect IQ App provides a display on your Garmin Device which closel
 * Activity Type - Select the type of activity the workout will be recorded as.  The Activity Sub-Type setting only applies to the "Training" Activity.
 * Heart Rate Zones - Choose between the official Orange Theory Zone model or your User Profile Defined Models
 * Allow Vibration - Enable or Disable Vibration.  Enabling presents cues at start/stop of workout and when falling into the blue zone or going up into the orange/red zone
+* Heart Rate Stability - Enable or Disable, default is on.
 
 **Buttons and Interactions**
 * On touchscreen devices tapping the screen will toggle the device back light (if equipped).
@@ -86,16 +101,6 @@ This Garmin Connect IQ App provides a display on your Garmin Device which closel
 
 To report a bug or request a feature please use the Github issue tracker associated with this repository. 
 
-### Calculations and Accuracy
-
-The output of this app should very closely match that of the OTF Workout Summary.  It may not be exact in all cases and is meant to be as close as possible.
-
-* Max HR is calculated as per Orange Theory's method which is: (230 - Age) for Females and (225 - Age) for Males
-* HR Zone Thresholds are: Blue - 61%, Green 71%, Orange 84%, Red 92%
-* Calories Burned are calculated using Garmin's algorithms, not OTF's.  This is because I do not know how to override that field in the FIT recording file.
-* Splat Points are the total time in seconds in the Orange + Red Zones, rounded to the nearest minute.
-* Splat Points are usually 1-2 low for the duration of the workout.  I believe this is because I use BPM to calculate time in zone and OTF might use percentage which is rounded.
-
 ### Development
 
 Source code is made available under the [MIT license](https://opensource.org/licenses/MIT).
@@ -105,6 +110,10 @@ Pull requests and translations are welcomed!
 ### Version History and Changelog
 
 *This app is tested on a Garmin Vivoactive� HR*
+
+**v1.2.4 - 6/19/2017**
+
+* Heart Rate Stability Feature (See description for additional details)
 
 **v1.2.3 - 6/16/2017**
 

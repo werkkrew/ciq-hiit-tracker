@@ -171,9 +171,12 @@ class OTFController
         Log.debug("Preferences Loading");
         // Set HR zones as per preferences
         mModel.setZones(Prefs.getHRProfile());
-        // Set Activity Recording Type 
-        mModel.setActivity(Prefs.getActivityType(), Prefs.getActivitySubType());      
-        
+        // Set Activity Recording Type
+        mModel.setActivity(Prefs.getActivityType(), Prefs.getActivitySubType());
+        // Set HR Stability
+        mModel.setStability(Prefs.getHRStability());
+        Log.debug("HR Stability: " + Prefs.getHRStability());
+
         allowVibration = (Attention has :vibrate) && (System.getDeviceSettings().vibrateOn) && (Prefs.getAllowVibration());
         Log.debug("Allow Vibration: " + allowVibration);
     }
@@ -211,34 +214,34 @@ class OTFController
             var VibeData = null;
             if ( style == 0 ) {
                 // Single Short
-                VibeData = 
+                VibeData =
                 [
                     new Attention.VibeProfile(100, 250)
                 ];
             } else if ( style == 1 ) {
                 // Single Long
-                VibeData = 
+                VibeData =
                 [
                     new Attention.VibeProfile(100, 2000)
                 ];
             } else if ( style == 2 ) {
                 // Two Short
-                VibeData = 
+                VibeData =
                 [
                     new Attention.VibeProfile(100, 250),
                     new Attention.VibeProfile(0, 250),
                     new Attention.VibeProfile(100, 250)
-                ];          
+                ];
             } else if ( style == 3 ) {
                 // Three Short
-                VibeData = 
+                VibeData =
                 [
                     new Attention.VibeProfile(100, 250),
                     new Attention.VibeProfile(0, 250),
                     new Attention.VibeProfile(100, 250),
                     new Attention.VibeProfile(0, 250),
-                    new Attention.VibeProfile(100, 250)                    
-                ];          
+                    new Attention.VibeProfile(100, 250)
+                ];
             }
             Attention.vibrate(VibeData);
         }

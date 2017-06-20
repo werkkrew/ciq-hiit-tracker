@@ -31,4 +31,7 @@
 	<setting propertyKey="@Properties.allowVibration" title="@Strings.AllowVibrationLabel">
 		<settingConfig type="boolean" />
 	</setting>
+	<setting propertyKey="@Properties.hrStability" title="@Strings.HRStabilityLabel">
+		<settingConfig type="boolean" />
+	</setting>
 </settings>

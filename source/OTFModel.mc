@@ -18,6 +18,9 @@ class OTFModel
     hidden var mSeconds;
     hidden var mSession = null;
     hidden var mSplatsField = null;
+    hidden var mStability;
+    hidden var mStabilityTimer;
+    hidden var mStabilityOn;
 
     // Primary stats used during intervals
     hidden var mHeartRate;
@@ -73,6 +76,9 @@ class OTFModel
         mZones = new [6];
         // HR Time in Each Zone
         mZoneTimes = new [5];
+        // Stability is inactive
+        mStabilityOn = false;
+        mStabilityTimer = 0;
     }
 
     // Start session
@@ -147,15 +153,29 @@ class OTFModel
         return mSeconds;
     }
 
+    // Handle controller sensor events
     function setSensor(sensor_info) {
         if( sensor_info has :heartRate ) {
             if( sensor_info.heartRate != null )
             {
                 mHeartRate = sensor_info.heartRate;
+                mStabilityTimer = 0;
+                mStabilityOn = false;
             } else {
-                mHeartRate = 0;
+                // if HR stability is off or the timer has expired
+                if ( mStability == false || mStabilityTimer > 9 ) {
+                    Log.debug("No HR Detected: Stability Off, Stability Timer Expired");
+                    mHeartRate = 0;
+                } else {
+                    mStabilityOn = true;
+                }
             }
         }
+    }
+
+    // HR Stability Setting
+    function setStability(option) {
+        mStability = option;
     }
 
     function setStats() {
@@ -240,6 +260,12 @@ class OTFModel
 
         // Increment timer
         mSeconds++;
+
+        // Increment Stability timer if needed
+        if ( mStabilityOn == true ) {
+            mStabilityTimer++;
+            Log.debug("Stability Mode On, Timer: " + mStabilityTimer);
+        }
     }
 
     // Define the HR Zones as per user preference
