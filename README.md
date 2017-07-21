@@ -111,6 +111,10 @@ Pull requests and translations are welcomed!
 
 *This app is tested on a Garmin Vivoactive� HR*
 
+**v1.2.5 - 7/21/2017**
+
+* Attempt to address bug on some devices where the HR Percentage does not show up.  
+
 **v1.2.4 - 6/19/2017**
 
 * Heart Rate Stability Feature (See description for additional details)

@@ -140,7 +140,7 @@ class OTFModel
 
     // Return the current heart rate in bpm
     function getHRpct() {
-        return Math.round(mHeartRatePct);
+        return Math.round(mHeartRatePct).toNumber();
     }
 
     // Return the current heart rate zone number
@@ -303,6 +303,11 @@ class OTFModel
                 var userAge = ( todayYear - birthYear );
                 // This is the formula OTF uses to get max HR
                 // The * 1.0 is a hack to force the maxHR type into a float or double because im bad
+                // If the user age is out of bounds set it to an age of 30 just for sanity
+                if ( userAge < 1 || userAge > 100 ) {
+                    userAge = 30;
+                }
+
                 if ( gender == 0 ) {
                     mMaxHR = ( 230 - userAge ) * 1.0;
                 } else {

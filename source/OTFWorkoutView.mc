@@ -45,7 +45,7 @@ class OTFWorkoutView extends Ui.View {
         uiHRZoneBackground = null;
         uiHRZoneBars = null;
         uiHRZoneColor = [ Gfx.COLOR_LT_GRAY, Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLUE, Gfx.COLOR_GREEN, Gfx.COLOR_ORANGE, Gfx. COLOR_DK_RED ];
-        
+
         prevZone = 0;
         vibeTime = 0;
     }
@@ -93,7 +93,7 @@ class OTFWorkoutView extends Ui.View {
         if( curZone != null ) {
             uiHRZoneBackground.color = uiHRZoneColor[ curZone ];
             uiHRZoneBars.zone = curZone;
-            
+
             // Prevent back to back vibration events
             if(( time - vibeTime) > 10) {
                 zoneCheck(curZone);
@@ -101,7 +101,7 @@ class OTFWorkoutView extends Ui.View {
         }
 
         uiTimer.setText( timeString );
-        uiHRpctText.setText(Lang.format("$1$", [mModel.getHRpct().format("%.0d")]));
+        uiHRpctText.setText(Lang.format("$1$", [mModel.getHRpct()]));
         uiHRbpmText.setText(Lang.format("$1$", [mModel.getHRbpm()]));
         uiSplatText.setText(Lang.format("$1$", [mModel.getSplats()]));
         uiCaloriesText.setText(Lang.format("$1$", [mModel.getCalories()]));
