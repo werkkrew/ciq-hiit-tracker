@@ -1,7 +1,6 @@
 <properties>
-	<property id="appVersion" type="string">1.2.5</property>
+	<property id="appVersion" type="string">1.2.6</property>
 	<property id="allowVibration" type="boolean">true</property>
-	<property id="hrProfile" type="number">0</property>
 	<property id="hrStability" type="boolean">true</property>
 	<property id="activityType" type="number">0</property>
 	<property id="activitySubType" type="number">0</property>

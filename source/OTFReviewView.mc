@@ -86,8 +86,8 @@ class OTFReviewView extends Ui.View {
         uiTime.setText( timeString );
         uiCalories.setText(Lang.format("$1$", [calories]));
         uiSplat.setText(Lang.format("$1$", [splatPoints]));
-        uiAvgHR.setText(Lang.format("$1$% ($2$)", [averageHRPct.format("%.2d"), averageHR]));
-        uiMaxHR.setText(Lang.format("$1$% ($2$)", [peakHRPct.format("%.2d"), peakHR]));
+        uiAvgHR.setText(Lang.format("$1$% ($2$)", [averageHRPct, averageHR]));
+        uiMaxHR.setText(Lang.format("$1$% ($2$)", [peakHRPct, peakHR]));
 
         drawSummaryBars(zoneTimes, zoneColors);
 

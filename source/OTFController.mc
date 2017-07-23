@@ -169,14 +169,12 @@ class OTFController
     //! This can be called from the app when the settings have changed.
     function loadPreferences() {
         Log.debug("Preferences Loading");
-        // Set HR zones as per preferences
-        mModel.setZones(Prefs.getHRProfile());
         // Set Activity Recording Type
         mModel.setActivity(Prefs.getActivityType(), Prefs.getActivitySubType());
         // Set HR Stability
         mModel.setStability(Prefs.getHRStability());
         Log.debug("HR Stability: " + Prefs.getHRStability());
-
+        // Set Vibration Policy
         allowVibration = (Attention has :vibrate) && (System.getDeviceSettings().vibrateOn) && (Prefs.getAllowVibration());
         Log.debug("Allow Vibration: " + allowVibration);
     }

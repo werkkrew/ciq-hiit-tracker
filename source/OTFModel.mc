@@ -50,11 +50,10 @@ class OTFModel
     hidden var tz5 = 0;
 
     //HR Zone Percentage settings, based on Orange Theory, override user
-    hidden var z1pct = 0.50;
-    hidden var z2pct = 0.61;
-    hidden var z3pct = 0.71;
-    hidden var z4pct = 0.84;
-    hidden var z5pct = 0.92;
+    hidden var blueZone = 0.61;
+    hidden var greenZone = 0.71;
+    hidden var orangeZone = 0.84;
+    hidden var redZone = 0.92;
 
     // Initialize Activity
     function initialize() {
@@ -73,12 +72,15 @@ class OTFModel
         // Time HR is in Orange or Red range
         mSecondsSplat = 0;
         // HR Zones
-        mZones = new [6];
+        mZones = new [4];
         // HR Time in Each Zone
         mZoneTimes = new [5];
         // Stability is inactive
         mStabilityOn = false;
         mStabilityTimer = 0;
+
+        // Define HR Zones
+        setZones();
     }
 
     // Start session
@@ -140,7 +142,7 @@ class OTFModel
 
     // Return the current heart rate in bpm
     function getHRpct() {
-        return Math.round(mHeartRatePct).toNumber();
+        return mHeartRatePct;
     }
 
     // Return the current heart rate zone number
@@ -196,7 +198,7 @@ class OTFModel
 
             if ( activity.averageHeartRate != null ) {
                 averageHR = activity.averageHeartRate;
-                averageHRPct = ( averageHR / mMaxHR ) * 100;
+                averageHRPct = Math.round(( averageHR.toDouble() / mMaxHR.toDouble() ) * 100).toNumber();
             } else {
                 averageHR = 0;
                 averageHRPct = 0;
@@ -204,7 +206,7 @@ class OTFModel
 
             if ( activity.maxHeartRate != null ) {
                 peakHR = activity.maxHeartRate;
-                peakHRPct = ( peakHR / mMaxHR ) * 100;
+                peakHRPct = Math.round(( peakHR.toDouble() / mMaxHR.toDouble() ) * 100).toNumber();
             } else {
                 peakHR = 0;
                 peakHRPct = 0;
@@ -229,24 +231,29 @@ class OTFModel
             return;
         }
 
-        if ( mHeartRate < mZones[1] ) {
+        // Gray Zone
+        if ( mHeartRate < mZones[0] ) {
             tz1++;
             mHeartRateZone = 1;
-        } else if ( mHeartRate > mZones[1] && mHeartRate < mZones[2] ) {
+        // Blue Zone
+        } else if ( mHeartRate < mZones[1] ) {
             tz2++;
             mHeartRateZone = 2;
-        } else if ( mHeartRate > mZones[2] && mHeartRate < mZones[3] ) {
+        // Green Zone
+        } else if ( mHeartRate < mZones[2] ) {
             tz3++;
             mHeartRateZone = 3;
-        } else if ( mHeartRate > mZones[3] && mHeartRate < mZones[4] ) {
+        // Orange Zone
+        } else if ( mHeartRate < mZones[3] ) {
             tz4++;
             mHeartRateZone = 4;
-        } else if ( mHeartRate > mZones[4] ) {
+        } else if ( mHeartRate > mZones[3] ) {
             tz5++;
             mHeartRateZone = 5;
         }
 
-        mHeartRatePct = ( mHeartRate / mMaxHR ) * 100;
+        // Round up and then cast to integer
+        mHeartRatePct = Math.round(( mHeartRate.toDouble() / mMaxHR.toDouble() ) * 100).toNumber();
         mZoneTimes = [ tz1, tz2, tz3, tz4, tz5 ];
 
         // Seconds in splat point zone (HR Zone 4 and 5)
@@ -268,56 +275,49 @@ class OTFModel
         }
     }
 
-    // Define the HR Zones as per user preference
-    // If user selects OTF as the mode, we create a custom set of zones
-    // min zone 1, max zone 1, max zone 2, max zone 3, max zone 4, max zone 5
-    function setZones(profile) {
-        if (profile == 1) {
-            mZones = Profile.getHeartRateZones(Profile.HR_ZONE_SPORT_GENERIC);
-            mMaxHR = mZones[5];
-        } else if (profile == 2) {
-            mZones = Profile.getHeartRateZones(Profile.HR_ZONE_SPORT_RUNNING);
-            mMaxHR = mZones[5];
-        } else if (profile == 3) {
-            mZones = Profile.getHeartRateZones(Profile.HR_ZONE_SPORT_BIKING);
-            mMaxHR = mZones[5];
-        } else if (profile == 4) {
-            mZones = Profile.getHeartRateZones(Profile.HR_ZONE_SPORT_SWIMMING);
-            mMaxHR = mZones[5];
-        } else {
-            var birthYear = Profile.getProfile().birthYear;
-            var todayYear = Time.Gregorian.info(Time.today(), Time.FORMAT_SHORT).year;
-            var gender = Profile.getProfile().gender;
+    // Define the HR Zones as per OTF guidelines
+    // See dist/OrangeTheoryCalculator.java for official calculations
+    hidden function setZones() {
 
-            // SDK 2.3.x Simulator Bug?
-            if ( birthYear < 1900 ) {
-                birthYear += 1900;
-            }
+        var birthYear = Profile.getProfile().birthYear;
+        var todayYear = Time.Gregorian.info(Time.today(), Time.FORMAT_SHORT).year;
+        var gender = Profile.getProfile().gender;
 
-            // Get the users age (will not be exact due to Garmin only providing users birth year)
-            // If user has not provided a birth year or the device cannot get the current date
-            // default back to the pre-defined zones
-            if ( birthYear == null || todayYear == null ) {
-                mZones = Profile.getHeartRateZones(Profile.HR_ZONE_SPORT_GENERIC);
-            } else {
-                var userAge = ( todayYear - birthYear );
-                // This is the formula OTF uses to get max HR
-                // The * 1.0 is a hack to force the maxHR type into a float or double because im bad
-                // If the user age is out of bounds set it to an age of 30 just for sanity
-                if ( userAge < 1 || userAge > 100 ) {
-                    userAge = 30;
-                }
-
-                if ( gender == 0 ) {
-                    mMaxHR = ( 230 - userAge ) * 1.0;
-                } else {
-                    mMaxHR = ( 225 - userAge ) * 1.0;
-                }
-
-                mZones = [ (mMaxHR * z1pct), (mMaxHR * z2pct), (mMaxHR * z3pct), (mMaxHR * z4pct), (mMaxHR * z5pct), mMaxHR ];
-            }
+        // SDK 2.3.x Simulator Bug?
+        if ( birthYear < 1900 ) {
+            birthYear += 1900;
         }
-        Log.debug("Heart Rate Zones Set: " + profile);
+
+        // Get the users age (will not be exact due to Garmin only providing users birth year)
+        // If user has not provided a birth year or the device cannot get the current date
+        // default to OTF max HR of 230
+        if ( birthYear == null || todayYear == null ) {
+            mMaxHR = 230;
+        } else {
+            var userAge = ( todayYear - birthYear );
+
+            // If the user age is out of bounds set it to an age of 30 just for sanity
+            if ( userAge <= 0 || userAge > 120 ) {
+                userAge = 30;
+            }
+
+            if ( gender == 0 ) {
+                Log.debug("User Gender: Female");
+                mMaxHR = ( 230 - userAge );
+            } else {
+                Log.debug("User Gender: Male");
+                mMaxHR = ( 225 - userAge );
+            }
+
+            // If we aren't getting a valid max HR
+            if ( mMaxHR <= 0 || mMaxHR == null ) {
+                mMaxHR = 230;
+            }
+            Log.debug("User Age: " + userAge);
+            Log.debug("Max HR Set to: " + mMaxHR);
+        }
+        // define HR for blue/green/orange/red
+        mZones = [ (mMaxHR * blueZone).toNumber(), (mMaxHR * greenZone).toNumber(), (mMaxHR * orangeZone).toNumber(), (mMaxHR * redZone).toNumber() ];
     }
 
     // Set the recording activity type as per user preferences

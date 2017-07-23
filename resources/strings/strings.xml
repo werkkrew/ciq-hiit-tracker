@@ -14,16 +14,10 @@
 	<string id="ActivityTypePrompt">Select the Activity Type</string>
 	<string id="ActivitySubTypeLabel">Activity Sub-type</string>
 	<string id="ActivitySubTypePrompt">Select the Activity Sub-type</string>
-	<string id="HRProfileLabel">Heart Rate Profile</string>
-	<string id="HRProfilePrompt">Select Heart Rate Profile</string>
 	<string id="AllowVibrationLabel">Allow Vibration</string>
 	<string id="HRStabilityLabel">HR Stabilizer</string>
 
 	<string id="orangetheory">Orange Theory</string>
-	<string id="user_profile_generic">User Generic</string>
-	<string id="user_profile_running">User Running</string>
-	<string id="user_profile_biking">User Biking</string>
-	<string id="user_profile_swimming">User Swimming</string>
 	
 	<string id="activity_default">Default</string>
 	<string id="activity_manual">Manual</string>

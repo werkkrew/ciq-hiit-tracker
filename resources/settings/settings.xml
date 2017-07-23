@@ -19,15 +19,6 @@
 			<listEntry value="2">@Strings.activity_sub_flexibility</listEntry>
 		</settingConfig>
 	</setting>
-	<setting propertyKey="@Properties.hrProfile" title="@Strings.HRProfileLabel" prompt="@Strings.HRProfilePrompt">
-		<settingConfig type="list" required="true">
-			<listEntry value="0">@Strings.orangetheory</listEntry>
-			<listEntry value="1">@Strings.user_profile_generic</listEntry>
-			<listEntry value="2">@Strings.user_profile_running</listEntry>
-			<listEntry value="3">@Strings.user_profile_biking</listEntry>
-			<listEntry value="4">@Strings.user_profile_swimming</listEntry>
-		</settingConfig>
-	</setting>
 	<setting propertyKey="@Properties.allowVibration" title="@Strings.AllowVibrationLabel">
 		<settingConfig type="boolean" />
 	</setting>

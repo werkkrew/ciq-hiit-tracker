@@ -111,6 +111,11 @@ Pull requests and translations are welcomed!
 
 *This app is tested on a Garmin Vivoactive� HR*
 
+**v1.2.6 - 7/22/2017**
+
+* HR Zone options removed.  Uses only the official OTF zone definition now (previously the default) to prevent confusion.  Many people seemed to ask about why things didn't line up as they expected.
+* HR Zone calculation adjustment, hopefully it's more accurate and splat points line up better now.
+
 **v1.2.5 - 7/21/2017**
 
 * Attempt to address bug on some devices where the HR Percentage does not show up.  

@@ -12,15 +12,6 @@ module Prefs {
         MANUAL = 1
     }
 
-    //! List of HR Profiles
-    enum {
-        HR_OTFAPP = 0,
-        HR_USER_GENERIC = 1,
-        HR_USER_RUNNING = 2,
-        HR_USER_BIKING = 3,
-        HR_USER_SWIMMING = 4
-    }
-
     //! Activity Types
     enum {
         ACT_DEFAULT = 0,
@@ -59,17 +50,6 @@ module Prefs {
     function getActivitySubType() {
         var subType = getNumber(ACTIVITY_SUB_TYPE, 0, 0, 100);
         return subType;
-    }
-
-    //! Store Heart Rate Profile
-    function setHRProfile(profile) {
-        App.getApp().setProperty(HR_PROFILE, profile);
-    }
-
-    //! Get Heart Rate Profile
-    function getHRProfile() {
-        var profile = getNumber(HR_PROFILE, 0, 0, 5);
-        return profile;
     }
 
     //! Set vibration policy
@@ -156,7 +136,6 @@ module Prefs {
     // Settings name, see resources/settings.xml
     const ACTIVITY_TYPE = "activityType";
     const ACTIVITY_SUB_TYPE = "activitySubType";
-    const HR_PROFILE = "hrProfile";
     const ALLOW_VIBRATION = "allowVibration";
     const ALLOW_HRSTABILITY = "allowHRStability";
 
