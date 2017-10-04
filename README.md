@@ -50,6 +50,7 @@ During particularly crowded sessions my Vivoactive HR has trouble staying connec
 
 ### Supported Devices
 
+* Vivoactive� 3
 * Vivoactive� HR
 * Vivoactive�
 * Forerunner� 920XT
@@ -109,6 +110,10 @@ Pull requests and translations are welcomed!
 ### Version History and Changelog
 
 *This app is tested on a Garmin Vivoactive� HR*
+
+**v1.3.1 - 10/3/2017**
+
+* Added support for Vivoactive3
 
 **v1.3.0 - 10/3/2017**
 
