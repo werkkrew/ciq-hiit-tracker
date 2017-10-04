@@ -1,5 +1,5 @@
 ## HIIT Tracker
-# Formerly Orange Theory Fitness App
+#### Formerly Orange Theory Fitness App
 **For Garmin Connect IQ**
 
 **This App is Unofficial and was not created by [Orange Theory Fitness](http://www.orangetheoryfitness.com)**
