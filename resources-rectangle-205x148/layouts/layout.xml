@@ -1,7 +1,7 @@
 <layouts>
 	<layout id="SplashScreen">
 		<drawable id="SplashScreenShapes" />
-		<bitmap id="SplashScreenBg" x="center" y="center" filename="../drawables/otf_background.png" dithering="none" >
+		<bitmap id="SplashScreenBg" x="center" y="center" filename="../drawables/hiit_background.png" dithering="none" >
 			<palette disableTransparency="true">
 				<color>000000</color>
 				<color>F58220</color>

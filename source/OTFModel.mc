@@ -349,7 +349,7 @@ class OTFModel
             }
 
             // Create a new FIT recording session
-            mSession = Recording.createSession({:sport=>type, :subSport=>subType, :name => Ui.loadResource(Rez.Strings.orangetheory)});
+            mSession = Recording.createSession({:sport=>type, :subSport=>subType, :name => Ui.loadResource(Rez.Strings.hiit_training)});
             // Create the new FIT fields to record to.
             mSplatsField = mSession.createField("splat_points", 0, Fit.DATA_TYPE_UINT16, {:mesgType => Fit.MESG_TYPE_SESSION, :units => Ui.loadResource(Rez.Strings.splat_units)});
 

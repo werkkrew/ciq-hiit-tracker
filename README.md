@@ -1,4 +1,5 @@
-## Orange Theory Fitness App
+## HIIT Tracker
+# Formerly Orange Theory Fitness App
 **For Garmin Connect IQ**
 
 **This App is Unofficial and was not created by [Orange Theory Fitness](http://www.orangetheoryfitness.com)**
@@ -29,7 +30,6 @@ During particularly crowded sessions my Vivoactive HR has trouble staying connec
 
 **Tall**
 
-![Capture](dist/graphics/capt_tall_01.png)
 ![Capture](dist/graphics/capt_tall_02.png)
 ![Capture](dist/graphics/capt_tall_03.png)
 
@@ -45,7 +45,6 @@ During particularly crowded sessions my Vivoactive HR has trouble staying connec
 
 **Round**
 
-![Capture](dist/graphics/capt_circ_01.png)
 ![Capture](dist/graphics/capt_circ_02.png)
 ![Capture](dist/graphics/capt_circ_03.png)
 
@@ -110,6 +109,12 @@ Pull requests and translations are welcomed!
 ### Version History and Changelog
 
 *This app is tested on a Garmin Vivoactive� HR*
+
+**v1.3.0 - 10/3/2017**
+
+* Removed all branding references to Orange Theory Fitness due to a copyright claim
+* Laid groundwork for additional often requested features
+* Updated to support SDK 2.3.4
 
 **v1.2.6 - 7/22/2017**
 

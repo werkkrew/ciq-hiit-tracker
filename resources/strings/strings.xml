@@ -1,6 +1,6 @@
 <strings>
-	<string id="AppName">OTF</string>
-	<string id="AppDescription">Orange Theory Workout Tracking</string>
+	<string id="AppName">HIIT Tracker</string>
+	<string id="AppDescription">High Intensity Interval Training Tracking</string>
 	<string id="AppVersionLabel">Version</string>
 	
 	<string id="yes">Yes</string>
@@ -17,7 +17,7 @@
 	<string id="AllowVibrationLabel">Allow Vibration</string>
 	<string id="HRStabilityLabel">HR Stabilizer</string>
 
-	<string id="orangetheory">Orange Theory</string>
+	<string id="hiit_training">HIIT Training</string>
 	
 	<string id="activity_default">Default</string>
 	<string id="activity_manual">Manual</string>
@@ -30,8 +30,8 @@
 	<string id="activity_sub_strength">Strength</string>
 	<string id="activity_sub_flexibility">Flexibility</string>
 	
-	<string id="splat_label">Splat Points</string>
-    <string id="splat_units">Splat Points</string>
+	<string id="splat_label">Star Points</string>
+    <string id="splat_units">pts</string>
 
 	<string id="start_session_no_hr">No HR Detected, Start Anyway?</string>
     <string id="start_workout">START BURNING!</string>
@@ -55,7 +55,7 @@
     <string id="Summary_time_val">00:00</string>    
     <string id="Summary_calories">Calories:</string>
     <string id="Summary_calories_val">0</string>    
-    <string id="Summary_splat">Splat Points:</string>
+    <string id="Summary_splat">Star Points:</string>
     <string id="Summary_splat_val">0</string>
     <string id="Summary_avgHR">Avg. HR:</string>
     <string id="Summary_maxHR">Max. HR:</string>

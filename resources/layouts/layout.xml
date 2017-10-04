@@ -1,7 +1,7 @@
 <layouts>
 	<layout id="SplashScreen">
 		<drawable id="SplashScreenShapes" />
-		<bitmap id="SplashScreenBg" x="center" y="center" filename="../drawables/otf_background.png" />	
+		<bitmap id="SplashScreenBg" x="center" y="center" filename="../drawables/hiit_background.png" />	
 		<bitmap id="StatusHRIconWhite" x="5" y="3" filename="../drawables/hr_white_16.png" />
 		<bitmap id="StatusHRIconRed" x="-50" y="3" filename="../drawables/hr_red_16.png" />
 		<label id="StatusTime" x="140" y="0" text="@Strings.StatusBar_time" font="Gfx.FONT_TINY" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_RIGHT" />

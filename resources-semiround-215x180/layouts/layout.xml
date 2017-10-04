@@ -1,7 +1,7 @@
 <layouts>
 	<layout id="SplashScreen">
 		<drawable id="SplashScreenShapes" />
-		<bitmap id="SplashScreenBg" x="center" y="center" filename="../drawables/otf_background.png" />
+		<bitmap id="SplashScreenBg" x="center" y="center" filename="../drawables/hiit_background.png" />
 		<bitmap id="StatusHRIconWhite" x="42" y="3" filename="../drawables/hr_white_16.png" dithering="none">
 			<palette>
 				<color>FFFFFF</color>
