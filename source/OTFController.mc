@@ -10,9 +10,6 @@ using Toybox.Attention as Attention;
 using Toybox.Time as Time;
 using Toybox.Lang as Lang;
 
-// Globals
-var confirmation;
-
 class OTFController
 {
     hidden var mModel;
@@ -22,6 +19,8 @@ class OTFController
     hidden var mTimer;
     hidden var backlightTimer;
     hidden var allowVibration;
+    
+    var confirmed;
 
     //! Initialize the controller
     function initialize() {
@@ -32,8 +31,8 @@ class OTFController
         Log.debug("Version: " + AppVersion);
 
         // Connect to Heart Rate Sensor
-        Sensor.enableSensorEvents(method(:onSensor));
         Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE]);
+        Sensor.enableSensorEvents(method(:onSensor));
 
         Log.debug("Heart Rate Sensor Enabled");
 
@@ -45,7 +44,7 @@ class OTFController
         // We are not running (yet)
         mRunning = false;
         backlightTimer = null;
-        confirmation = false;
+        confirmed = false;
     }
 
     //! Start the recording process
@@ -55,7 +54,6 @@ class OTFController
 
         var delegate = new OTFWorkoutDelegate();
         var view = new OTFWorkoutView();
-        delegate.setController(self);
 
         Ui.switchToView(view, delegate, Ui.SLIDE_LEFT);
 
@@ -99,7 +97,6 @@ class OTFController
             var delegate = new StartConfirmationDelegate();
 
             // Open the HR confirmation dialog
-            delegate.setController(self);
             Ui.pushView(dialog, delegate, Ui.SLIDE_UP );
         } else {
             startWorkout();
@@ -140,7 +137,6 @@ class OTFController
     function onFinish() {
         var delegate = new OTFReviewDelegate();
         var view = new OTFReviewView();
-        delegate.setController(self);
 
         Ui.switchToView(view, delegate, Ui.SLIDE_UP);
     }

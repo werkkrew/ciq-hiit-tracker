@@ -34,9 +34,6 @@ class OTFApp extends App.AppBase {
         var view = new OTFSplashView();
         var delegate = new OTFSplashDelegate();
 
-        //controller.loadPreferences();
-        delegate.setController(controller);
-
         return [ view, delegate ];
     }
 

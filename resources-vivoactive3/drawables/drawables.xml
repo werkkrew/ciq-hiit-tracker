@@ -15,8 +15,8 @@
 		<shape type="polygon" color="Gfx.COLOR_LT_GRAY" points="[[0,82],[0,64],[24,70],[24,88]]" />
         <shape type="polygon" color="Gfx.COLOR_BLUE" points="[[0,103],[0,85],[24,91],[24,109]]" />
         <shape type="polygon" color="Gfx.COLOR_GREEN" points="[[0,124],[0,106],[24,112],[24,130]]" />
-        <shape type="polygon" color="Gfx.COLOR_ORANGE" points="[[0,145],[0,129],[24,135],[24,153]]" />
-        <shape type="polygon" color="Gfx.COLOR_DK_RED" points="[[0,166],[0,150],[24,156],[24,174]]" />
+        <shape type="polygon" color="Gfx.COLOR_ORANGE" points="[[0,145],[0,127],[24,133],[24,151]]" />
+        <shape type="polygon" color="Gfx.COLOR_DK_RED" points="[[0,166],[0,148],[24,154],[24,172]]" />
 	</drawable-list>
 	
 	<drawable-list id="ReviewSummaryShapes" >

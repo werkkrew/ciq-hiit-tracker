@@ -4,20 +4,20 @@ using Toybox.WatchUi as Ui;
 
 class OTFReviewDelegate extends Ui.BehaviorDelegate {
 
-    hidden var controller;
+    hidden var mController;
 
     //! Constructor
     function initialize() {
         // Initialize the superclass
         BehaviorDelegate.initialize();
         // Get the controller from the application class
-        controller = Application.getApp().controller;
+        mController = Application.getApp().controller;
     }
 
     //! Back button pressed
     function onBack() {
         //Exit the app
-        controller.onExit();
+        mController.onExit();
         return true;
     }
 
@@ -25,11 +25,11 @@ class OTFReviewDelegate extends Ui.BehaviorDelegate {
     function onKey(key) {
         if (key.getKey() == Ui.KEY_ENTER) {
             //Exit the app
-            controller.onExit();
+            mController.onExit();
         }
         // All other buttons toggle backlight
         if (key.getKey() == Ui.KEY_LIGHT || key.getKey() == Ui.KEY_UP || key.getKey() == Ui.KEY_DOWN) {
-            controller.turnOnBacklight();
+            mController.turnOnBacklight();
         }
         return true;
     }
@@ -37,12 +37,8 @@ class OTFReviewDelegate extends Ui.BehaviorDelegate {
     //! Screen Tap
     function onTap(type) {
         if (type.getType() == Ui.CLICK_TYPE_TAP) {
-            controller.turnOnBacklight();
+            mController.turnOnBacklight();
         }
-    }
-
-    function setController(c) {
-        controller = c;
     }
 
 }

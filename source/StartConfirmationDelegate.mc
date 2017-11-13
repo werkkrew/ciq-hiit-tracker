@@ -2,21 +2,18 @@ using Toybox.WatchUi as Ui;
 
 class StartConfirmationDelegate extends Ui.ConfirmationDelegate {
 
-    hidden var controller;
+    hidden var mController;
 
     function initialize() {
         ConfirmationDelegate.initialize();
+        // Get the controller from the application class
+        mController = Application.getApp().controller;
     }
 
     function onResponse(value) {
         if (value == Ui.CONFIRM_YES) {
-            confirmation = true;
-        } else {
-            confirmation = false;
-        }
+            mController.confirmed = true;
+        } 
     }
 
-    function setController(c) {
-        controller = c;
-    }
 }

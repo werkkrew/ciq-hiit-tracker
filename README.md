@@ -111,6 +111,14 @@ Pull requests and translations are welcomed!
 
 *This app is tested on a Garmin Vivoactive� HR*
 
+**v1.3.2 - 10/3/2017**
+
+* Attempted bug fixes related to Fenix 3 HR
+* Bumped minimum SDK support to 1.4.x from 1.3.x
+* Adjusted some core code for optimizations and cleanup
+* Adjusted some UI element positions
+
+
 **v1.3.1 - 10/3/2017**
 
 * Added support for Vivoactive3

@@ -33,8 +33,8 @@
 			<param name="points_1">[[24,88],[24,70],[30,72],[30,90]]</param>
 			<param name="points_2">[[24,109],[24,91],[30,93],[30,111]]</param>
 			<param name="points_3">[[24,130],[24,112],[30,114],[30,132]]</param>
-			<param name="points_4">[[24,151],[24,133],[30,135],[30,153]]</param>
-			<param name="points_5">[[24,172],[24,154],[30,156],[30,174]]</param>
+			<param name="points_4">[[24,151],[24,133],[30,137],[30,155]]</param>
+			<param name="points_5">[[24,172],[24,154],[30,158],[30,176]]</param>
 		</drawable>
 		
 		<bitmap id="WorkoutHRIcon" x="126" y="214" filename="../drawables/hr_red_24.png" dithering="none">

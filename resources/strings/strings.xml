@@ -30,8 +30,8 @@
 	<string id="activity_sub_strength">Strength</string>
 	<string id="activity_sub_flexibility">Flexibility</string>
 	
-	<string id="splat_label">Star Points</string>
-    <string id="splat_units">pts</string>
+	<string id="star_label">Star Points</string>
+    <string id="star_units">pts</string>
 
 	<string id="start_session_no_hr">No HR Detected, Start Anyway?</string>
     <string id="start_workout">START BURNING!</string>

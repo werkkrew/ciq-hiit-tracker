@@ -9,22 +9,22 @@ using Toybox.Application;
 //! hits the stop button
 class EndWorkoutDelegate extends Ui.MenuInputDelegate {
 
-    hidden var controller;
+    hidden var mController;
 
     // Constructor
     function initialize() {
         MenuInputDelegate.initialize();
-        controller = Application.getApp().controller;
+        mController = Application.getApp().controller;
     }
 
     // Handle the menu input
     function onMenuItem(item) {
         if (item == :resume) {
-            controller.onStartStop();
+            mController.onStartStop();
         } else if (item == :save) {
-            controller.save();
+            mController.save();
         } else if (item == :discard) {
-            controller.discard();
+            mController.discard();
         }
     }
 }

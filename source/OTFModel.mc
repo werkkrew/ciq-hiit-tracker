@@ -109,7 +109,6 @@ class OTFModel
     function save() {
         if ( mSession != null ) {
             mSession.save();
-            mSession = null;
         }
     }
 
@@ -158,8 +157,7 @@ class OTFModel
     // Handle controller sensor events
     function setSensor(sensor_info) {
         if( sensor_info has :heartRate ) {
-            if( sensor_info.heartRate != null )
-            {
+            if( sensor_info.heartRate != null ) {
                 mHeartRate = sensor_info.heartRate;
                 mStabilityTimer = 0;
                 mStabilityOn = false;
@@ -351,7 +349,7 @@ class OTFModel
             // Create a new FIT recording session
             mSession = Recording.createSession({:sport=>type, :subSport=>subType, :name => Ui.loadResource(Rez.Strings.hiit_training)});
             // Create the new FIT fields to record to.
-            mSplatsField = mSession.createField("splat_points", 0, Fit.DATA_TYPE_UINT16, {:mesgType => Fit.MESG_TYPE_SESSION, :units => Ui.loadResource(Rez.Strings.splat_units)});
+            mSplatsField = mSession.createField("star_points", 0, Fit.DATA_TYPE_UINT16, {:mesgType => Fit.MESG_TYPE_SESSION, :units => Ui.loadResource(Rez.Strings.star_units)});
 
             Log.debug("Activity Recording Type: " + type + " Sub: " + subType);
         }

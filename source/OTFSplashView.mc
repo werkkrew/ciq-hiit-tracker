@@ -55,10 +55,12 @@ class OTFSplashView extends Ui.View {
         // Load preferencese
         mController.loadPreferences();
         
-        mTimer.start(method(:onTimer), 1000, true);
-        if ( confirmation == true ) {
+        if ( mController.confirmed == true ) {
             mController.startWorkout();
         }
+        
+        // Refresh timer      
+        mTimer.start(method(:onTimer), 1000, true);
     }
 
     //! Called when this View is removed from the screen. Save the
