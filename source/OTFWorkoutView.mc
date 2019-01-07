@@ -14,6 +14,7 @@ class OTFWorkoutView extends Ui.View {
     hidden var mTimer;
 
     //! UI Variables
+    hidden var uiStatusTime;
     hidden var uiTimer;
     hidden var uiHRbpmText;
     hidden var uiCaloriesText;
@@ -36,6 +37,7 @@ class OTFWorkoutView extends Ui.View {
         mModel = Application.getApp().model;
         mController = Application.getApp().controller;
 
+        uiStatusTime = null;
         uiTimer = null;
         uiHRbpmText = null;
         uiCaloriesText = null;
@@ -56,6 +58,7 @@ class OTFWorkoutView extends Ui.View {
         setLayout(Rez.Layouts.PrimaryWorkoutScreen(dc));
 
         // Load UI resources
+        uiStatusTime = View.findDrawableById("StatusTime");
         uiHRbpmText = View.findDrawableById("WorkoutHRbpmText");
         uiTimer = View.findDrawableById("WorkoutTimer");
         uiCaloriesText = View.findDrawableById("WorkoutCaloriesText");
@@ -86,6 +89,18 @@ class OTFWorkoutView extends Ui.View {
 
     //! Update the view
     function onUpdate(dc) {
+    	var clock = System.getClockTime();
+    	var clockString = "";
+    	
+    	if (Prefs.getTwentyFourHourClock()) {
+    		clockString = Lang.format("$1$:$2$", [clock.hour.format("%02d"),clock.min.format("%02d")]);
+    	} else {
+    		var ampm = clock.hour >= 12 ? "PM" : "AM";
+        	clockString = Lang.format("$1$:$2$ $3$", [(clock.hour%12).format("%02d"),clock.min.format("%02d"),ampm]);
+        }
+        
+        uiStatusTime.setText( clockString );
+        
         var curZone = mModel.getHRzone();
         var time = mModel.getTimeElapsed();
         var timeString = Lang.format("$1$:$2$", [time / 60, (time % 60).format("%02d")]);

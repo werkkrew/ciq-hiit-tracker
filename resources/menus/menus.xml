@@ -3,6 +3,7 @@
 		<menu-item id="ActivityType">@Strings.ActivityTypeLabel</menu-item>
 		<menu-item id="AllowVibration">@Strings.AllowVibrationLabel</menu-item>
 		<menu-item id="HRStability">@Strings.HRStabilityLabel</menu-item>
+		<menu-item id="TwentyFourHourClock">@Strings.TwentyFourHourClockLabel</menu-item>
 	</menu>
 	<menu id="ActivityTypeMenu">
 		<menu-item id="activity_default">@Strings.activity_default</menu-item>
@@ -24,6 +25,10 @@
 	<menu id="HRStabilityMenu">
 		<menu-item id="HRStabilityOn">@Strings.yes</menu-item>
 		<menu-item id="HRStabilityOff">@Strings.no</menu-item>
+	</menu>
+	<menu id="TwentyFourHourClockMenu">
+		<menu-item id="TwentyFourHourClockOn">@Strings.yes</menu-item>
+		<menu-item id="TwentyFourHourClockOff">@Strings.no</menu-item>
 	</menu>
 	<menu id="EndWorkoutMenu">
 	    <menu-item id="resume">@Strings.resume_workout</menu-item>
