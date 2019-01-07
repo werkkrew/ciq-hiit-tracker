@@ -28,6 +28,8 @@
 			<param name="points_5">[[124,174],[144,174],[142,180],[122,180]]</param>
 		</drawable>
 		
+		<label id="StatusTime" x="center" y="70" text="@Strings.StatusBar_time" font="Gfx.FONT_MEDIUM" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+		
 		<bitmap id="WorkoutHRIcon" x="3" y="5" filename="../drawables/hr_red_24.png" />
 		<label id="WorkoutHRbpmText" x="65" y="-2" text="@Strings.Workout_hr_bpm" font="Gfx.FONT_NUMBER_MILD" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
 		

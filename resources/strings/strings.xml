@@ -16,6 +16,7 @@
 	<string id="ActivitySubTypePrompt">Select the Activity Sub-type</string>
 	<string id="AllowVibrationLabel">Allow Vibration</string>
 	<string id="HRStabilityLabel">HR Stabilizer</string>
+	<string id="TwentyFourHourClockLabel">24-hour Clock</string>
 
 	<string id="hiit_training">HIIT Training</string>
 	

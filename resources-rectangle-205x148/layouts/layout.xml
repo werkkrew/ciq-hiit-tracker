@@ -42,6 +42,8 @@
 			<param name="points_5">[[24,142],[24,124],[30,126],[30,144]]</param>
 		</drawable>
 		
+		<label id="StatusTime" x="35" y="34" text="@Strings.StatusBar_time" font="Gfx.FONT_MEDIUM" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+		
 		<bitmap id="WorkoutHRIcon" x="135" y="38" filename="../drawables/hr_red_24.png" dithering="none">
 			<palette>
 				<color>FF1D1D</color>

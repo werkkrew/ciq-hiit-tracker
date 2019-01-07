@@ -22,6 +22,10 @@ class OTFMenuDelegate extends Ui.MenuInputDelegate {
             Ui.pushView(new Rez.Menus.HRStabilityMenu(), new OTFMenuDelegate(), Ui.SLIDE_UP);
             return true;
         }
+        if (item == :TwentyFourHourClock) {
+            Ui.pushView(new Rez.Menus.TwentyFourHourClockMenu(), new OTFMenuDelegate(), Ui.SLIDE_UP);
+            return true;
+        }
 
         // Activity Type
         if (item == :activity_default) {
@@ -81,6 +85,16 @@ class OTFMenuDelegate extends Ui.MenuInputDelegate {
         }
         if (item == :HRStabilityOff) {
             Prefs.setHRStability(false);
+            return true;
+        }
+        
+        // TwentyFourHourClock
+        if (item == :TwentyFourHourClockOn) {
+            Prefs.setTwentyFourHourClock(true);
+            return true;
+        }
+        if (item == :TwentyFourHourClockOff) {
+            Prefs.setTwentyFourHourClock(false);
             return true;
         }
 
