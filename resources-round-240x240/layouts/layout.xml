@@ -2,13 +2,13 @@
 	<layout id="SplashScreen">
 		<drawable id="SplashScreenShapes" />
 		<bitmap id="SplashScreenBg" x="center" y="center" filename="../drawables/hiit_background.png" />
-		<bitmap id="StatusHRIconWhite" x="75" y="22" filename="../drawables/hr_white_16.png" dithering="none">
+		<bitmap id="StatusHRIconWhite" x="75" y="31" filename="../drawables/hr_white_16.png" dithering="none">
 			<palette>
 				<color>FFFFFF</color>
 			</palette>
 		</bitmap>
 		
-		<bitmap id="StatusHRIconRed" x="-50" y="22" filename="../drawables/hr_red_16.png" dithering="none">
+		<bitmap id="StatusHRIconRed" x="-50" y="31" filename="../drawables/hr_red_16.png" dithering="none">
 			<palette>
 				<color>FF1D1D</color>
 			</palette>
