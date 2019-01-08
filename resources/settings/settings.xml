@@ -19,6 +19,12 @@
 			<listEntry value="2">@Strings.activity_sub_flexibility</listEntry>
 		</settingConfig>
 	</setting>
+	<setting propertyKey="@Properties.maxHRFormula" title="@Strings.MaxHRFormulaLabel" prompt="@Strings.MaxHRFormulaPrompt">
+		<settingConfig type="list" required="true">
+			<listEntry value="0">@Strings.maxhrformula_new</listEntry>
+			<listEntry value="1">@Strings.maxhrformula_old</listEntry>
+		</settingConfig>
+	</setting>
 	<setting propertyKey="@Properties.allowVibration" title="@Strings.AllowVibrationLabel">
 		<settingConfig type="boolean" />
 	</setting>

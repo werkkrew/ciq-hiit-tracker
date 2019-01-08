@@ -167,6 +167,8 @@ class OTFController
         Log.debug("Preferences Loading");
         // Set Activity Recording Type
         mModel.setActivity(Prefs.getActivityType(), Prefs.getActivitySubType());
+        // Check HR Max Formula
+        Log.debug("MaxHRFormula: " + Prefs.getMaxHRFormula());
         // Set HR Stability
         mModel.setStability(Prefs.getHRStability());
         Log.debug("HR Stability: " + Prefs.getHRStability());
