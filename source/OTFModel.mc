@@ -280,6 +280,7 @@ class OTFModel
         var birthYear = Profile.getProfile().birthYear;
         var todayYear = Time.Gregorian.info(Time.today(), Time.FORMAT_SHORT).year;
         var gender = Profile.getProfile().gender;
+        var maxHRFormula = Prefs.getMaxHRFormula();
 
         // SDK 2.3.x Simulator Bug?
         if ( birthYear < 1900 ) {
@@ -288,17 +289,31 @@ class OTFModel
 
         // Get the users age (will not be exact due to Garmin only providing users birth year)
         // If user has not provided a birth year or the device cannot get the current date
-        // default to OTF max HR of 230
+        // default age is 35
+        
+        var userAge = 35;
+        
         if ( birthYear == null || todayYear == null ) {
-            mMaxHR = 230;
+            userAge = 35;
         } else {
-            var userAge = ( todayYear - birthYear );
+            userAge = ( todayYear - birthYear );
 
             // If the user age is out of bounds set it to an age of 30 just for sanity
             if ( userAge <= 0 || userAge > 120 ) {
                 userAge = 30;
             }
-
+        }
+        
+        if (maxHRFormula == 0) {
+        	//new formula for OTF based on this data https://www.ncbi.nlm.nih.gov/pubmed/11153730
+        	mMaxHR = (208 - (0.7 * userAge));
+        	
+        	// If we aren't getting a valid max HR then set it to value for default age of 35
+            if ( mMaxHR <= 0 || mMaxHR == null ) {
+                mMaxHR = 183;
+            }
+        } else {
+        	//old formula for OTF
             if ( gender == 0 ) {
                 Log.debug("User Gender: Female");
                 mMaxHR = ( 230 - userAge );
@@ -307,13 +322,16 @@ class OTFModel
                 mMaxHR = ( 225 - userAge );
             }
 
-            // If we aren't getting a valid max HR
+            // If we aren't getting a valid max HR then set it to value for default age of 35 split between genders
             if ( mMaxHR <= 0 || mMaxHR == null ) {
-                mMaxHR = 230;
+                mMaxHR = 192;
             }
-            Log.debug("User Age: " + userAge);
-            Log.debug("Max HR Set to: " + mMaxHR);
         }
+        
+        Log.debug("Formula: " + maxHRFormula);
+        Log.debug("User Age: " + userAge);
+        Log.debug("Max HR Set to: " + mMaxHR);
+            
         // define HR for blue/green/orange/red
         mZones = [ (mMaxHR * blueZone).toNumber(), (mMaxHR * greenZone).toNumber(), (mMaxHR * orangeZone).toNumber(), (mMaxHR * redZone).toNumber() ];
     }

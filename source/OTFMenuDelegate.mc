@@ -22,6 +22,10 @@ class OTFMenuDelegate extends Ui.MenuInputDelegate {
             Ui.pushView(new Rez.Menus.HRStabilityMenu(), new OTFMenuDelegate(), Ui.SLIDE_UP);
             return true;
         }
+        if (item == :MaxHRFormula) {
+            Ui.pushView(new Rez.Menus.MaxHRFormulaMenu(), new OTFMenuDelegate(), Ui.SLIDE_UP);
+            return true;
+        }
         if (item == :TwentyFourHourClock) {
             Ui.pushView(new Rez.Menus.TwentyFourHourClockMenu(), new OTFMenuDelegate(), Ui.SLIDE_UP);
             return true;
@@ -65,6 +69,16 @@ class OTFMenuDelegate extends Ui.MenuInputDelegate {
         }
         if (item == :activity_sub_flexibility) {
             Prefs.setActivitySubType(Prefs.SUB_FLEXIBILITY);
+            return true;
+        }
+
+        // Max HR Formula
+        if (item == :maxhrformula_new) {
+            Prefs.setMaxHRFormula(Prefs.FORMULA_NEW);
+            return true;
+        }
+        if (item == :maxhrformula_old) {
+            Prefs.setMaxHRFormula(Prefs.FORMULA_OLD);
             return true;
         }
 

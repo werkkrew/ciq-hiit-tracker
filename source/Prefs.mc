@@ -30,6 +30,12 @@ module Prefs {
         SUB_FLEXIBILITY = 2
     }
 
+    //! Max HR Formulas
+    enum {
+        FORMULA_NEW = 0,
+        FORMULA_OLD = 1
+    }
+
     //! Store activity type
     function setActivityType(type) {
         App.getApp().setProperty(ACTIVITY_TYPE, type);
@@ -50,6 +56,17 @@ module Prefs {
     function getActivitySubType() {
         var subType = getNumber(ACTIVITY_SUB_TYPE, 0, 0, 100);
         return subType;
+    }
+
+    //! Store max HR formula
+    function setMaxHRFormula(type) {
+        App.getApp().setProperty(MAXHRFORMULA, type);
+    }
+
+    //! Get max HR formula
+    function getMaxHRFormula() {
+        var formula = getNumber(MAXHRFORMULA, 0, 0, 100);
+        return formula;
     }
 
     //! Set vibration policy
@@ -147,6 +164,7 @@ module Prefs {
     // Settings name, see resources/settings.xml
     const ACTIVITY_TYPE = "activityType";
     const ACTIVITY_SUB_TYPE = "activitySubType";
+    const MAXHRFORMULA = "maxHRFormula";
     const ALLOW_VIBRATION = "allowVibration";
     const ALLOW_HRSTABILITY = "allowHRStability";
     const TWENTYFOURHOUR_CLOCK = "twentyFourHourClock";

@@ -14,6 +14,8 @@
 	<string id="ActivityTypePrompt">Select the Activity Type</string>
 	<string id="ActivitySubTypeLabel">Activity Sub-type</string>
 	<string id="ActivitySubTypePrompt">Select the Activity Sub-type</string>
+	<string id="MaxHRFormulaLabel">Max HR Formula</string>
+	<string id="MaxHRFormulaPrompt">Select the formula for calculating HR Max</string>
 	<string id="AllowVibrationLabel">Allow Vibration</string>
 	<string id="HRStabilityLabel">HR Stabilizer</string>
 	<string id="TwentyFourHourClockLabel">24-hour Clock</string>
@@ -30,6 +32,9 @@
 	<string id="activity_sub_cardio">Cardio</string>
 	<string id="activity_sub_strength">Strength</string>
 	<string id="activity_sub_flexibility">Flexibility</string>
+	
+	<string id="maxhrformula_new">New Formula</string>
+	<string id="maxhrformula_old">Old Formula</string>
 	
 	<string id="star_label">Star Points</string>
     <string id="star_units">pts</string>

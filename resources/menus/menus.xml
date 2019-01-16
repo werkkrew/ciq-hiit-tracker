@@ -3,6 +3,7 @@
 		<menu-item id="ActivityType">@Strings.ActivityTypeLabel</menu-item>
 		<menu-item id="AllowVibration">@Strings.AllowVibrationLabel</menu-item>
 		<menu-item id="HRStability">@Strings.HRStabilityLabel</menu-item>
+		<menu-item id="MaxHRFormula">@Strings.MaxHRFormulaLabel</menu-item>
 		<menu-item id="TwentyFourHourClock">@Strings.TwentyFourHourClockLabel</menu-item>
 	</menu>
 	<menu id="ActivityTypeMenu">
@@ -17,6 +18,10 @@
 		<menu-item id="activity_sub_cardio">@Strings.activity_sub_cardio</menu-item>
 		<menu-item id="activity_sub_strength">@Strings.activity_sub_strength</menu-item>
 		<menu-item id="activity_sub_flexibility">@Strings.activity_sub_flexibility</menu-item>
+	</menu>
+	<menu id="MaxHRFormulaMenu">
+		<menu-item id="maxhrformula_new">@Strings.maxhrformula_new</menu-item>
+		<menu-item id="maxhrformula_old">@Strings.maxhrformula_old</menu-item>
 	</menu>
 	<menu id="AllowVibrationMenu">
 		<menu-item id="VibrationOn">@Strings.yes</menu-item>
