@@ -18,6 +18,7 @@
 	<string id="MaxHRFormulaPrompt">Select the formula for calculating HR Max</string>
 	<string id="AllowVibrationLabel">Allow Vibration</string>
 	<string id="HRStabilityLabel">HR Stabilizer</string>
+	<string id="TwentyFourHourClockLabel">24-hour Clock</string>
 
 	<string id="hiit_training">HIIT Training</string>
 	

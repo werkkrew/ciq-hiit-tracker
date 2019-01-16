@@ -91,6 +91,17 @@ module Prefs {
         return value;
     }
 
+    //! Set TwentyFourHourClock
+    function setTwentyFourHourClock(value) {
+        App.getApp().setProperty(TWENTYFOURHOUR_CLOCK, value);
+    }
+
+    //! Return boolean of vibration setting
+    function getTwentyFourHourClock() {
+        var value = getBoolean(TWENTYFOURHOUR_CLOCK, true);
+        return value;
+    }
+
     //! Return the number value for a preference, or the given default value if pref
     //! does not exist, is invalid, is less than the min or is greater than the max.
     //! @param name the name of the preference
@@ -156,5 +167,6 @@ module Prefs {
     const MAXHRFORMULA = "maxHRFormula";
     const ALLOW_VIBRATION = "allowVibration";
     const ALLOW_HRSTABILITY = "allowHRStability";
+    const TWENTYFOURHOUR_CLOCK = "twentyFourHourClock";
 
 }

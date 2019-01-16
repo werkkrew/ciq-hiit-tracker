@@ -2,13 +2,13 @@
 	<layout id="SplashScreen">
 		<drawable id="SplashScreenShapes" />
 		<bitmap id="SplashScreenBg" x="center" y="center" filename="../drawables/hiit_background.png" />
-		<bitmap id="StatusHRIconWhite" x="65" y="26" filename="../drawables/hr_white_16.png" dithering="none">
+		<bitmap id="StatusHRIconWhite" x="65" y="31" filename="../drawables/hr_white_16.png" dithering="none">
 			<palette>
 				<color>FFFFFF</color>
 			</palette>
 		</bitmap>
 		
-		<bitmap id="StatusHRIconRed" x="-50" y="26" filename="../drawables/hr_red_16.png" dithering="none">
+		<bitmap id="StatusHRIconRed" x="-50" y="31" filename="../drawables/hr_red_16.png" dithering="none">
 			<palette>
 				<color>FF1D1D</color>
 			</palette>
@@ -36,6 +36,8 @@
 			<param name="points_4">[[24,151],[24,133],[30,135],[30,153]]</param>
 			<param name="points_5">[[24,172],[24,154],[30,156],[30,174]]</param>
 		</drawable>
+		
+		<label id="StatusTime" x="center" y="54" text="@Strings.StatusBar_time" font="Gfx.FONT_MEDIUM" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" />
 		
 		<bitmap id="WorkoutHRIcon" x="126" y="214" filename="../drawables/hr_red_24.png" dithering="none">
 			<palette>

@@ -85,13 +85,21 @@ class OTFSplashView extends Ui.View {
     }
 
     hidden function drawSplash() {
-        var time = System.getClockTime();
-        var timeString = Lang.format("$1$:$2$", [time.hour.format("%2.2d"),time.min.format("%2.2d")]);
-        var heartrate = mModel.getHRbpm();
+        var clock = System.getClockTime();
+        var clockString = "";
+    	
+    	if (Prefs.getTwentyFourHourClock()) {
+    		clockString = Lang.format("$1$:$2$", [clock.hour.format("%02d"),clock.min.format("%02d")]);
+    	} else {
+    		var ampm = clock.hour >= 12 ? "PM" : "AM";
+        	clockString = Lang.format("$1$:$2$ $3$", [(clock.hour%12).format("%02d"),clock.min.format("%02d"),ampm]);
+        }
 
-        uiStatusTime.setText( timeString );
+        uiStatusTime.setText( clockString );
 
         // Change the Heart Rate icon and text based on sensor data
+        var heartrate = mModel.getHRbpm();
+        
         // Flashing White is no HR data
         // Steady Red is valid HR data
         if (heartrate == 0 || heartrate == null) {

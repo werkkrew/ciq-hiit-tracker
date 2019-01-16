@@ -5,4 +5,5 @@
 	<property id="activityType" type="number">0</property>
 	<property id="activitySubType" type="number">0</property>
 	<property id="maxHRFormula" type="number">0</property>
+	<property id="twentyFourHourClock" type="boolean">true</property>
 </properties>
