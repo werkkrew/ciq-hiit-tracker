@@ -1,43 +1,43 @@
 <menus>
 	<menu id="MainMenu">
-		<menu-item id="ActivityType">@Strings.ActivityTypeLabel</menu-item>
-		<menu-item id="AllowVibration">@Strings.AllowVibrationLabel</menu-item>
-		<menu-item id="HRStability">@Strings.HRStabilityLabel</menu-item>
-		<menu-item id="MaxHRFormula">@Strings.MaxHRFormulaLabel</menu-item>
-		<menu-item id="TwentyFourHourClock">@Strings.TwentyFourHourClockLabel</menu-item>
+		<menu-item id="ActivityType" label="@Strings.ActivityTypeLabel" />
+		<menu-item id="AllowVibration" label="@Strings.AllowVibrationLabel" />
+		<menu-item id="HRStability" label="@Strings.HRStabilityLabel" />
+		<menu-item id="MaxHRFormula" label="@Strings.MaxHRFormulaLabel" />
+		<menu-item id="TwentyFourHourClock" label="@Strings.TwentyFourHourClockLabel" />
 	</menu>
 	<menu id="ActivityTypeMenu">
-		<menu-item id="activity_default">@Strings.activity_default</menu-item>
-		<menu-item id="activity_training">@Strings.activity_training</menu-item>
-		<menu-item id="activity_running">@Strings.activity_running</menu-item>
-		<menu-item id="activity_walking">@Strings.activity_walking</menu-item>
-		<menu-item id="activity_rowing">@Strings.activity_rowing</menu-item>
-		<menu-item id="activity_cycling">@Strings.activity_cycling</menu-item>
+		<menu-item id="activity_default" label="@Strings.activity_default" />
+		<menu-item id="activity_training" label="@Strings.activity_training" />
+		<menu-item id="activity_running" label="@Strings.activity_running" />
+		<menu-item id="activity_walking" label="@Strings.activity_walking" />
+		<menu-item id="activity_rowing" label="@Strings.activity_rowing" />
+		<menu-item id="activity_cycling" label="@Strings.activity_cycling" />
 	</menu>
 	<menu id="ActivitySubTypeMenu">
-		<menu-item id="activity_sub_cardio">@Strings.activity_sub_cardio</menu-item>
-		<menu-item id="activity_sub_strength">@Strings.activity_sub_strength</menu-item>
-		<menu-item id="activity_sub_flexibility">@Strings.activity_sub_flexibility</menu-item>
+		<menu-item id="activity_sub_cardio" label="@Strings.activity_sub_cardio" />
+		<menu-item id="activity_sub_strength" label="@Strings.activity_sub_strength" />
+		<menu-item id="activity_sub_flexibility" label="@Strings.activity_sub_flexibility" />
 	</menu>
 	<menu id="MaxHRFormulaMenu">
-		<menu-item id="maxhrformula_new">@Strings.maxhrformula_new</menu-item>
-		<menu-item id="maxhrformula_old">@Strings.maxhrformula_old</menu-item>
+		<menu-item id="maxhrformula_new" label="@Strings.maxhrformula_new" />
+		<menu-item id="maxhrformula_old" label="@Strings.maxhrformula_old" />
 	</menu>
 	<menu id="AllowVibrationMenu">
-		<menu-item id="VibrationOn">@Strings.yes</menu-item>
-		<menu-item id="VibrationOff">@Strings.no</menu-item>
+		<menu-item id="VibrationOn" label="@Strings.yes" />
+		<menu-item id="VibrationOff" label="@Strings.no" />
 	</menu>
 	<menu id="HRStabilityMenu">
-		<menu-item id="HRStabilityOn">@Strings.yes</menu-item>
-		<menu-item id="HRStabilityOff">@Strings.no</menu-item>
+		<menu-item id="HRStabilityOn" label="@Strings.yes" />
+		<menu-item id="HRStabilityOff" label="@Strings.no" />
 	</menu>
 	<menu id="TwentyFourHourClockMenu">
-		<menu-item id="TwentyFourHourClockOn">@Strings.yes</menu-item>
-		<menu-item id="TwentyFourHourClockOff">@Strings.no</menu-item>
+		<menu-item id="TwentyFourHourClockOn" label="@Strings.yes" />
+		<menu-item id="TwentyFourHourClockOff" label="@Strings.no" />
 	</menu>
 	<menu id="EndWorkoutMenu">
-	    <menu-item id="resume">@Strings.resume_workout</menu-item>
-	    <menu-item id="save">@Strings.save_workout</menu-item>
-	    <menu-item id="discard">@Strings.discard_workout</menu-item>
+	    <menu-item id="resume" label="@Strings.resume_workout" />
+	    <menu-item id="save" label="@Strings.save_workout" />
+	    <menu-item id="discard" label="@Strings.discard_workout" />
 	</menu>
 </menus>

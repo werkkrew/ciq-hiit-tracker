@@ -305,15 +305,15 @@ class OTFModel
         }
         
         if (maxHRFormula == 0) {
-        	//new formula for OTF based on this data https://www.ncbi.nlm.nih.gov/pubmed/11153730
-        	mMaxHR = (208 - (0.7 * userAge));
-        	
-        	// If we aren't getting a valid max HR then set it to value for default age of 35
+            //new formula for OTF based on this data https://www.ncbi.nlm.nih.gov/pubmed/11153730
+            mMaxHR = (208 - (0.7 * userAge));
+            
+            // If we aren't getting a valid max HR then set it to value for default age of 35
             if ( mMaxHR <= 0 || mMaxHR == null ) {
                 mMaxHR = 183;
             }
         } else {
-        	//old formula for OTF
+            //old formula for OTF
             if ( gender == 0 ) {
                 Log.debug("User Gender: Female");
                 mMaxHR = ( 230 - userAge );
@@ -341,9 +341,9 @@ class OTFModel
         if(Toybox has :ActivityRecording) {
 
             // Default and Treadmill Running
-            if ( type == 0 || type == 2) {
-                type = Recording.SPORT_RUNNING;
-                subType = Recording.SUB_SPORT_TREADMILL;
+            if ( type == 0 ) {
+                type = Recording.SPORT_TRAINING;
+                subType = Recording.SUB_SPORT_CARDIO_TRAINING;
             } else if ( type == 1 ) {
                 type = Recording.SPORT_TRAINING;
                 if ( subType == 0 ) {
@@ -353,6 +353,9 @@ class OTFModel
                 } else if ( subType == 2 ) {
                     subType = Recording.SUB_SPORT_FLEXIBILITY_TRAINING;
                 }
+            } else if ( type == 2 ) {
+                type = Recording.SPORT_RUNNING;
+                subType = Recording.SUB_SPORT_TREADMILL;
             } else if ( type == 3 ) {
                 type = Recording.SPORT_WALKING;
                 subType = Recording.SUB_SPORT_TREADMILL;

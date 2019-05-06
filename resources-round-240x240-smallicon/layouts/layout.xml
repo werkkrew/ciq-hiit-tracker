@@ -33,11 +33,11 @@
 			<param name="points_1">[[24,88],[24,70],[30,72],[30,90]]</param>
 			<param name="points_2">[[24,109],[24,91],[30,93],[30,111]]</param>
 			<param name="points_3">[[24,130],[24,112],[30,114],[30,132]]</param>
-			<param name="points_4">[[24,151],[24,133],[30,135],[30,153]]</param>
-			<param name="points_5">[[24,172],[24,154],[30,156],[30,174]]</param>
+			<param name="points_4">[[24,151],[24,133],[30,137],[30,155]]</param>
+			<param name="points_5">[[24,172],[24,154],[30,158],[30,176]]</param>
 		</drawable>
 		
-		<label id="StatusTime" x="center" y="54" text="@Strings.StatusBar_time" font="Gfx.FONT_MEDIUM" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+		<label id="StatusTime" x="center" y="55" text="@Strings.StatusBar_time" font="Gfx.FONT_MEDIUM" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" />
 		
 		<bitmap id="WorkoutHRIcon" x="126" y="214" filename="../drawables/hr_red_24.png" dithering="none">
 			<palette>
@@ -67,8 +67,8 @@
 		</bitmap>
 		<label id="WorkoutSplatText" x="113" y="24" text="@Strings.Workout_splat" font="Gfx.FONT_NUMBER_MILD" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
 		
-		<label id="WorkoutHRpctText" x="182" y="center" text="@Strings.Workout_hr_pct" font="@Fonts.klavika_numbers_bold_110" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
-		<label id="WorkoutHRpctSymbol" x="206" y="82" text="@Strings.percent" font="@Fonts.klavika_italic_26" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
+		<label id="WorkoutHRpctText" x="182" y="78" text="@Strings.Workout_hr_pct" font="@Fonts.klavika_numbers_bold_110" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
+		<label id="WorkoutHRpctSymbol" x="206" y="94" text="@Strings.percent" font="@Fonts.klavika_italic_26" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
 	</layout>
 	
 	<layout id="ReviewSummaryScreen">

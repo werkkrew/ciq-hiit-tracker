@@ -1,0 +1,22 @@
+project.manifest = manifest.xml
+
+# Configure paths based on screen shape
+approachs60.resourcePath = $(base.resourcePath);resources-round-240x240-smallicon
+
+fenix5s.resourcePath = $(base.resourcePath);resources-round-218x218-smallicon
+fenixchronos.resourcePath = $(base.resourcePath);resources-round-218x218-smallicon
+
+fr245.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
+fr245m.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
+fr945.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
+
+marqathlete.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
+marqaviator.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
+marqcaptain.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
+marqdriver.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
+marqexpedition.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
+
+vivoactive3.resourcePath = $(base.resourcePath);resources-round-240x240-smallicon
+vivoactive3d.resourcePath = $(base.resourcePath);resources-round-240x240-smallicon
+vivoactive3m.resourcePath = $(base.resourcePath);resources-round-240x240-smallicon
+vivoactive3mlte.resourcePath = $(base.resourcePath);resources-round-240x240-smallicon

@@ -8,9 +8,9 @@
 
 ### Description
 
-This Garmin Connect IQ App provides a display on your Garmin Device which closely matches the display seen on the screens in Orange Theory Fitness studios.  It is intended to be used in-studio along with any of the official OTF heart rate monitors.  Devices equipped with internal HRM's can use this sensor as well but it is not as accurate.  By default the app will record an activity of type Treadmill Running but can be changed by the user.  This activity and it's FIT data can be saved and sync'd with Garmin Connect just as any other fitness tracking app does.
+This Garmin Connect IQ App provides a display on your Garmin Device which closely matches the display seen on the screens in Orange Theory Fitness studios.  It is intended to be used in-studio along with any of the official OTF heart rate monitors.  Devices equipped with internal HRM's can use this sensor as well but it is not as accurate.  By default the app will record an activity of type Training with sub-type Cardio but this can be changed by the user in the app settings.  This activity and it's FIT data can be saved and sync'd with Garmin Connect just as any other fitness tracking app does.
 
-* [Orange Theory App on the Connect IQ Store](https://apps.garmin.com/en-US/apps/b886d2ac-2f94-4f9d-a7bd-85a59b99e639)
+* [HIIT Tracker App on the Connect IQ Store](https://apps.garmin.com/en-US/apps/b886d2ac-2f94-4f9d-a7bd-85a59b99e639)
 
 ### Calculations and Accuracy
 
@@ -110,6 +110,13 @@ Pull requests and translations are welcomed!
 ### Version History and Changelog
 
 *This app is tested on a Garmin Vivoactive� HR*
+
+**v1.3.3 - 05/06/2019**
+* Changed default activity type from "Treadmill Running" to "Training" to avoid some user confusion
+* Updated code-base to work with SDK version 3.x
+* Added support for some additional devices
+* Minor layout tweaks to various devices
+* Cleaned up resources in code base
 
 **v1.3.2 - 11/13/2017**
 
