@@ -111,6 +111,11 @@ Pull requests and translations are welcomed!
 
 *This app is tested on a Garmin Vivoactive� HR*
 
+**v1.4.0 - 09/10/2019**
+* Updated code-base to work with SDK version 3.1.x
+* Added support for many new devices (fenix 6, etc.)
+* Minor layout tweaks to various devices
+
 **v1.3.3 - 05/06/2019**
 * Changed default activity type from "Treadmill Running" to "Training" to avoid some user confusion
 * Updated code-base to work with SDK version 3.x

@@ -6,6 +6,13 @@ approachs60.resourcePath = $(base.resourcePath);resources-round-240x240-smallico
 fenix5s.resourcePath = $(base.resourcePath);resources-round-218x218-smallicon
 fenixchronos.resourcePath = $(base.resourcePath);resources-round-218x218-smallicon
 
+legacyherocaptainmarvel.resourcePath = $(base.resourcePath);resources-round-218x218-marvel
+
+legacyherofirstavenger.resourcePath = $(base.resourcePath);resources-round-260x260-smallicon
+
+fenix6s.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
+fenix6spro.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
+
 fr245.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
 fr245m.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
 fr945.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
