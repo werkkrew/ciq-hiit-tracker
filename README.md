@@ -50,22 +50,58 @@ During particularly crowded sessions my Vivoactive HR has trouble staying connec
 
 ### Supported Devices
 
-* Vivoactiveï¿½ 3
-* Vivoactiveï¿½ HR
-* Vivoactiveï¿½
-* Forerunnerï¿½ 920XT
-* Forerunnerï¿½ 230
-* Forerunnerï¿½ 235
-* Forerunnerï¿½ 735XT
-* Forerunnerï¿½ 630
-* fenixï¿½ 3
-* fenixï¿½ 3 HR
-* fenixï¿½ 5S
-* fenixï¿½ 5 Chronos
-* D2ï¿½ Bravo
-* D2ï¿½ Bravo Titanium
-* tactixï¿½ Bravo
-* quatixï¿½ 3
+* Approach® S60
+* Captain Marvel
+* First Avenger
+
+* D2™ Bravo
+* D2™ Bravo Titanium
+* D2™ Charlie
+* D2™ Delta
+* D2™ Delta PX
+* D2™ Delta S
+* Descent™ MK1
+
+* fenix® 3 / taxtix® Bravo / quatix® 3
+* fenix® 3 HR
+* fenix® 5 / quatix® 5
+* fenix® 5 Plus
+* fenix® 5S
+* fenix® 5S Plus
+* fenix® 5X / taxtix® Charlie
+* fenix® 5X Plus
+* fenix® 6
+* fenix® 6 Pro / 6 Sapphire
+* fenix® 6S
+* fenix® 6S Pro / 6S Sapphire
+* fenix® 6X Pro / 6X Sapphire / 6X Pro Solar
+* fenix® Chronos
+* Forerunner® 230
+* Forerunner® 235
+* Forerunner® 245
+* Forerunner® 245 Music
+* Forerunner® 630
+* Forerunner® 645
+* Forerunner® 645 Music
+* Forerunner® 735xt
+* Forerunner® 920xt
+* Forerunner® 935
+* Forerunner® 945
+
+* MARQ™ Athlete
+* MARQ™ Aviator
+* MARQ™ Captain
+* MARQ™ Driver
+* MARQ™ Expedition
+
+* vivoactive®
+* vivoactive® 3
+* vivoactive® 3 Mercedes-Benz® Collection
+* vivoactive® 3 Music
+* vivoactive® 3 Music LTE
+* vivoactive® 4
+* vivoactive® 4S
+* vivoactive® HR
 
 ### How-To
 
