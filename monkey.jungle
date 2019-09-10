@@ -27,3 +27,6 @@ vivoactive3.resourcePath = $(base.resourcePath);resources-round-240x240-smallico
 vivoactive3d.resourcePath = $(base.resourcePath);resources-round-240x240-smallicon
 vivoactive3m.resourcePath = $(base.resourcePath);resources-round-240x240-smallicon
 vivoactive3mlte.resourcePath = $(base.resourcePath);resources-round-240x240-smallicon
+
+vivoactive4.resourcePath = $(base.resourcePath);resources-round-260x260-smallicon
+vivoactive4s.resourcePath = $(base.resourcePath);resources-round-218x218-marvel

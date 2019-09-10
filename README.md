@@ -53,7 +53,6 @@ During particularly crowded sessions my Vivoactive HR has trouble staying connec
 * Approach® S60
 * Captain Marvel
 * First Avenger
-
 * D2™ Bravo
 * D2™ Bravo Titanium
 * D2™ Charlie
@@ -61,7 +60,6 @@ During particularly crowded sessions my Vivoactive HR has trouble staying connec
 * D2™ Delta PX
 * D2™ Delta S
 * Descent™ MK1
-
 * fenix® 3 / taxtix® Bravo / quatix® 3
 * fenix® 3 HR
 * fenix® 5 / quatix® 5
@@ -87,13 +85,11 @@ During particularly crowded sessions my Vivoactive HR has trouble staying connec
 * Forerunner® 920xt
 * Forerunner® 935
 * Forerunner® 945
-
 * MARQ™ Athlete
 * MARQ™ Aviator
 * MARQ™ Captain
 * MARQ™ Driver
 * MARQ™ Expedition
-
 * vivoactive®
 * vivoactive® 3
 * vivoactive® 3 Mercedes-Benz® Collection
