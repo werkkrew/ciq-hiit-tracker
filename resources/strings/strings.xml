@@ -35,6 +35,7 @@
 	
 	<string id="maxhrformula_new">New Formula</string>
 	<string id="maxhrformula_old">Old Formula</string>
+	<string id="max_hr_from_user_profile">User Profile</string>
 	
 	<string id="star_label">Star Points</string>
     <string id="star_units">pts</string>

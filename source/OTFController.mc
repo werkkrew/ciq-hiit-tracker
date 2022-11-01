@@ -169,6 +169,8 @@ class OTFController
         mModel.setActivity(Prefs.getActivityType(), Prefs.getActivitySubType());
         // Check HR Max Formula
         Log.debug("MaxHRFormula: " + Prefs.getMaxHRFormula());
+        // Set Zones
+        mModel.setZones(Prefs.getMaxHRFormula());
         // Set HR Stability
         mModel.setStability(Prefs.getHRStability());
         Log.debug("HR Stability: " + Prefs.getHRStability());
