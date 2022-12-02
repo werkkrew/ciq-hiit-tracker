@@ -91,6 +91,7 @@ During particularly crowded sessions my Vivoactive HR has trouble staying connec
 
 * Allow the 4 statistics shown during a workout to be user selectable from a list of desirable stats
 * Potentially allow for manual activity selection / switching during a workout
+* Add background step tracking
 
 ### Bugs and Feature Requests
 
