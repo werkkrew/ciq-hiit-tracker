@@ -50,54 +50,17 @@ During particularly crowded sessions my Vivoactive HR has trouble staying connec
 
 ### Supported Devices
 
-* Approach� S60
+* Approach® S60
+* Approach® S62
 * Captain Marvel
 * First Avenger
-* D2� Bravo
-* D2� Bravo Titanium
-* D2� Charlie
-* D2� Delta
-* D2� Delta PX
-* D2� Delta S
-* Descent� MK1
-* fenix� 3 / taxtix� Bravo / quatix� 3
-* fenix� 3 HR
-* fenix� 5 / quatix� 5
-* fenix� 5 Plus
-* fenix� 5S
-* fenix� 5S Plus
-* fenix� 5X / taxtix� Charlie
-* fenix� 5X Plus
-* fenix� 6
-* fenix� 6 Pro / 6 Sapphire
-* fenix� 6S
-* fenix� 6S Pro / 6S Sapphire
-* fenix� 6X Pro / 6X Sapphire / 6X Pro Solar
-* fenix� Chronos
-* Forerunner� 230
-* Forerunner� 235
-* Forerunner� 245
-* Forerunner� 245 Music
-* Forerunner� 630
-* Forerunner� 645
-* Forerunner� 645 Music
-* Forerunner� 735xt
-* Forerunner� 920xt
-* Forerunner� 935
-* Forerunner� 945
-* MARQ� Athlete
-* MARQ� Aviator
-* MARQ� Captain
-* MARQ� Driver
-* MARQ� Expedition
-* vivoactive�
-* vivoactive� 3
-* vivoactive� 3 Mercedes-Benz� Collection
-* vivoactive� 3 Music
-* vivoactive� 3 Music LTE
-* vivoactive� 4
-* vivoactive� 4S
-* vivoactive� HR
+* D2® Series
+* Descent® Series
+* fenix® 5 and up
+* ForeRunner® Series
+* MARQ® Series
+* vivoactive® Series
+* venu® Series
 
 ### How-To
 
@@ -141,7 +104,7 @@ Pull requests and translations are welcomed!
 
 ### Version History and Changelog
 
-*This app is tested on a Garmin Vivoactive� HR*
+*This app is tested on a Garmin Vivoactive® HR*
 
 **v1.5.0 - 12/02/2022**
 * Updated code-base to work with SDK version 4.1.x
