@@ -1,11 +1,8 @@
 /*
-UNOFFICIAL Orange Theory Garmin App
-The "Orange Theory" name, logo, and "Splat Points" are trademarks of Orange Theory Fitness
+HIIT Tracker
 
-Created by Bryan Chain, Copyright 2017
+Created by Bryan Chain, Copyright 2022
 Personal Homepage: https://bryanchain.com
-
-Records an activity and displays data fields relevant to an OTF training session.
 
 */
 
@@ -20,10 +17,6 @@ class OTFApp extends App.AppBase {
     //! Initialize App
     function initialize() {
         AppBase.initialize();
-
-        //! Update app version in preferences
-        var version = Ui.loadResource(Rez.Strings.AppVersion);
-        setProperty("appVersion", version);
 
         model = new OTFModel();
         controller = new OTFController();

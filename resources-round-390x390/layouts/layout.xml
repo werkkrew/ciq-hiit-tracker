@@ -1,0 +1,95 @@
+<layouts>
+	<layout id="SplashScreen">
+		<drawable id="SplashScreenShapes" />
+		<bitmap id="SplashScreenBg" x="center" y="center" filename="../drawables/hiit_background.png" />
+		<bitmap id="StatusHRIconWhite" x="94" y="42" filename="../drawables/hr_white_32.png" dithering="none">
+			<palette>
+				<color>FFFFFF</color>
+			</palette>
+		</bitmap>
+		
+		<bitmap id="StatusHRIconRed" x="-50" y="42" filename="../drawables/hr_red_32.png" dithering="none">
+			<palette>
+				<color>FF1D1D</color>
+			</palette>
+		</bitmap>
+		<label id="StatusTime" x="center" y="0" text="@Strings.StatusBar_time" font="Gfx.FONT_TINY" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+		<label id="StatusHRText" x="center" y="38" text="@Strings.StatusBar_hr" font="Gfx.FONT_XTINY" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+   		<label id="StartWorkoutLabel" x="center" y="305" text="@Strings.start_workout" font="Gfx.FONT_SMALL" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER"/>
+	</layout>
+	
+	<layout id="PrimaryWorkoutScreen">
+		<drawable id="PrimaryWorkoutShapes" />
+		
+		<drawable id="WorkoutZoneBg" class="WorkoutZoneBg">
+			<param name="color">Gfx.COLOR_LT_GRAY</param>
+			<param name="x">72</param>
+			<param name="y">100</param>
+			<param name="width">350</param>
+			<param name="height">190</param>
+		</drawable>
+		
+		<drawable id="WorkoutZoneBars" class="WorkoutZoneBars">
+			<param name="points_1">[[62,144],[62,112],[72,113],[72,145]]</param>
+			<param name="points_2">[[62,179],[62,147],[72,148],[72,180]]</param>
+			<param name="points_3">[[62,214],[62,182],[72,183],[72,215]]</param>
+			<param name="points_4">[[62,249],[62,217],[72,218],[72,250]]</param>
+			<param name="points_5">[[62,284],[62,252],[72,253],[72,285]]</param>
+		</drawable>
+		
+		<label id="StatusTime" x="center" y="100" text="@Strings.StatusBar_time" font="Gfx.FONT_MEDIUM" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+	
+		<bitmap id="WorkoutHRIcon" x="197" y="340" filename="../drawables/hr_red_48.png" dithering="none" />
+		<label id="WorkoutHRbpmText" x="200" y="290" text="@Strings.Workout_hr_bpm" font="Gfx.FONT_LARGE" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+		
+		<bitmap id="WorkoutTimerIcon" x="145" y="340" filename="../drawables/stopwatch_48.png" dithering="none" />
+		<label id="WorkoutTimer" x="190" y="290" text="@Strings.Workout_timer" font="Gfx.FONT_LARGE" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
+	
+		<bitmap id="WorkoutCaloriesIcon" x="197" y="4" filename="../drawables/calories_48.png" dithering="none" />
+		<label id="WorkoutCaloriesText" x="200" y="48" text="@Strings.Workout_calories" font="Gfx.FONT_LARGE" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+		
+		<bitmap id="WorkoutSplatIcon" x="145" y="4" filename="../drawables/splat_48.png" dithering="none" />
+		<label id="WorkoutSplatText" x="190" y="48" text="@Strings.Workout_splat" font="Gfx.FONT_LARGE" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
+		
+		<label id="WorkoutHRpctText" x="250" y="150" text="@Strings.Workout_hr_pct" font="@Fonts.klavika_numbers_bold_140" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
+		<label id="WorkoutHRpctSymbol" x="270" y="170" text="@Strings.percent" font="@Fonts.klavika_italic_26" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
+	</layout>
+	
+	<layout id="ReviewSummaryScreen">
+		<drawable id="ReviewSummaryShapes" />
+		
+		<drawable id="SummaryZoneBars" class="SummaryZoneBars">
+			<param name="regionHeight">140</param>
+			<param name="y">292</param>
+			<param name="width">40</param>
+			<param name="x1">83</param>
+			<param name="x2">129</param>
+			<param name="x3">175</param>
+			<param name="x4">221</param>
+			<param name="x5">267</param>
+		</drawable>
+		
+		<label id="Summary_time" x="192" y="10" text="@Strings.Summary_time" font="Gfx.FONT_XTINY" color="Gfx.COLOR_DK_GRAY" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
+		<label id="Summary_time_val" x="198" y="10" text="@Strings.Summary_time_val" font="Gfx.FONT_XTINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+		
+		<label id="Summary_calories" x="192" y="30" text="@Strings.Summary_calories" font="Gfx.FONT_XTINY" color="Gfx.COLOR_DK_GRAY" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
+		<label id="Summary_calories_val" x="198" y="30" text="@Strings.Summary_calories_val" font="Gfx.FONT_XTINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+		
+		<label id="Summary_splat" x="192" y="90" text="@Strings.Summary_splat" font="Gfx.FONT_XTINY" color="Gfx.COLOR_DK_GRAY" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
+		<label id="Summary_splat_val" x="198" y="90" text="@Strings.Summary_splat_val" font="Gfx.FONT_XTINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+				
+		<label id="Summary_avgHR" x="192" y="50" text="@Strings.Summary_avgHR" font="Gfx.FONT_XTINY" color="Gfx.COLOR_DK_GRAY" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
+		<label id="Summary_avgHR_val" x="198" y="50" text="@Strings.Summary_avgHR_val" font="Gfx.FONT_XTINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_LEFT" />	
+		
+		<label id="Summary_maxHR" x="192" y="70" text="@Strings.Summary_maxHR" font="Gfx.FONT_XTINY" color="Gfx.COLOR_DK_GRAY" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
+		<label id="Summary_maxHR_val" x="198" y="70" text="@Strings.Summary_maxHR_val" font="Gfx.FONT_XTINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+		
+
+		<label id="Summary_tz1_text" x="103" y="298" text="@Strings.Summary_tz1" font="Gfx.FONT_XTINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+		<label id="Summary_tz2_text" x="149" y="298" text="@Strings.Summary_tz2" font="Gfx.FONT_XTINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+		<label id="Summary_tz3_text" x="195" y="298" text="@Strings.Summary_tz3" font="Gfx.FONT_XTINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+		<label id="Summary_tz4_text" x="241" y="298" text="@Strings.Summary_tz4" font="Gfx.FONT_XTINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+		<label id="Summary_tz5_text" x="287" y="298" text="@Strings.Summary_tz5" font="Gfx.FONT_XTINY" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+	</layout>
+
+</layouts>

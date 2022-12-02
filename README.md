@@ -50,54 +50,54 @@ During particularly crowded sessions my Vivoactive HR has trouble staying connec
 
 ### Supported Devices
 
-* Approach® S60
+* Approachï¿½ S60
 * Captain Marvel
 * First Avenger
-* D2™ Bravo
-* D2™ Bravo Titanium
-* D2™ Charlie
-* D2™ Delta
-* D2™ Delta PX
-* D2™ Delta S
-* Descent™ MK1
-* fenix® 3 / taxtix® Bravo / quatix® 3
-* fenix® 3 HR
-* fenix® 5 / quatix® 5
-* fenix® 5 Plus
-* fenix® 5S
-* fenix® 5S Plus
-* fenix® 5X / taxtix® Charlie
-* fenix® 5X Plus
-* fenix® 6
-* fenix® 6 Pro / 6 Sapphire
-* fenix® 6S
-* fenix® 6S Pro / 6S Sapphire
-* fenix® 6X Pro / 6X Sapphire / 6X Pro Solar
-* fenix® Chronos
-* Forerunner® 230
-* Forerunner® 235
-* Forerunner® 245
-* Forerunner® 245 Music
-* Forerunner® 630
-* Forerunner® 645
-* Forerunner® 645 Music
-* Forerunner® 735xt
-* Forerunner® 920xt
-* Forerunner® 935
-* Forerunner® 945
-* MARQ™ Athlete
-* MARQ™ Aviator
-* MARQ™ Captain
-* MARQ™ Driver
-* MARQ™ Expedition
-* vivoactive®
-* vivoactive® 3
-* vivoactive® 3 Mercedes-Benz® Collection
-* vivoactive® 3 Music
-* vivoactive® 3 Music LTE
-* vivoactive® 4
-* vivoactive® 4S
-* vivoactive® HR
+* D2ï¿½ Bravo
+* D2ï¿½ Bravo Titanium
+* D2ï¿½ Charlie
+* D2ï¿½ Delta
+* D2ï¿½ Delta PX
+* D2ï¿½ Delta S
+* Descentï¿½ MK1
+* fenixï¿½ 3 / taxtixï¿½ Bravo / quatixï¿½ 3
+* fenixï¿½ 3 HR
+* fenixï¿½ 5 / quatixï¿½ 5
+* fenixï¿½ 5 Plus
+* fenixï¿½ 5S
+* fenixï¿½ 5S Plus
+* fenixï¿½ 5X / taxtixï¿½ Charlie
+* fenixï¿½ 5X Plus
+* fenixï¿½ 6
+* fenixï¿½ 6 Pro / 6 Sapphire
+* fenixï¿½ 6S
+* fenixï¿½ 6S Pro / 6S Sapphire
+* fenixï¿½ 6X Pro / 6X Sapphire / 6X Pro Solar
+* fenixï¿½ Chronos
+* Forerunnerï¿½ 230
+* Forerunnerï¿½ 235
+* Forerunnerï¿½ 245
+* Forerunnerï¿½ 245 Music
+* Forerunnerï¿½ 630
+* Forerunnerï¿½ 645
+* Forerunnerï¿½ 645 Music
+* Forerunnerï¿½ 735xt
+* Forerunnerï¿½ 920xt
+* Forerunnerï¿½ 935
+* Forerunnerï¿½ 945
+* MARQï¿½ Athlete
+* MARQï¿½ Aviator
+* MARQï¿½ Captain
+* MARQï¿½ Driver
+* MARQï¿½ Expedition
+* vivoactiveï¿½
+* vivoactiveï¿½ 3
+* vivoactiveï¿½ 3 Mercedes-Benzï¿½ Collection
+* vivoactiveï¿½ 3 Music
+* vivoactiveï¿½ 3 Music LTE
+* vivoactiveï¿½ 4
+* vivoactiveï¿½ 4S
+* vivoactiveï¿½ HR
 
 ### How-To
 
@@ -143,6 +143,14 @@ Pull requests and translations are welcomed!
 
 *This app is tested on a Garmin Vivoactiveï¿½ HR*
 
+**v1.5.0 - 12/02/2022**
+* Updated code-base to work with SDK version 4.1.x
+* Added support for many new devices
+* Fixed max HR issue (PR #11), thanks Supersmo!
+* Updated icons for use on larger screen devices
+* Cleaned up some layouts
+* Removed support for: Fenix 3 series, ForeRunner 55
+  
 **v1.4.0 - 09/10/2019**
 * Updated code-base to work with SDK version 3.1.x
 * Added support for many new devices (fenix 6, etc.)
@@ -156,58 +164,46 @@ Pull requests and translations are welcomed!
 * Cleaned up resources in code base
 
 **v1.3.2 - 11/13/2017**
-
 * Attempted bug fixes related to Fenix 3 HR
 * Bumped minimum SDK support to 1.4.x from 1.3.x
 * Adjusted some core code for optimizations and cleanup
 * Adjusted some UI element positions
 
-
 **v1.3.1 - 10/3/2017**
-
 * Added support for Vivoactive3
 
 **v1.3.0 - 10/3/2017**
-
 * Removed all branding references to Orange Theory Fitness due to a copyright claim
 * Laid groundwork for additional often requested features
 * Updated to support SDK 2.3.4
 
 **v1.2.6 - 7/22/2017**
-
 * HR Zone options removed.  Uses only the official OTF zone definition now (previously the default) to prevent confusion.  Many people seemed to ask about why things didn't line up as they expected.
 * HR Zone calculation adjustment, hopefully it's more accurate and splat points line up better now.
 
 **v1.2.5 - 7/21/2017**
-
 * Attempt to address bug on some devices where the HR Percentage does not show up.  
 
 **v1.2.4 - 6/19/2017**
-
 * Heart Rate Stability Feature (See description for additional details)
 
 **v1.2.3 - 6/16/2017**
-
 * Removed "Training Effect" statistic from summary.  It did not seem to return a useful value most of the time.
 
 **v1.2.2 - 6/16/2017**
-
 * Added Fenix 5S and Fenix Chronos Support
 * Added Round 240x240 Watch support including Approach S60
 
 **v1.2.1 - 6/16/2017**
-
 * Added Fenix 3 and other round watch support
 * Fixed an issue with incorrect version build uploaded for 1.2.0
 
 **v1.2.0 - 6/15/2017**
-
 * Added setting to allow user selection of the activity recording type.  Now defaults to Treadmill Running
 * Vibration Updates, changed vibration profiles to be more easily recognizable as to what they mean
 * Prevent back-to-back vibration events when heart rate is going between two zones relatively quickly
 
 **v1.1.2 - 6/15/2017**
-
 * Forerunner 630 Support
 * Corrections to custom FIT field for Splat Points
 * Additional HR profile settings
@@ -215,35 +211,29 @@ Pull requests and translations are welcomed!
 * Fix reloading of changes to settings
 
 **v1.1.1 - 6/14/2017**
-
 * Fixed a bug in the review screen where test bars were left in place
 * Improved button handling
 
 **v1.1.0 - 6/13/2017**
-
 * Updated code to be compatible with CIQ SDK 2.3.1
 * Memory footprint optimizations
 * Added support for Vivoactive
 * Added support for Forerunner 920XT, 230, 235, 735XT
 
 **v1.0.3 - 6/11/2017**
-
 * Memory optimizations
 * Re-factored a lot of code to be more portable across various devices
 
 **v1.0.2 - 6/9/2017**
-
 * Removed an un-needed permission
 * Fixed a bug when closing/clearing sensors
 * Added some additional logging points for debugging
 
 **v1.0.1 - 6/5/2017**
-
 * Fixed a type casting issue on HR percentage
 * Changed the splat point calculation to be more accurate
 * Updated screenshots
 
 **v1.0.0 - 6/3/2017**
-
 * Initial Release
 

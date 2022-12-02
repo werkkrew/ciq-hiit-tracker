@@ -2,17 +2,10 @@
 	<layout id="SplashScreen">
 		<drawable id="SplashScreenShapes" />
 		<bitmap id="SplashScreenBg" x="center" y="center" filename="../drawables/hiit_background.png" />
-		<bitmap id="StatusHRIconWhite" x="94" y="42" filename="../drawables/hr_white_16.png" dithering="none">
-			<palette>
-				<color>FFFFFF</color>
-			</palette>
-		</bitmap>
-		
-		<bitmap id="StatusHRIconRed" x="-50" y="42" filename="../drawables/hr_red_16.png" dithering="none">
-			<palette>
-				<color>FF1D1D</color>
-			</palette>
-		</bitmap>
+		<bitmap id="StatusHRIconWhite" x="94" y="42" filename="../drawables/hr_white_16.png" dithering="none" />
+
+		<bitmap id="StatusHRIconRed" x="-50" y="42" filename="../drawables/hr_red_16.png" dithering="none" />
+
 		<label id="StatusTime" x="center" y="0" text="@Strings.StatusBar_time" font="Gfx.FONT_TINY" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" />
 		<label id="StatusHRText" x="center" y="38" text="@Strings.StatusBar_hr" font="Gfx.FONT_XTINY" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" />
    		<label id="StartWorkoutLabel" x="center" y="202" text="@Strings.start_workout" font="@Fonts.klavika_italic_18" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER"/>
@@ -39,35 +32,24 @@
 		
 		<label id="StatusTime" x="center" y="70" text="@Strings.StatusBar_time" font="Gfx.FONT_MEDIUM" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" />
 		
-		<bitmap id="WorkoutHRIcon" x="136" y="230" filename="../drawables/hr_red_24.png" dithering="none">
-			<palette>
-				<color>FF1D1D</color>
-			</palette>		
-		</bitmap>
+		<bitmap id="WorkoutHRIcon" x="136" y="230" filename="../drawables/hr_red_24.png" dithering="none" />
+
 		<label id="WorkoutHRbpmText" x="136" y="190" text="@Strings.Workout_hr_bpm" font="Gfx.FONT_LARGE" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_LEFT" />
 		
-		<bitmap id="WorkoutTimerIcon" x="104" y="228" filename="../drawables/stopwatch_24.png" dithering="none">
-			<palette>
-				<color>3914C7</color>
-			</palette>
-		</bitmap>
+		<bitmap id="WorkoutTimerIcon" x="104" y="228" filename="../drawables/stopwatch_24.png" dithering="none" />
+
 		<label id="WorkoutTimer" x="124" y="190" text="@Strings.Workout_timer" font="Gfx.FONT_LARGE" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
 	
-		<bitmap id="WorkoutCaloriesIcon" x="136" y="8" filename="../drawables/calories_24.png" dithering="none">
-			<palette>
-				<color>FE5504</color>
-			</palette>
-		</bitmap>
+		<bitmap id="WorkoutCaloriesIcon" x="136" y="8" filename="../drawables/calories_24.png" dithering="none" />
+
 		<label id="WorkoutCaloriesText" x="136" y="32" text="@Strings.Workout_calories" font="Gfx.FONT_LARGE" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_LEFT" />
 		
-		<bitmap id="WorkoutSplatIcon" x="102" y="10" filename="../drawables/splat_24.png" dithering="none">
-			<palette>
-				<color>F58220</color>
-			</palette>		
-		</bitmap>
+		<bitmap id="WorkoutSplatIcon" x="102" y="10" filename="../drawables/splat_24.png" dithering="none" />
+
 		<label id="WorkoutSplatText" x="124" y="32" text="@Strings.Workout_splat" font="Gfx.FONT_LARGE" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
 		
 		<label id="WorkoutHRpctText" x="182" y="88" text="@Strings.Workout_hr_pct" font="@Fonts.klavika_numbers_bold_110" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
+		
 		<label id="WorkoutHRpctSymbol" x="206" y="114" text="@Strings.percent" font="@Fonts.klavika_italic_26" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
 	</layout>
 	

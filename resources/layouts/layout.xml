@@ -30,7 +30,7 @@
 		
 		<label id="StatusTime" x="center" y="70" text="@Strings.StatusBar_time" font="Gfx.FONT_MEDIUM" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" />
 		
-		<bitmap id="WorkoutHRIcon" x="3" y="5" filename="../drawables/hr_red_24.png" />
+		<bitmap id="WorkoutHRIcon" x="3" y="3" filename="../drawables/hr_red_24.png" />
 		<label id="WorkoutHRbpmText" x="65" y="-2" text="@Strings.Workout_hr_bpm" font="Gfx.FONT_NUMBER_MILD" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
 		
 		<bitmap id="WorkoutTimerIcon" x="72" y="3" filename="../drawables/stopwatch_24.png" />
@@ -39,7 +39,7 @@
 		<bitmap id="WorkoutCaloriesIcon" x="74" y="38" filename="../drawables/calories_24.png" />
 		<label id="WorkoutCaloriesText" x="145" y="35" text="@Strings.Workout_calories" font="Gfx.FONT_NUMBER_MILD" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
 		
-		<bitmap id="WorkoutSplatIcon" x="3" y="40" filename="../drawables/splat_24.png" />
+		<bitmap id="WorkoutSplatIcon" x="3" y="38" filename="../drawables/splat_24.png" />
 		<label id="WorkoutSplatText" x="65" y="35" text="@Strings.Workout_splat" font="Gfx.FONT_NUMBER_MILD" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_RIGHT" />
 		
 		<label id="WorkoutHRpctText" x="120" y="80" text="@Strings.Workout_hr_pct" font="@Fonts.klavika_numbers_bold_90" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_RIGHT" />

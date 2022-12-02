@@ -1,0 +1,27 @@
+<drawables>
+    <bitmap id="LauncherIcon" filename="launcher_icon.png" />
+    
+	<drawable-list id="SplashScreenShapes" >
+		<shape type="rectangle" x="0" y="0" height="50" corner_radius="5" color="Gfx.COLOR_DK_GRAY"  />
+		<shape type="rectangle" x="0" y="190" height="50" corner_radius="5" color="Gfx.COLOR_ORANGE"  />
+	</drawable-list>
+	
+	<drawable-list id="PrimaryWorkoutShapes" >
+		<shape type="rectangle" x="0" y="0" height="60" color="Gfx.COLOR_WHITE" />
+		<shape type="rectangle" x="0" y="62" height="116" width="30" color="Gfx.COLOR_WHITE" />		
+		<shape type="rectangle" x="0" y="180" height="60" color="Gfx.COLOR_WHITE" />
+		<shape type="rectangle" x="120" y="180" height="60" width="2" color="Gfx.COLOR_BLACK" />
+		<shape type="rectangle" x="120" y="0" height="60" width="2" color="Gfx.COLOR_BLACK" />
+		<shape type="polygon" color="Gfx.COLOR_LT_GRAY" points="[[0,82],[0,64],[24,70],[24,88]]" />
+        <shape type="polygon" color="Gfx.COLOR_BLUE" points="[[0,103],[0,85],[24,91],[24,109]]" />
+        <shape type="polygon" color="Gfx.COLOR_GREEN" points="[[0,124],[0,106],[24,112],[24,130]]" />
+        <shape type="polygon" color="Gfx.COLOR_ORANGE" points="[[0,145],[0,127],[24,133],[24,151]]" />
+        <shape type="polygon" color="Gfx.COLOR_DK_RED" points="[[0,166],[0,148],[24,154],[24,172]]" />
+	</drawable-list>
+	
+	<drawable-list id="ReviewSummaryShapes" >
+		<shape type="rectangle" x="0" y="0" color="Gfx.COLOR_WHITE" />
+		<shape type="rectangle" x="0" y="118" height="2" color="Gfx.COLOR_BLACK" />
+		<shape type="rectangle" x="0" y="198" height="2" color="Gfx.COLOR_BLACK" />
+	</drawable-list>	
+</drawables>

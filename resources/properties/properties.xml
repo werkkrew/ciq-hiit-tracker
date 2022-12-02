@@ -1,5 +1,5 @@
 <properties>
-	<property id="appVersion" type="string">1.4.0</property>
+	<property id="appVersion" type="string">1.5.0</property>
 	<property id="allowVibration" type="boolean">true</property>
 	<property id="hrStability" type="boolean">true</property>
 	<property id="activityType" type="number">0</property>

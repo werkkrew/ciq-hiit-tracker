@@ -2,31 +2,49 @@ project.manifest = manifest.xml
 
 # Configure paths based on screen shape
 approachs60.resourcePath = $(base.resourcePath);resources-round-240x240-smallicon
+approachs62.resourcePath = $(base.resourcePath);resources-round-260x260-smallicon
+
+d2mach1.resourcePath = $(base.resourcePath);resources-round-416x416-smallicon
+d2airx10.resourcePath = $(base.resourcePath);resources-round-416x416-smallfont
+
+descentmk2s.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
+
+epix2.resourcePath = $(base.resourcePath);resources-round-416x416-smallicon
 
 fenix5s.resourcePath = $(base.resourcePath);resources-round-218x218-smallicon
 fenixchronos.resourcePath = $(base.resourcePath);resources-round-218x218-smallicon
 
 legacyherocaptainmarvel.resourcePath = $(base.resourcePath);resources-round-218x218-marvel
-
 legacyherofirstavenger.resourcePath = $(base.resourcePath);resources-round-260x260-smallicon
 
 fenix6s.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
 fenix6spro.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
+fenix7s.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
 
+fr255s.resourcePath = $(base.resourcePath);resources-round-218x218-smallfont
+fr255sm.resourcePath = $(base.resourcePath);resources-round-218x218-smallfont
 fr245.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
 fr245m.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
+fr745.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
 fr945.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
+fr945lte.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
 
+marqadventurer.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
 marqathlete.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
 marqaviator.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
 marqcaptain.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
+marqcommander.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
 marqdriver.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
 marqexpedition.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
+marqgolfer.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
 
 vivoactive3.resourcePath = $(base.resourcePath);resources-round-240x240-smallicon
 vivoactive3d.resourcePath = $(base.resourcePath);resources-round-240x240-smallicon
 vivoactive3m.resourcePath = $(base.resourcePath);resources-round-240x240-smallicon
 vivoactive3mlte.resourcePath = $(base.resourcePath);resources-round-240x240-smallicon
 
-vivoactive4.resourcePath = $(base.resourcePath);resources-round-260x260-smallicon
+vivoactive4.resourcePath = $(base.resourcePath);resources-round-260x260-mediumicon
 vivoactive4s.resourcePath = $(base.resourcePath);resources-round-218x218-marvel
+
+venu2.resourcePath = $(base.resourcePath);resources-round-416x416-smallfont
+venu2plus.resourcePath = $(base.resourcePath);resources-round-416x416-smallfont
