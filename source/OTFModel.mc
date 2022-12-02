@@ -78,9 +78,6 @@ class OTFModel
         // Stability is inactive
         mStabilityOn = false;
         mStabilityTimer = 0;
-
-        // Define HR Zones
-        setZones();
     }
 
     // Start session
@@ -275,12 +272,10 @@ class OTFModel
 
     // Define the HR Zones as per OTF guidelines
     // See dist/OrangeTheoryCalculator.java for official calculations
-    hidden function setZones() {
-
+    function setZones(maxHRFormula) {
         var birthYear = Profile.getProfile().birthYear;
         var todayYear = Time.Gregorian.info(Time.today(), Time.FORMAT_SHORT).year;
         var gender = Profile.getProfile().gender;
-        var maxHRFormula = Prefs.getMaxHRFormula();
 
         // SDK 2.3.x Simulator Bug?
         if ( birthYear < 1900 ) {
@@ -304,34 +299,44 @@ class OTFModel
             }
         }
         
-        if (maxHRFormula == 0) {
-            //new formula for OTF based on this data https://www.ncbi.nlm.nih.gov/pubmed/11153730
-            mMaxHR = (208 - (0.7 * userAge));
-            
-            // If we aren't getting a valid max HR then set it to value for default age of 35
-            if ( mMaxHR <= 0 || mMaxHR == null ) {
-                mMaxHR = 183;
-            }
-        } else {
-            //old formula for OTF
-            if ( gender == 0 ) {
-                Log.debug("User Gender: Female");
-                mMaxHR = ( 230 - userAge );
-            } else {
-                Log.debug("User Gender: Male");
-                mMaxHR = ( 225 - userAge );
-            }
+        switch(maxHRFormula) {
+            case Prefs.FORMULA_NEW:
+                //new formula for OTF based on this data https://www.ncbi.nlm.nih.gov/pubmed/11153730
+                mMaxHR = (208 - (0.7 * userAge));
+                
+                // If we aren't getting a valid max HR then set it to value for default age of 35
+                if ( mMaxHR <= 0 || mMaxHR == null ) {
+                    mMaxHR = 183;
+                }
+                break;
+            case Prefs.FORMULA_OLD:
+                //old formula for OTF
+                if ( gender == 0 ) {
+                    Log.debug("User Gender: Female");
+                    mMaxHR = ( 230 - userAge );
+                } else {
+                    Log.debug("User Gender: Male");
+                    mMaxHR = ( 225 - userAge );
+                }
 
-            // If we aren't getting a valid max HR then set it to value for default age of 35 split between genders
-            if ( mMaxHR <= 0 || mMaxHR == null ) {
-                mMaxHR = 192;
-            }
+                // If we aren't getting a valid max HR then set it to value for default age of 35 split between genders
+                if ( mMaxHR <= 0 || mMaxHR == null ) {
+                    mMaxHR = 192;
+                }
+                break;
+            case Prefs.FORMULA_USER_PROFILE:
+                // Get max HR from the user profile
+                var genericZoneInfo = UserProfile.getHeartRateZones(UserProfile.HR_ZONE_SPORT_GENERIC);
+                mMaxHR = genericZoneInfo[genericZoneInfo.size()-1];
+                break;
+            default:
+                throw new Toybox.Lang.InvalidOptionsException("Invalid maxHRFormula selected.");
         }
         
         Log.debug("Formula: " + maxHRFormula);
         Log.debug("User Age: " + userAge);
         Log.debug("Max HR Set to: " + mMaxHR);
-            
+
         // define HR for blue/green/orange/red
         mZones = [ (mMaxHR * blueZone).toNumber(), (mMaxHR * greenZone).toNumber(), (mMaxHR * orangeZone).toNumber(), (mMaxHR * redZone).toNumber() ];
     }

@@ -33,7 +33,8 @@ module Prefs {
     //! Max HR Formulas
     enum {
         FORMULA_NEW = 0,
-        FORMULA_OLD = 1
+        FORMULA_OLD = 1,
+        FORMULA_USER_PROFILE = 2
     }
 
     //! Store activity type

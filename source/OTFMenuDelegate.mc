@@ -81,6 +81,10 @@ class OTFMenuDelegate extends Ui.MenuInputDelegate {
             Prefs.setMaxHRFormula(Prefs.FORMULA_OLD);
             return true;
         }
+        if (item == :max_hr_from_user_profile) {
+            Prefs.setMaxHRFormula(Prefs.FORMULA_USER_PROFILE);
+            return true;
+        }
 
         // Allow Vibration
         if (item == :VibrationOn) {

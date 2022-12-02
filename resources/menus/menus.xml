@@ -22,6 +22,7 @@
 	<menu id="MaxHRFormulaMenu">
 		<menu-item id="maxhrformula_new" label="@Strings.maxhrformula_new" />
 		<menu-item id="maxhrformula_old" label="@Strings.maxhrformula_old" />
+		<menu-item id="max_hr_from_user_profile" label="@Strings.max_hr_from_user_profile" />
 	</menu>
 	<menu id="AllowVibrationMenu">
 		<menu-item id="VibrationOn" label="@Strings.yes" />
