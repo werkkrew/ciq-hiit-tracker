@@ -45,6 +45,7 @@ class OTFWorkoutDelegate extends Ui.BehaviorDelegate {
         if (type.getType() == Ui.CLICK_TYPE_TAP) {
             mController.turnOnBacklight();
         }
+        return false;
     }
 
 }

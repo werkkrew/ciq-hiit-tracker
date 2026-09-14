@@ -221,7 +221,7 @@ class OTFModel
     }
 
     // Process splat points
-    function splatCallback() {
+    function splatCallback() as Void {
         if( mHeartRate == null ) {
             return;
         }

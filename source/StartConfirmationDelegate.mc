@@ -13,7 +13,8 @@ class StartConfirmationDelegate extends Ui.ConfirmationDelegate {
     function onResponse(value) {
         if (value == Ui.CONFIRM_YES) {
             mController.confirmed = true;
-        } 
+        }
+        return false;
     }
 
 }

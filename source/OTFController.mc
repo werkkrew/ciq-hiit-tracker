@@ -9,6 +9,7 @@ using Toybox.Activity as Activity;
 using Toybox.Attention as Attention;
 using Toybox.Time as Time;
 using Toybox.Lang as Lang;
+using Toybox.Sensor;
 
 class OTFController
 {
@@ -134,7 +135,7 @@ class OTFController
     }
 
      //! Review the stats of the activity when finished
-    function onFinish() {
+    function onFinish() as Void {
         var delegate = new OTFReviewDelegate();
         var view = new OTFReviewView();
 
@@ -152,12 +153,12 @@ class OTFController
     }
 
     //! Handle Sensor Events
-    function onSensor(sensor_info) {
+    function onSensor(sensor_info as Sensor.Info) as Void {
         mModel.setSensor(sensor_info);
     }
 
     //! Handle timing out after exit
-    function onExit() {
+    function onExit() as Void {
         System.exit();
     }
 
@@ -190,7 +191,7 @@ class OTFController
     }
 
     //! Action on backlight timer, turn off backlight and invalidate timer.
-    function onBacklightTimer() {
+    function onBacklightTimer() as Void {
         backlight(false);
         backlightTimer = null;
     }
