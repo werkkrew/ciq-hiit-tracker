@@ -107,6 +107,10 @@ Pull requests and translations are welcomed!
 
 *This app is tested on a Garmin Vivoactive® HR*
 
+**v1.5.1 - 09/14/2026**
+* Updated code-base to work with SDK version 9.2.x
+* Fixed heart rate freezing on the last reading when the sensor stops reporting
+
 **v1.5.0 - 12/02/2022**
 * Updated code-base to work with SDK version 4.1.x
 * Added support for many new devices
