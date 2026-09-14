@@ -103,9 +103,16 @@ Source code is made available under the [MIT license](https://opensource.org/lic
 
 Pull requests and translations are welcomed!
 
+Requires the Connect IQ SDK 9.2+ (install it with the SDK Manager), a JDK 17+, and a [developer key](https://developer.garmin.com/connect-iq/connect-iq-basics/getting-started/).  The VS Code Monkey C extension provides "Run App" and "Run Tests".  From the command line, with `bin` from the SDK on your path:
+
+* Build: `monkeyc -f monkey.jungle -d vivoactive4 -o bin/app.prg -y developer_key.der`
+* Run: open the simulator (`simulator`), then `monkeydo bin/app.prg vivoactive4`
+* Test: add `--unit-test` to the build, then `monkeydo bin/app.prg vivoactive4 /t`
+* Store package: `monkeyc -f monkey.jungle -e -r -o bin/HIITTracker.iq -y developer_key.der`
+
 ### Version History and Changelog
 
-*This app is tested on a Garmin Vivoactive® HR*
+*This app is tested in the Connect IQ simulator. Bug reports from real devices are very welcome.*
 
 **v1.5.1 - 09/14/2026**
 * Updated code-base to work with SDK version 9.2.x
