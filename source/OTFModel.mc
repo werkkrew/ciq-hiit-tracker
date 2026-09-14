@@ -19,8 +19,10 @@ class OTFModel
     hidden var mSession = null;
     hidden var mSplatsField = null;
     hidden var mStability;
-    hidden var mStabilityTimer;
-    hidden var mStabilityOn;
+    hidden var mLastHRTime;
+
+    // Drop HR to 0 after this long without a fresh reading
+    hidden const HR_TIMEOUT_MS = 10000;
 
     // Primary stats used during intervals
     hidden var mHeartRate;
@@ -75,9 +77,8 @@ class OTFModel
         mZones = new [4];
         // HR Time in Each Zone
         mZoneTimes = new [5];
-        // Stability is inactive
-        mStabilityOn = false;
-        mStabilityTimer = 0;
+        // Time of last non-null HR reading
+        mLastHRTime = 0;
     }
 
     // Start session
@@ -133,7 +134,17 @@ class OTFModel
 
     // Return the current heart rate in bpm
     function getHRbpm() {
+        expireStaleHR();
         return mHeartRate;
+    }
+
+    // Zero the HR when no fresh reading has arrived recently. Sensor events can
+    // stop entirely, which used to freeze the last value on screen.
+    hidden function expireStaleHR() {
+        if ( mHeartRate != 0 && System.getTimer() - mLastHRTime > HR_TIMEOUT_MS ) {
+            Log.debug("No HR Detected: Last reading stale");
+            mHeartRate = 0;
+        }
     }
 
     // Return the current heart rate in bpm
@@ -156,16 +167,11 @@ class OTFModel
         if( sensor_info has :heartRate ) {
             if( sensor_info.heartRate != null ) {
                 mHeartRate = sensor_info.heartRate;
-                mStabilityTimer = 0;
-                mStabilityOn = false;
-            } else {
-                // if HR stability is off or the timer has expired
-                if ( mStability == false || mStabilityTimer > 9 ) {
-                    Log.debug("No HR Detected: Stability Off, Stability Timer Expired");
-                    mHeartRate = 0;
-                } else {
-                    mStabilityOn = true;
-                }
+                mLastHRTime = System.getTimer();
+            } else if ( mStability == false ) {
+                // With stability on, the last value is held until expireStaleHR times it out
+                Log.debug("No HR Detected: Stability Off");
+                mHeartRate = 0;
             }
         }
     }
@@ -222,6 +228,7 @@ class OTFModel
 
     // Process splat points
     function splatCallback() as Void {
+        expireStaleHR();
         if( mHeartRate == null ) {
             return;
         }
@@ -262,12 +269,6 @@ class OTFModel
 
         // Increment timer
         mSeconds++;
-
-        // Increment Stability timer if needed
-        if ( mStabilityOn == true ) {
-            mStabilityTimer++;
-            Log.debug("Stability Mode On, Timer: " + mStabilityTimer);
-        }
     }
 
     // Define the HR Zones as per OTF guidelines
