@@ -24,5 +24,13 @@ function heartRateHoldAndDropout(logger) {
     model.setSensor(info);
     Test.assertEqual(model.getHRbpm(), 0);
 
+    // A dropout still advances the workout clock, but banks no zone time.
+    // Zones are deliberately left unset here: reaching the zone comparisons
+    // with no reading is the bug this guards against.
+    model.splatCallback();
+    Test.assertEqual(model.getTimeElapsed(), 1);
+    Test.assertEqual(model.getHRzone(), 0);
+    Test.assertEqual(model.getHRpct(), 0);
+
     return true;
 }

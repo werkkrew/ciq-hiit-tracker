@@ -76,7 +76,7 @@ class OTFModel
         // HR Zones
         mZones = new [4];
         // HR Time in Each Zone
-        mZoneTimes = new [5];
+        mZoneTimes = [ 0, 0, 0, 0, 0 ];
         // Time of last non-null HR reading
         mLastHRTime = 0;
     }
@@ -229,7 +229,12 @@ class OTFModel
     // Process splat points
     function splatCallback() as Void {
         expireStaleHR();
-        if( mHeartRate == null ) {
+
+        // No reading. Keep the clock running but do not bank the second into a
+        // zone: counting dropouts as zone 1 wipes out the user's zone times.
+        if( mHeartRate == null || mHeartRate == 0 ) {
+            mHeartRatePct = 0;
+            mSeconds++;
             return;
         }
 
@@ -345,6 +350,13 @@ class OTFModel
     // Set the recording activity type as per user preferences
     function setActivity(type, subType) {
         if(Toybox has :ActivityRecording) {
+            // createSession() hands back the session that is already open rather
+            // than a new one, so re-running this (splash onShow, settings sync)
+            // would add a second star_points field to a live recording and
+            // produce a FIT that Garmin Connect cannot read. Set up once.
+            if ( mSession != null ) {
+                return;
+            }
 
             // Default and Treadmill Running
             if ( type == 0 ) {

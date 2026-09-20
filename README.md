@@ -114,6 +114,10 @@ Requires the Connect IQ SDK 9.2+ (install it with the SDK Manager), a JDK 17+, a
 
 *This app is tested in the Connect IQ simulator. Bug reports from real devices are very welcome.*
 
+**v1.5.2 - 09/20/2026**
+* Heart rate dropouts no longer count as time in the gray zone, which was wiping out zone times and star points
+* Only set the activity recording session up once per run, so a settings sync during a workout cannot corrupt the saved FIT file
+
 **v1.5.1 - 09/14/2026**
 * Updated code-base to work with SDK version 9.2.x
 * Fixed heart rate freezing on the last reading when the sensor stops reporting
