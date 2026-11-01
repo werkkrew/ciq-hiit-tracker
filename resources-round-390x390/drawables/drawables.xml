@@ -21,7 +21,7 @@
 	
 	<drawable-list id="ReviewSummaryShapes" >
 		<shape type="rectangle" x="0" y="0" color="Gfx.COLOR_WHITE" />
-		<shape type="rectangle" x="0" y="118" height="2" color="Gfx.COLOR_BLACK" />
+		<shape type="rectangle" x="0" y="136" height="2" color="Gfx.COLOR_BLACK" />
 		<shape type="rectangle" x="0" y="292" height="2" color="Gfx.COLOR_BLACK" />
 	</drawable-list>	
 </drawables>
