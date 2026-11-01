@@ -28,25 +28,8 @@ During particularly crowded sessions my Vivoactive HR has trouble staying connec
 
 ### Screenshots
 
-**Tall**
-
-![Capture](dist/graphics/capt_tall_02.png)
-![Capture](dist/graphics/capt_tall_03.png)
-
-**Rectangle**
-
-![Capture](dist/graphics/capt_rect_01.png)
-![Capture](dist/graphics/capt_rect_02.png)
-
-**Semi-Round**
-
-![Capture](dist/graphics/capt_semi_01.png)
-![Capture](dist/graphics/capt_semi_02.png)
-
-**Round**
-
-![Capture](dist/graphics/capt_circ_02.png)
-![Capture](dist/graphics/capt_circ_03.png)
+<img src="dist/graphics/1-forerunner965-orange-zone.png" alt="Forerunner 965 in the orange zone" width="200"> <img src="dist/graphics/2-venu3-red-zone.png" alt="Venu 3 in the red zone" width="200"> <img src="dist/graphics/3-fenix8-green-zone.png" alt="fenix 8 in the green zone" width="200">
+<img src="dist/graphics/4-forerunner265-blue-zone.png" alt="Forerunner 265 in the blue zone" width="200"> <img src="dist/graphics/5-fenix8-summary.png" alt="Workout summary on fenix 8" width="200"> <img src="dist/graphics/6-fenix8-start.png" alt="Start screen on fenix 8" width="200">
 
 ### Supported Devices
 
