@@ -49,3 +49,15 @@ vivoactive4s.resourcePath = $(base.resourcePath);resources-round-218x218-marvel
 
 venu2.resourcePath = $(base.resourcePath);resources-round-416x416-smallfont
 venu2plus.resourcePath = $(base.resourcePath);resources-round-416x416-smallfont
+
+fr265s.resourcePath = $(base.resourcePath);resources-round-360x360-ttf
+fr165.resourcePath = $(base.resourcePath);resources-round-390x390-ttf
+fr165m.resourcePath = $(base.resourcePath);resources-round-390x390-ttf
+fr170.resourcePath = $(base.resourcePath);resources-round-390x390-ttf
+fr170m.resourcePath = $(base.resourcePath);resources-round-390x390-ttf
+fr70.resourcePath = $(base.resourcePath);resources-round-390x390-ttf
+fr57042mm.resourcePath = $(base.resourcePath);resources-round-390x390-ttf
+venu3s.resourcePath = $(base.resourcePath);resources-round-390x390-ttf
+venu441mm.resourcePath = $(base.resourcePath);resources-round-390x390-ttf
+vivoactive5.resourcePath = $(base.resourcePath);resources-round-390x390-ttf
+vivoactive6.resourcePath = $(base.resourcePath);resources-round-390x390-ttf

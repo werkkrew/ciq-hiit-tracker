@@ -48,6 +48,10 @@
             <iq:product id="fenix9prosolar47mm"/>
             <iq:product id="fenix9prosolar51mm"/>
             <iq:product id="fenixchronos"/>
+            <iq:product id="fr165"/>
+            <iq:product id="fr165m"/>
+            <iq:product id="fr170"/>
+            <iq:product id="fr170m"/>
             <iq:product id="fr230"/>
             <iq:product id="fr235"/>
             <iq:product id="fr245"/>
@@ -57,9 +61,12 @@
             <iq:product id="fr255s"/>
             <iq:product id="fr255sm"/>
             <iq:product id="fr265"/>
+            <iq:product id="fr265s"/>
+            <iq:product id="fr57042mm"/>
             <iq:product id="fr630"/>
             <iq:product id="fr645"/>
             <iq:product id="fr645m"/>
+            <iq:product id="fr70"/>
             <iq:product id="fr735xt"/>
             <iq:product id="fr745"/>
             <iq:product id="fr920xt"/>
@@ -85,6 +92,8 @@
             <iq:product id="venu2"/>
             <iq:product id="venu2plus"/>
             <iq:product id="venu2s"/>
+            <iq:product id="venu3s"/>
+            <iq:product id="venu441mm"/>
             <iq:product id="venud"/>
             <iq:product id="venusq"/>
             <iq:product id="venusq2"/>
@@ -97,6 +106,8 @@
             <iq:product id="vivoactive3mlte"/>
             <iq:product id="vivoactive4"/>
             <iq:product id="vivoactive4s"/>
+            <iq:product id="vivoactive5"/>
+            <iq:product id="vivoactive6"/>
             <iq:product id="vivoactive_hr"/>
         </iq:products>
         <iq:permissions>
