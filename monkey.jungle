@@ -28,6 +28,7 @@ fr245m.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
 fr745.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
 fr945.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
 fr945lte.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
+fr265.resourcePath = $(base.resourcePath);resources-round-416x416-ttf
 
 marqadventurer.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
 marqathlete.resourcePath = $(base.resourcePath);resources-round-240x240-smallfont
