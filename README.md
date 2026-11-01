@@ -50,12 +50,16 @@ During particularly crowded sessions my Vivoactive HR has trouble staying connec
 
 ### Supported Devices
 
+* Approach® S50
 * Approach® S60
 * Approach® S62
+* Approach® S70
 * Captain Marvel
 * First Avenger
 * D2® Series
 * Descent® Series
+* Enduro® Series
+* epix® Series
 * fenix® 5 and up
 * ForeRunner® Series
 * MARQ® Series
@@ -113,6 +117,11 @@ Requires the Connect IQ SDK 9.2+ (install it with the SDK Manager), a JDK 17+, a
 ### Version History and Changelog
 
 *This app is tested in the Connect IQ simulator. Bug reports from real devices are very welcome.*
+
+**v1.6.0 - 10/31/2026**
+* Added support for 47 newer devices, including Forerunner 165, 170, 265, 570, 965 and 970, fēnix 7 Pro, fēnix 8, fēnix 9, fēnix E, epix Pro, Enduro 3, Venu 3 and 4, vívoactive 5 and 6, D2 Mach 2, Descent Mk3 and G2, and Approach S50 and S70
+* The summary bar chart now scales to your longest zone instead of a fixed hour
+* Summary screen rows no longer touch or overlap on epix (Gen 2), D2 Mach 1, Venu, Venu 2, D2 Air and MARQ (Gen 2)
 
 **v1.5.2 - 09/20/2026**
 * Heart rate dropouts no longer count as time in the gray zone, which was wiping out zone times and star points
