@@ -2,6 +2,7 @@
 
 using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
+using Toybox.Math;
 
 class WorkoutZoneBg extends Ui.Drawable {
 
@@ -98,6 +99,31 @@ class SummaryZoneBars extends Ui.Drawable {
         x5 = params.get(:x5);
         y = params.get(:y);
         width = params.get(:width);
+    }
+
+    //! Bar heights for the given zone times. The longest zone fills the
+    //! region and the others are drawn relative to it. A bar with any time
+    //! gets 5 px extra so very small bars stay visible.
+    static function scaleHeights(times, regionHeight) {
+        var result = new [times.size()];
+        var maxTime = 0;
+
+        for (var i = 0; i < times.size(); i++) {
+            if (times[i] > maxTime) {
+                maxTime = times[i];
+            }
+        }
+
+        for (var i = 0; i < times.size(); i++) {
+            result[i] = 0;
+            if (maxTime > 0) {
+                result[i] = Math.round((regionHeight - 5.0) * times[i] / maxTime).toNumber();
+                if (result[i] > 0) {
+                    result[i] += 5;
+                }
+            }
+        }
+        return result;
     }
 
     function draw(dc) {

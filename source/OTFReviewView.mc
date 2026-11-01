@@ -103,21 +103,12 @@ class OTFReviewView extends Ui.View {
 
     //! Calculate the height of the bars
     function drawSummaryBars(times, colors) {
-        var regionHeight = uiZoneBars.regionHeight * 1.0;
-        var barHeight = 0;
-
         uiZoneBars.colors = zoneColors;
 
         //times = [60, 300, 600, 1800, 3600];
-        for( var i = 0; i < times.size(); i++ ) {
-            barHeight = Math.round((regionHeight / 60) * (times[i] / 60));
-
-            // Make very small bars more visible
-            if ( barHeight > 0 ) {
-                barHeight = barHeight + 5;
-            }
-
-            uiZoneBars.heights[i] = barHeight;
+        var heights = SummaryZoneBars.scaleHeights(times, uiZoneBars.regionHeight);
+        for( var i = 0; i < heights.size(); i++ ) {
+            uiZoneBars.heights[i] = heights[i];
         }
     }
 }
