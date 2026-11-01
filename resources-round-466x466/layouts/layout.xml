@@ -2,19 +2,19 @@
 	<layout id="SplashScreen">
 		<drawable id="SplashScreenShapes" />
 		<bitmap id="SplashScreenBg" x="center" y="center" filename="../drawables/hiit_background.png" />
-		<bitmap id="StatusHRIconWhite" x="105" y="47" filename="../drawables/hr_white_36.png" dithering="none">
+		<bitmap id="StatusHRIconWhite" x="105" y="63" filename="../drawables/hr_white_36.png" dithering="none">
 			<palette>
 				<color>FFFFFF</color>
 			</palette>
 		</bitmap>
 		
-		<bitmap id="StatusHRIconRed" x="-56" y="47" filename="../drawables/hr_red_36.png" dithering="none">
+		<bitmap id="StatusHRIconRed" x="-56" y="63" filename="../drawables/hr_red_36.png" dithering="none">
 			<palette>
 				<color>FF1D1D</color>
 			</palette>
 		</bitmap>
-		<label id="StatusTime" x="center" y="0" text="@Strings.StatusBar_time" font="Gfx.FONT_TINY" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" />
-		<label id="StatusHRText" x="center" y="43" text="@Strings.StatusBar_hr" font="Gfx.FONT_XTINY" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+		<label id="StatusTime" x="center" y="16" text="@Strings.StatusBar_time" font="Gfx.FONT_TINY" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+		<label id="StatusHRText" x="center" y="59" text="@Strings.StatusBar_hr" font="Gfx.FONT_XTINY" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" />
    		<label id="StartWorkoutLabel" x="center" y="356" text="@Strings.start_workout" font="Gfx.FONT_TINY" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER"/>
 	</layout>
 	
